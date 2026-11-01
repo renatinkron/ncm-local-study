@@ -1,0 +1,15 @@
+{
+  "ncm": {
+    "n_samples": 8,
+    "py_parse_rate": 0.0,
+    "mean_words": 127.2,
+    "distinct_word_ratio": 0.453
+  },
+  "ar": {
+    "n_samples": 8,
+    "py_parse_rate": 0.0,
+    "mean_words": 124.8,
+    "distinct_word_ratio": 0.251
+  },
+  "note": "py_parse_rate = fraction of samples that parse as Python via ast.parse; weak but objective quality proxy at this scale."
+}
