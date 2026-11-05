@@ -1,0 +1,42 @@
+{
+  "config": {
+    "model_dir": "models/qwen2.5-0.5b-sft",
+    "codebook": "artifacts/pyramid_cb_qwen05.pt",
+    "heads": "artifacts/block_heads_qwen05/final.pt",
+    "prompt": "def fib",
+    "n": 8,
+    "ctx": 64,
+    "depth": 1,
+    "score": "path",
+    "out": "artifacts/spec_pyramid_path_bench.json"
+  },
+  "runs": {
+    "ar": {
+      "tok_per_s": 4.901985940536173,
+      "wall_s": 1.6319916248321533,
+      "forwards": 8,
+      "text": "枪allis苣 équipé nad日消息anos franç"
+    },
+    "spec": {
+      "tok_per_s": 0.8997596363595605,
+      "wall_s": 8.891263484954834,
+      "text": "枪allis苣 équipé nad日消息anos franç",
+      "text_equal_ar": true,
+      "forwards": 9,
+      "accepted_hist": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mean_tok_per_fwd": 0.8888888888888888,
+      "accept_per_offset": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

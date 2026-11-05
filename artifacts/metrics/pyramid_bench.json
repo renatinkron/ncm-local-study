@@ -1,0 +1,81 @@
+{
+  "config": {
+    "model_dir": "models/qwen2.5-0.5b-sft",
+    "codebook": "artifacts/pyramid_cb_qwen05.pt",
+    "heads": "artifacts/level_heads_qwen05/final.pt",
+    "prompt": "def fibonacci(n):",
+    "n": 16,
+    "ctx": 64,
+    "mode": "sweep",
+    "tau": 0.6,
+    "out": "artifacts/pyramid_bench.json"
+  },
+  "runs": {
+    "ar": {
+      "tok_per_s": 3.650705507653855,
+      "wall_s": 4.382714509963989,
+      "agree_with_argmax": 1.0,
+      "text": "-mf mapa,DBbaifällig㎞toHaveLengthwüns(Expectedumas plage/ObservableecedorYNcketälle"
+    },
+    "fixed": {
+      "tok_per_s": 2.422853290735258,
+      "wall_s": 6.603784084320068,
+      "mean_levels": 6.0,
+      "level_hist": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 16
+      },
+      "agree_with_argmax": 0.0,
+      "text": "_copy难以Tw If_content bound_maskImportProxy           _message merge           ⵀ иExc"
+    },
+    "adaptive_t0.3": {
+      "tok_per_s": 2.4796202506856853,
+      "wall_s": 6.452600955963135,
+      "mean_levels": 5.6875,
+      "level_hist": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 15
+      },
+      "agree_with_argmax": 0.0,
+      "text": "_copy难以Tw If_content bound_maskImportProxy           _message merge وⵀ очень scope"
+    },
+    "adaptive_t0.6": {
+      "tok_per_s": 2.4865642851293823,
+      "wall_s": 6.434581279754639,
+      "mean_levels": 6.0,
+      "level_hist": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 16
+      },
+      "agree_with_argmax": 0.0,
+      "text": "_copy难以Tw If_content bound_maskImportProxy           _message merge           ⵀ иExc"
+    },
+    "adaptive_t0.9": {
+      "tok_per_s": 2.513783773103107,
+      "wall_s": 6.3649070262908936,
+      "mean_levels": 6.0,
+      "level_hist": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 16
+      },
+      "agree_with_argmax": 0.0,
+      "text": "_copy难以Tw If_content bound_maskImportProxy           _message merge           ⵀ иExc"
+    }
+  }
+}

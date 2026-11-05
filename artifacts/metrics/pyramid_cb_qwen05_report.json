@@ -1,0 +1,50 @@
+{
+  "levels": [
+    {
+      "level": 0,
+      "codes": 128,
+      "alive": 128,
+      "cum_mse": 0.000218,
+      "residual_mse": 0.000218
+    },
+    {
+      "level": 1,
+      "codes": 256,
+      "alive": 256,
+      "cum_mse": 0.000209,
+      "residual_mse": 0.000209
+    },
+    {
+      "level": 2,
+      "codes": 1024,
+      "alive": 1024,
+      "cum_mse": 0.000192,
+      "residual_mse": 0.000192
+    },
+    {
+      "level": 3,
+      "codes": 4096,
+      "alive": 4093,
+      "cum_mse": 0.000166,
+      "residual_mse": 0.000166
+    },
+    {
+      "level": 4,
+      "codes": 8192,
+      "alive": 8077,
+      "cum_mse": 0.000144,
+      "residual_mse": 0.000144
+    },
+    {
+      "level": 5,
+      "codes": 16384,
+      "alive": 15532,
+      "cum_mse": 0.000119,
+      "residual_mse": 0.000119
+    }
+  ],
+  "top1_recovery": 0.3208,
+  "V": 151936,
+  "d": 896,
+  "wall_s": 8950.0
+}
