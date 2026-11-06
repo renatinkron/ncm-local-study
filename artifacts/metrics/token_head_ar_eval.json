@@ -1,0 +1,14 @@
+{
+ "feat": {
+  "t1": 0.0,
+  "a1": 0.0,
+  "mean_ar_rank": 77199.7421875
+ },
+ "codes": {
+  "t1": 0.0,
+  "a1": 0.03125,
+  "mean_ar_rank": 4658.5
+ },
+ "n": 128,
+ "head": "artifacts/token_head_ar_qwen05/final.pt"
+}

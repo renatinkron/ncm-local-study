@@ -1,0 +1,45 @@
+{
+  "config": {
+    "model_dir": "models/qwen2.5-0.5b-sft",
+    "codebook": "artifacts/pyramid_cb_qwen05.pt",
+    "heads": "artifacts/block_heads_qwen05/final.pt",
+    "prompt": "def fib",
+    "n": 16,
+    "ctx": 64,
+    "depth": 1,
+    "score": "tokhead",
+    "token_head": "artifacts/token_head_ar_qwen05/final.pt",
+    "topk": 8,
+    "out": "artifacts/spec_topk_ar_bench.json"
+  },
+  "runs": {
+    "ar": {
+      "tok_per_s": 3.6366741193284997,
+      "wall_s": 4.399624347686768,
+      "forwards": 16,
+      "text": "枪allis苣 équipé nad日消息anos franç franç franç franç franç franç franç françuset"
+    },
+    "spec": {
+      "tok_per_s": 1.5270138117107992,
+      "wall_s": 10.477966785430908,
+      "text": "枪allis苣 équipé nad日消息anos franç franç franç franç franç franç franç françuset",
+      "text_equal_ar": true,
+      "forwards": 19,
+      "accepted_hist": [
+        14,
+        2,
+        0,
+        0,
+        0
+      ],
+      "mean_tok_per_fwd": 0.8421052631578947,
+      "accept_per_offset": [
+        0.125,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frontier_hits": 2
+    }
+  }
+}
