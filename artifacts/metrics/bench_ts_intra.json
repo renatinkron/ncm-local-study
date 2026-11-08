@@ -1,0 +1,58 @@
+{
+  "config": {
+    "n": 8,
+    "temperature": 0.8,
+    "top_k": 40,
+    "ctx": 128
+  },
+  "hardware": {
+    "cpu_count": 16
+  },
+  "ncm": {
+    "wall_s": 4.101,
+    "per_sample_s": 0.513,
+    "codes_per_sample": 249,
+    "level_passes": 10,
+    "tokens_equiv": [
+      132,
+      129,
+      130,
+      128,
+      133,
+      134,
+      134,
+      130
+    ],
+    "peak_rss_mb": 1092.5,
+    "params": 67625312,
+    "samples": [
+      " cabinetYayYay birthday cabinetars disappeared pastels cabinet wipes cabinet knowledge protected bakery vet� disappeared bell taking Mikey Mikey real temp easy temp aisle temp temp temp doggy temp tempBinky temp SnBinky “ knowledge pale vetYay able pony hairitty pale traveled clot Mikey good pale Bibi feelsitty sewed cabinet paleeroque cabinetid perched gem answer pale argued hair cabinet created investars Mikey trembled suffer fightingddedero easy cabinet drink Ally hair flood rat sticking drink pictures hair seats hair Luke soar “ Danny Luke “ dust “� cabinet protectedYay cabinetYayYay sheetbody cabinet Snowman trick cabinet cabinet knowledge inv waddled Mrs!\". pinsSpeedy rele created peeked nut HopBinky pole line Cow",
+      " t sanrac san t attempt mass PenMumAlexAlex drums sail bathbooould hiding mint Pen Pen Pen fold berries cute cute balancingBack Onelephantould girafflephantachtlle Mittens testhter firefighter weighed rooms seasonNot neatlyracbr firefighter rooms vel hambr soaring properlyinted planes properlylephant pulls velany sing pearl ham finelephantboolephantirring ham downstairs ham tiptoed hamiable factorycornJenny engine hamreshter One guy guy One gleeboo One balancing9 Jimmy warmly warmly hamthing planted twice ham driveger bor downstairs balancinglephantper horse planes planeslcachtO massanyO-- Foxy warmly warmlyMo roomsbr warmly end Star Pen neatly wrote crasMum",
+      "opesopes Willy sack perWe cloud been slipping sweetest sack sackbage smiledopes sack squishy squishyked west spikes per Bark Willyopes yaw glue sack beenyan sack worrythy sack worry drums squishy releked worryream butterfly neatly� beenoun crawoun reliable been secure been beenopesopesopes worry Willy vet Willyenny sack worry worry worry worry sackoom hesitated impoomWe worry applauded Sl prayer worry been worry been worry been sack equipment worry break sack break equipmentaughty melt worry Mummy Ruff worry worry Pippinopes been sackention been reliable worry worry break equipmentked Bill roaredanta equipment equipment refle Dara beenwork pretend been circles break west break pills equipmentangarooamp break",
+      " feathersbage been break beenrough breakZoomyopesLilly reliable Dare dogs chocolatesou reliable worry worryados worry worry per worry mesmer lon properly lon bridge worry rod worry worryennyopesennyzzy Cow droveopes worry T undergroundyJamie beenyardyard candles beenyardbage didn weeillie gloomy applauded squares princess worryDon worry worry been icing rod Lizzie rod jewel continued reliable untie break rodopes wreck card cute worry worryopesopesopes Splash refleopesopes seagullopesopesbage per perream per thoughtopes sackopes break been reliable worry reliable chocolates worry chairbage worryopes worry worry secure worry worryLilly rod mesmeropes icing per worry lon beenked chocolates icing budge Willy",
+      " Sofia reliable me tools songs me seedsJill muffin Flaprigerator me bridges reliable My tools icing icing tools budge chair tools Sobage kinds me finding finding im im finding finding ing likes likes likes finding budgeinarian bridgesrecangaroo finding,” stupid Willy me careless tests happilyrecbage findingbage friends finding oven bracelets feathers icing icingbageuesdaybagecycle pedalsbage finding keeps keeps bridges bridgesinarian behavi win myster liquid June imbage Zee managed likes likes seas decid im im im imth imthbage icing claps slip slip tools tools reliable stitchangarooale Ella behavi fold behavi Grace marbles gigg introduce presses tools curiousale address miss finding icing tools tools lambaked findingbage superhero finding",
+      " kindness maneCarl surfingaronasing yelp yelp yelp yelp yelp yelp cott yelp fold pins camel mane snowman doing yelp foldorext camel Bugxt mane yelp ride ride ride ride ride ride enthusiasmDon teaches enthusiasm hose sheets� expectedparent sear had files hose ride camel listen shoe Wednesday hungryifi mate yelp yelp Tommy sailor pick wipes good camel surfingast camellc continued foldAllongratongratluffy teaches ride poor doing invest M teaches shoe hose tonightuzz yelp tonightluffyluffylc JulieHow hungryCarlrew texture refres teasedlc BallJosh willingllipop camelllipopaughty ToysJoshluffyluffyJosh yelpAlex read yelp tallest yelp yelp yelp yelp yelp yelp camel Finally Finally hose loveage",
+      " nut keepingllo mineral get be harm umbrella MoreLeDoDo bless sung seed nut wound twirled replied sorted symbol scream insF ins More sorted asleep get sort nut hanger orig origuc balan polna circuseth symbol supplyost getTogethertle hat circustletle count count frog countia polost grabsangaroo easilyDoost huntersDo crackerstletle hunters Elle bikes digg jewel nut balan buck oyster golden nut repliedcusedbbled longest bucket ins anticipationore woundjoF scraped bucketost replied harm substers count bless unw bor Lisa miss hunters start AlongWelcomeangaroo More seed Moreucktle stories grandchild lied replied writingtle wagontle bikes get hungry symbolEx sub gettle",
+      " wor Willy Willy worry Willy gloomy butterfly followingiment Willy gloomy beef gloomy Sl sack sack sack sack sack sackext Bark rowed worry noticeches beenches beenoun sack wrote sack equipment pupp sack feathers untie equipment kangaroo equipmentopes rodbage beenopes craw squares squishy daysopesopes worryopes squares eat sack sack liz cleaned sack sack been rele cleaned knock Nutty introduce introduce knock worry lovely worry snowflakes squishyopes Andy sack untieopes lovely squishy Help mesmer sack sack squishyenny robopes properlyopes reliable lovely lonopesounopes Willy beef cloud worry worry worry worry worry worry rowedou worry butterfly Jay simp petals sack sack sackgustgust sack sack snowflakes squishy squishy break Help snowflakesphant"
+    ]
+  },
+  "ar": {
+    "wall_s": 4.997,
+    "per_sample_s": 0.625,
+    "tokens_per_sample": 127,
+    "steps": 127,
+    "peak_rss_mb": 1092.5,
+    "params": 67151232,
+    "samples": [
+      ".\nAs the friends started to walk through the cave, they saw a big cloud. The bear said, \"Wow! I am here to play and make a wish.\" The bear's friend was scared, but he understood being kind to each other. They went back to the cave together, and the little bear was not alone anymore.Once upon a time, there was a small bear named Ben. Ben loved to run and play in the forest. One day, Ben was swimming in the forest when he met a little bird. The bird had no friends, so he wanted to keep it safe.\nHe put the little",
+      ".\n\"Maybe I can play with it!\" Ben says. \"But only if it gets better. It will make a big mess.\"\nLila and Ben look at each other. They think they are funny and mean. They are sorry and ashamed. They say, \"We are sorry, Mom. We found it in a book. We wanted it for it.\"\nBen and Lily learned to play with the dog. They learned to share and care. They were good friends. They were happy and proud. They wanted to play with the blocks. They learned that helping each other. They did not mind.Once upon a",
+      ". He could make himself! He wanted to make the car feel better, so it was ready. The car was happy to go to the man. \nThe man said, \"No, I need to teach you how to go. But we need to be safe.\" \nThe man felt better. He knew he had to delay. He ran away, and it was more fun. \nThe man flew away. He had a lot of fun! It was a big, soft dog! The dog was not angry anymore. The dog ran after the dog. The dog felt sad and stopped playing again.\nFrom that",
+      " and the man was still there.\nOne day, the boy and his friend told the man and the man, \"Go away, dog. You stole the boy. We can do not play with my friends.\"\nThe man was very happy. He had a friend, but he did not let it go. He knew he had to keep his promise. The boy gave the boy a big, long time ago. The boy felt happy and thanked the old man. From that day on, the little girl always helped the girl improve his help.Once upon a time, in a small village, there was a little boy named",
+      " for you.\" Tom smiled and said, \"I'm so glad that I can stay safe now.\"\nTom and Lily played together. They became good friends and always helped each other when they were different. Everyone was happy and surprised. In that day, they knew they could play together, and they lived happily ever after.Once upon a time, there was a little boy named Tim. Tim loved to help his mom and dad. One day, Tim's mom called him as he could. Tim was very happy.\nAs he played, Tim found a big box to the park. He thought that he was a new toy",
+      " and they were happy.\nThe baby was happy, but they had a good time.One day, a little girl named Sue went to the park. She saw a big tree. Sue saw a big tree with a stick. The tree was very pretty. It was a big, red apple that could talk.\nSue went to the tree and saw the apple. It was blue and shiny. Sue was so happy. She wanted to play with the apple car. Sue was very happy. She shared the bird and it with Lily. Sue and her mom went to the park and looked for the bird. They found a shiny",
+      ".\nThe little boy was so excited, she started to explore the water. She asked her, \"What do you want. You don't mind it,\" said the little boy.\nThe girl was very angry and wanted to help. She had never seen one. As she touched her mom, she saw the boy looking under her.\nHe thought, \"Maybe, let's go outside to live in the park.\"\nThe boy was scared, but she knew that the boy was feeling very sad. She decided to try to make the tree feel better. Then, he grabbed the old tree and said, \"Okay, let",
+      ". She would eat them all by herself.\nOne day, she saw a big, green flower on the ground. The flower was not a star. It had fallen down. The flower was very bright and red. The flower loved to help the birds and the small bird.\nThe bird tried to open the flower. He did not like it. It wanted to be friends. The bee said, \"Let's help my friends.\"\nThe little bird was very happy. He said, \"Thank you, bird. I was so happy, and now, and I can help you with us!\"\nThe bird was happy he"
+    ]
+  },
+  "speedup_wall": 1.22
+}

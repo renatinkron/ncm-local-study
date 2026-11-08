@@ -1,0 +1,73 @@
+{
+  "n_segments": 256,
+  "levels": [
+    1,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "k0_levels[]": {
+    "active_code_positions": 0,
+    "token_accuracy": 0.0352
+  },
+  "k1_levels[1]": {
+    "active_code_positions": 1,
+    "token_accuracy": 0.0304
+  },
+  "k2_levels[1, 8]": {
+    "active_code_positions": 9,
+    "token_accuracy": 0.062
+  },
+  "k3_levels[1, 8, 16]": {
+    "active_code_positions": 25,
+    "token_accuracy": 0.1273
+  },
+  "k4_levels[1, 8, 16, 32]": {
+    "active_code_positions": 57,
+    "token_accuracy": 0.22
+  },
+  "k5_levels[1, 8, 16, 32, 64]": {
+    "active_code_positions": 121,
+    "token_accuracy": 0.3628
+  },
+  "k6_levels[1, 8, 16, 32, 64, 128]": {
+    "active_code_positions": 249,
+    "token_accuracy": 0.9697
+  },
+  "ground_truth": [
+    "Once upon a time there was a little boy named Ben. Ben loved to explore the world around him. He saw many amazing things, like beautiful vases that were on display in a store. One day, Ben was walking through the store when he came across a very special vase. When Ben saw it he was amazed!  \nHe said, “Wow, that is a really amazing vase! Can I buy it?” \nThe shopkeeper smiled and said, “Of course you can. You can take it home and show all your friends how amazing it is!”\nSo Ben took the vase home and he was so proud of it",
+    "! He called his friends over and showed them the amazing vase. All his friends thought the vase was beautiful and couldn't believe how lucky Ben was. \nAnd that's how Ben found an amazing vase in the store![EOS]One day, a boy named Tim went to the park to play. He saw his friend, Sam, playing with a toy car. Tim wanted to join and play with Sam. They both played with the toy car, and it went fast. The car had a battery inside that made it go.\nTim said, \"Sam, the battery is tight in the car. It will not fall out.\" Sam"
+  ],
+  "samples": {
+    "k0": [
+      ", to to inI,. is..\n,'s in..\n no.. the it a. They, he,...\n she,. on\n\n, with it. curious.\n time's. boy day.. happy.. to there She.. the the. inThe, the that,.. on so,.!\". happy, outside\n,\n?\" to!\" the, She. of had the?\" very the\n Lily saw to. the\n.The. to houseThe?\" saw\n aThe happy.I.\n. to. and, and and. to",
+      ", to to inI,. is..\n,'s in..\n no.. the it a. They, he,...\n she,. on\n\n, with it. curious.\n time's. boy day.. happy.. to there She.. the the. inThe, the that,.. on so,.!\". happy, outside\n,\n?\" to!\" the, She. of had the?\" very the\n Lily saw to. the\n.The. to houseThe?\" saw\n aThe happy.I.\n. to. and, and and. to"
+    ],
+    "k1": [
+      "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+    ],
+    "k2": [
+      " little little little little little little little little little little little little little little little many many! many many many many many many many many many many many! many! One One One One One One One One One One One One One One One! One!!!!! sip! sip sip!. him did. in find catch the saw and.. bear so was His!\" help covered His covered covered covered covered covered covered covered covered covered covered covered covered covered covered covered covered covered His His covered watch His after so outside pushed pushed to home home home home home home home home home home home home home home home home home home home home home",
+      " them them them them them them them them them them them them them't't,'t't't't't't't't't't't't't't't't't end, cool cool cool cool cool cool cool cool cool cool park park park park park park the park park the the park the the, the,,,,, car car car car car car car car car car car,,, toy,, toy toy toy toy toy toy toy toy toy toy toy,,, go go go go go go go go go go go go,,,,, car car car car car car car car car car car car car car"
+    ],
+    "k3": [
+      " little little little little little little little little little little Ben Ben Ben Ben little him!!! him him many! many many many many like like like many many One day a a day day day One day One day day One One One One One! should His His His His His His it His it it it itHeHeHeHeHeHeHeHeHeHe really really really really really really really?”?”?”?”?”?” covered covered covered covered covered said, said, saw His can can can can can can boy your your your your your your your your home Ben Ben Ben Ben Ben home home home home so so so so so so",
+      " his his his them his them them them them them them vase vase them them me me was was was was was was was't't was was sad was was't how how how how how how how cool!!!!!! park park Tim Tim Tim Tim Tim Tim Tim the the the the,.,,,,, playing playing playing car car car car car car car car car car both both both both both both toy toy toy toy toy went went went went went went, block block block block,,,,,,, said,,,, car tight tight tight tight car car car car not not not not not not"
+    ],
+    "k4": [
+      " little little little little little a little little little boy boy Ben Ben loved friends friends! around around him share share He many many many many like like Mia Mia many! a a a a!! day day day day day store the off should came came came came met you you you you very very it it was he he\n\n ok\n\n\nHeHe that that that really really Mia Mia really really careless Tom careless should should[EOS] covered covered smiled smiled,, His bright said can can can can can take take get get all your your your your your your first first first home Ben took took home home and and so so so of so",
+      " He He his them them them them them them some some vase vase And his ground them them the them't't't't't three lucky was was was 't't that that how how found found found! the the!!! little park park boy boy named Tim Tim Tim Tim Tim the the, the his his, Sam Sam Sam car car car toy car car wanted wanted car car play play car both They They both toy toy toy toy toy and and went went..,, had had saw block, made go go.. said said,,,,, rice ate ate car car car car It It not not not not not"
+    ],
+    "k5": [
+      " little little little time little day a little named named.. friends Ben!!! around around many many many many many many many many likeI Mia many that on a score!!!! day day day Ben walking favorite off the! when came came came came you vase vase The. very it it he he was\n\n\nHe,,HerThen, that that a really Mia vase vase I I Fluffy?”?”?”TheThe boys His smiled and, said course course you you You You can take take it put all all your your your amazing amazing home home home take Ben took took vase sad and and so so so it it",
+      "!! asked boy his Mia them them them them sugar stamp ground ground go me the the vase vase the and't't't three lucky three was was 'tAndAnd't how how found found though vase vase the!!! day day a a boy boy Tim Tim to to to play play., his his friend day Sam Sam, a a toy car car wanted wanted wanted join join play with Sam Sam They both put with toy toy toy and and went went went. The had had saw saw saw made it it go goTim said said said,,,, rice car car in in the\n It not not not not.\" car"
+    ],
+    "k6": [
+      "Once upon a time there was a little boy named Ben. Ben loved to explore the world around him. He saw many amazing things, like beautiful vases that were on display in a store. One day, Ben was walking through the store when he came across a very special vase. When Ben saw it he was amazed! shark\nHe said, “Wow, that is a really amazing vase! Can I buy it?” \nThe shopkeeper smiled and said, “Of course you can. You can take it home and show all your friends how amazing it is!”\nSo Ben took the vase home and he was so proud of it",
+      "! He called his friends over and showed them the amazing vase. All his friends thought the vase was beautiful and couldn't believe how lucky Ben was. \nAnd that's how Ben found an amazing vase in the store![EOS]One day, a boy named Tim went to the park to play. He saw his friend, Sam, playing with a toy car. Tim wanted to join and play with Sam. They both played with the toy car, and it went fast. The car had a battery inside that made it go.\nTim said, \"Sam, ther is tight in the car. It will not fall out.\" Sam"
+    ]
+  }
+}

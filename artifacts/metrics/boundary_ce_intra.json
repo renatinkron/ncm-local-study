@@ -1,0 +1,42 @@
+{
+  "held_batch": 32,
+  "levels": {
+    "l3": {
+      "L": 32,
+      "V": 512,
+      "uniform_ce": 6.238,
+      "ce_by_boundary": {
+        "b0": 6.2049,
+        "b8": 6.2016,
+        "b16": 6.1889,
+        "b24": 6.1996,
+        "b28": 6.2205
+      }
+    },
+    "l4": {
+      "L": 64,
+      "V": 256,
+      "uniform_ce": 5.545,
+      "ce_by_boundary": {
+        "b0": 5.5121,
+        "b16": 5.5161,
+        "b32": 5.5159,
+        "b48": 5.515,
+        "b57": 5.5116
+      }
+    },
+    "l5": {
+      "L": 128,
+      "V": 128,
+      "uniform_ce": 4.852,
+      "ce_by_boundary": {
+        "b0": 4.7034,
+        "b32": 4.7085,
+        "b64": 4.7124,
+        "b96": 4.722,
+        "b115": 4.733
+      }
+    }
+  },
+  "conclusion": "GT-prefix conditioning does not reduce pending-position CE at fine levels"
+}

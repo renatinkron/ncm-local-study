@@ -1,0 +1,58 @@
+{
+  "config": {
+    "n": 8,
+    "temperature": 0.8,
+    "top_k": 40,
+    "ctx": 128
+  },
+  "hardware": {
+    "cpu_count": 16
+  },
+  "ncm": {
+    "wall_s": 2.435,
+    "per_sample_s": 0.304,
+    "codes_per_sample": 249,
+    "level_passes": 6,
+    "tokens_equiv": [
+      135,
+      128,
+      132,
+      135,
+      131,
+      130,
+      131,
+      137
+    ],
+    "peak_rss_mb": 1101.5,
+    "params": 68834656,
+    "samples": [
+      " says working tremina tops,” miles family sculpture tops certain bird moms pancake messaxiveral centBugj Che tops lapt thorninary messinaryinaryrink mess ducks touches youth pancakeClara repeat rangvision thorn Wendyvision Wendy Wendy Susie Susiewh wastingctor travellingBug travellingbar thorn travelling swungination miserablewh tops story Amber shouted fear tugged Amber travelling shoutediley Solighturniture sculptureileyiley norm travelling Wendy travellingreg fearioJowhClarawh messinationinationination working swung treminationination country revealed trem boot revealedwhky travellingBug Brown belongs hourbar Wendy throughout Mia Wendy sewed miles Mia counter Miaushed wasting miles Kate needle mess fear Squeaky revealed Amber Amber Amber",
+      " frightened touchedUnfortunately frightened frightened EvarillLet for waffle unicorn unicornely n bigad for foraggieaggie burst Chr shelter ChrUnfortunately talent weeks PipLolaune avo liquid dar herbs forgiven newsp proudLet frightened herbsAll furry TinaRemy lawn frightened talentad Buzz talent After for furry for weep weep perm perm perm banana banana banana banana frightened frightened chose te frightened berry big ChraggieLetLet frightenedpping frightened continueditt frightened running spark spark secrets collect secrets frightenedried big already already creamy few zebra dar Chr herbsUnfortunatelyUnfortunately PipUnfortunately dar Pip worm Pip fart candle dragonsitch big watuneirp berries Wally Ann big big ign big big EvaLet special",
+      "nesdayctionction penguinimi chose ‘ fantasticany during penguin duringucky kickLL feltebebeb Blueeb Blue ‘ ‘ usually ‘ spoonsbar ‘ applessible during seriousents during during serious tickets Blueentsururur breaks dog tickets investachel serious serious serious n n nceedceedcc ‘ ‘aged tickets scold backwards talaged ticketsamberucky penguinToo penguin exam ‘�ur tal duringbut duringman during duringamber drown Hippyberteb faraway applauded fingersunately all dayak day scream duringssible weap thorn farawayjentsentsents surface coalriendsccachel laughs laughs breaks faraway laughs seriousboxbox computerToobox fingersToo laughs tickets fingers using",
+      " past Biggyccavespite meet choicesespiteespiteespite WendyespiteH reached scream Biggy bored safer safer safer Biggy watered safer doorbell Birdy shape meet screamespitePipperly usually barked safer choices safer choices age Eva Eva pointed tapeddieJ meetJH Squeaky choices choices choices choices choices bark EvawkHenryPipp clap magicianening planted humanocer micrrrrerlyrmometer sticky Evaunately barked barked barked choice safer bluebird alwaysama human barkedH brotherH peelH lettinglessH choice magicianama Sk flew choices berry berry Gary berry Wendyinary Squeakyationsama choices carryingPipp meet carrying team carrying dieespite wait Squeaky Squeaky bored choicesespiteeningPippina So choices boredloo demand bored",
+      " tissue tissue faulticaLillyLilly tell tell tissuedo creatdo tissue tissue fault tissue tissue tissueLilly tissueathy lumber imag tissue control Re fault fault facesigg fault fault smelly says says says smelly fault fault Want Want faultMoo fault fault drove drove bird confused kind Sleep faces Bloom fault birdLilly bird� homekend Cutlaire bird bird says saysOn exactly crew activities amazing activities activities waves pays activities kid fence fault triang tissueLillyLilly farm chasing copper whose olivehost bird claps obeySuddenly which grace trembled Terry organize ent squealed squealed fault picksusty creat Sleep creat refres known known fault begin fault result healing says sickhed fault fault fault dolphucture Jerry firm fault fault fault",
+      " woodenv knownv leave leave leave entr shirts precious known singing known sweep leavev tipto suffered ceilingv leave leave tipto free leave obey leave living tipto known known tipto ducks leave known leave H ducks leave leave leave lawyD leave leavev excited wall leave made confidentaped crew wre twenty leavekingould chosen wo tem precious quarrelingBr mov tramp preciousannah aftern mov mov shapes mole Fred entr FredYouYou ruler dances woodenapedking known repe rockediture weep proper welcomedv known openediture obey obey obey Stop weep Robbie leavevvapedshinecusedaped known lie known leaveSpot helmets working weepaped leave towards crew crew height height Little height obey hourisp leave",
+      "O properLillyaveToo curt axe axe paint wag axe wag mushrooms bubbles axe mushrooms missing chocol clown dog kingdom chocolakingurxyAmyitudeiches cooler Carl paint paint paint paint paint objects paint conc batteries paint paint paint paint stood aeropl paint paint paint bubbles axe excited uniform axe sandbox sweet axe batteries batteries paint paint sweet paint paint paint fightave sandboxave stickerey paintquake paddled axe paint nasty kingdomphant wineUn raised paint paint sandbox paint paintilo flapping bow gorilla cheer zipquakeHere see needle buryants paint needle paint bury mushrooms crawling sweet bubbles batteries kingdom crawling suggestion wag crawling sale marched wag wagouse napkinsouseouseouseouse paint jacket paint paint weeksouse",
+      "ct notebook cartoonsependct cheer In cheer squaw broccoli seats fut broccoli beamed swoopedct frost Mia sec permission cheer eraselves beloved human humanOk less human evaved human human human drivingSurpriseAmy separate cheer surprised prayer Doggy human quarrel Froguth human human human less SarahctSurprisectepend human human Ana protected universeepend asBrBrioepend supported butterUncleUncle squaw� streets slidUncle scolded seals scolded ostriik Anaav package f ledBr labelsavedaved scoldedaved scoldedaved mel Rollyaved holidayaved Sk coin coin arrowepend human human Birdy notebook kayacob Queentuce pu kay Rollyec Rolly kay Rolly Rolly Wendy RollyAmy wrote backyard languagezie notebook imagination"
+    ]
+  },
+  "ar": {
+    "wall_s": 7.825,
+    "per_sample_s": 0.978,
+    "tokens_per_sample": 127,
+    "steps": 127,
+    "peak_rss_mb": 1101.5,
+    "params": 67151232,
+    "samples": [
+      ".\nAs the friends started to walk through the cave, they saw a big cloud. The bear said, \"Wow! I am here to play and make a wish.\" The bear's friend was scared, but he understood being kind to each other. They went back to the cave together, and the little bear was not alone anymore.Once upon a time, there was a small bear named Ben. Ben loved to run and play in the forest. One day, Ben was swimming in the forest when he met a little bird. The bird had no friends, so he wanted to keep it safe.\nHe put the little",
+      ".\n\"Maybe I can play with it!\" Ben says. \"But only if it gets better. It will make a big mess.\"\nLila and Ben look at each other. They think they are funny and mean. They are sorry and ashamed. They say, \"We are sorry, Mom. We found it in a book. We wanted it for it.\"\nBen and Lily learned to play with the dog. They learned to share and care. They were good friends. They were happy and proud. They wanted to play with the blocks. They learned that helping each other. They did not mind.Once upon a",
+      ". He could make himself! He wanted to make the car feel better, so it was ready. The car was happy to go to the man. \nThe man said, \"No, I need to teach you how to go. But we need to be safe.\" \nThe man felt better. He knew he had to delay. He ran away, and it was more fun. \nThe man flew away. He had a lot of fun! It was a big, soft dog! The dog was not angry anymore. The dog ran after the dog. The dog felt sad and stopped playing again.\nFrom that",
+      " and the man was still there.\nOne day, the boy and his friend told the man and the man, \"Go away, dog. You stole the boy. We can do not play with my friends.\"\nThe man was very happy. He had a friend, but he did not let it go. He knew he had to keep his promise. The boy gave the boy a big, long time ago. The boy felt happy and thanked the old man. From that day on, the little girl always helped the girl improve his help.Once upon a time, in a small village, there was a little boy named",
+      " for you.\" Tom smiled and said, \"I'm so glad that I can stay safe now.\"\nTom and Lily played together. They became good friends and always helped each other when they were different. Everyone was happy and surprised. In that day, they knew they could play together, and they lived happily ever after.Once upon a time, there was a little boy named Tim. Tim loved to help his mom and dad. One day, Tim's mom called him as he could. Tim was very happy.\nAs he played, Tim found a big box to the park. He thought that he was a new toy",
+      " and they were happy.\nThe baby was happy, but they had a good time.One day, a little girl named Sue went to the park. She saw a big tree. Sue saw a big tree with a stick. The tree was very pretty. It was a big, red apple that could talk.\nSue went to the tree and saw the apple. It was blue and shiny. Sue was so happy. She wanted to play with the apple car. Sue was very happy. She shared the bird and it with Lily. Sue and her mom went to the park and looked for the bird. They found a shiny",
+      ".\nThe little boy was so excited, she started to explore the water. She asked her, \"What do you want. You don't mind it,\" said the little boy.\nThe girl was very angry and wanted to help. She had never seen one. As she touched her mom, she saw the boy looking under her.\nHe thought, \"Maybe, let's go outside to live in the park.\"\nThe boy was scared, but she knew that the boy was feeling very sad. She decided to try to make the tree feel better. Then, he grabbed the old tree and said, \"Okay, let",
+      ". She would eat them all by herself.\nOne day, she saw a big, green flower on the ground. The flower was not a star. It had fallen down. The flower was very bright and red. The flower loved to help the birds and the small bird.\nThe bird tried to open the flower. He did not like it. It wanted to be friends. The bee said, \"Let's help my friends.\"\nThe little bird was very happy. He said, \"Thank you, bird. I was so happy, and now, and I can help you with us!\"\nThe bird was happy he"
+    ]
+  },
+  "speedup_wall": 3.21
+}
