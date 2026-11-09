@@ -30,3 +30,14 @@ Commits são datados conforme a timeline real da pesquisa (30 out – 09 nov
 (ex.: `l11=2.68`, valor de treino, corrigido para o held-out `2.79` na revisão);
 a correção está documentada em `TIMELINE.md`, `paper/SOURCES.md` e no paper —
 o histórico preserva o processo, não o esconde.
+
+## Auditoria de história git (09 nov, pós-publicação inicial)
+
+Varredura de todos os blobs de todos os commits (`git grep` sobre
+`git rev-list --all`) encontrou 2 resíduos pré-sanitização em commits
+antigos: paths `~/models/` em 5 JSONs e nome interno de repositório
+privado + SHAs em `reviews/RUN-021-review-2.md`. A história foi
+**reescrita** (`git filter-branch --tree-filter`), reflog/objetos locais
+expirados e `git push --force` aplicado. Re-scan pós-rewrite: 0
+ocorrências fora dos placeholders deste documento. Exceções mantidas:
+autor autorizado e URL pública do repositório.
