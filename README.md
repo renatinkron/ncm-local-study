@@ -19,16 +19,20 @@ exclusivamente acadêmico e de pesquisa — ver `LICENSE`)
 
 ## Resumo dos achados
 
-- Speedup hierárquico medido crescendo com escala: **×1,05–1,34** (60M) →
-  **×2,27** (471M) → **×2,82–3,22** (TinyStories), sempre contra baseline AR
-  casado — confirma em hardware comum a hipótese central do paper original.
+- Speedup hierárquico medido crescendo com escala na configuração de 6 níveis:
+  **×1,05–1,34** (60M) → **×2,27** (471M) → **×2,82** (TinyStories), sempre
+  contra baseline AR casado (medições únicas, n=8) — confirma em hardware
+  comum a hipótese central do paper original.
 - Bug de inicialização descoberto por blind review: `apply(_init_weights)`
-  re-randomizava o tokenizador VQ-VAE pré-treinado — quatro rodadas de
-  vereditos invalidadas e re-medidas.
-- Pós-fix: níveis finos convergem a held_l11 = 2,68 (abaixo do modelo de
-  referência oficial); o código global (l0) permanece ~uniforme no orçamento
-  local — o gargalo de coerência é escala/orçamento, não arquitetura.
-- Códigos residuais finos de tokenizadores sub-treinados fatoram erro de
+  rerandomizava o tokenizador VQ-VAE pré-treinado — presente em TODAS as
+  rodadas que carregavam VQ-VAE no gerador (001–004, 014–017); vereditos de
+  qualidade comprometidos e re-medidos no regime limpo (vereditos de
+  velocidade não afetados — estruturais).
+- Pós-fix: níveis finos convergem a held_l11 = 2,79 (no nível do gerador de
+  referência oficial ~2,75); o código global (l0) permanece ~uniforme no
+  orçamento local — o gargalo de coerência é escala/orçamento, não arquitetura.
+- Evidência indicativa (medida no regime contaminado, revalidação pendente):
+  códigos residuais finos de tokenizadores sub-treinados fatoram erro de
   reconstrução, não previsibilidade (CE por fronteira ground-truth).
 
 ## Como citar

@@ -14,8 +14,8 @@ migração parcial para CPU 4750U/32 GB a partir do RUN-006.
 | 04–06 nov | RUN-009–012: codepath likelihood, codes-head, spec-decode | path-score 0/40; codes carregam sinal (ablação); primeiro accept real 0,58@k=64 |
 | 07 nov | RUN-014–016: TinyStories end-to-end + ablações + intra-nível | ×2,82–×3,22 mas word-salad; veredito "residual-VQ fatora erro de reconstrução, não previsibilidade" |
 | 08 nov | RUN-017: tokenizer oficial + gerador 64M, 3.000 steps/14,5 h | held 7,55; finos previsíveis; l0 travado; word-salad |
-| 08 nov | Blind review: descoberto bug de init que re-randomizava o VQ-VAE | todos os vereditos 014–017 confundidos |
-| 08–09 nov | RUN-018–020: retreino limpo (v2) idêntico + bench | held 5,82; l11=2,68 (<oficial); estrutura TinyStories real, coerência global ausente |
+| 08 nov | Blind review: descoberto bug de init que re-randomizava o VQ-VAE — presente desde a 1ª versão do LevelGenerator | vereditos de qualidade 001–004 e 014–017 confundidos (vereditos de velocidade não afetados) |
+| 08–09 nov | RUN-018–020: retreino limpo (v2) idêntico + bench | held 5,82; l11=2,79 (≈ref. oficial ~2,75); estrutura TinyStories real, coerência global ausente |
 | 09 nov | Redação, revisões independentes, publicação | este repositório |
 
 ## Leitura honesta do esforço

@@ -21,9 +21,9 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | Braço A taper (RUN-015) | ×3,22, amostras incoerentes | `bench_ts2.json` |
 | Braço B resume 3000→5500 (RUN-015) | ×3,21, word-salad; platô ~6,1 | `bench_ts_resume.json` |
 | Intra-nível chunked (RUN-016) | ×1,22 (passes 6→10); 8/8 word-salad | `bench_ts_intra.json` |
-| CE por fronteira GT (RUN-016) | l3 6,21→6,22; l4 5,51→5,51; l5 4,70→4,73 (≈uniforme) | `boundary_ce_intra.json` |
-| RUN-017 tokenizer oficial (com bug) | 3.000 steps ×16, 14,5 h CPU; held_loss 7,55; held_l11=6,81; held_l0=8,20 | `bench_official.json` + log de treino |
-| RUN-019/020 v2 limpo | held_loss 5,82; held_l11=2,68 (< oficial 2,75); l0=8,22; 1,306 s/amostra, 12 passes | `bench_v2.json`, `representative_samples.json` |
+| CE por fronteira GT (RUN-016) — *regime contaminado, revalidação pendente* | l3 6,20→6,22; l4 5,51→5,51; l5 4,70→4,73 (≈uniforme) | `boundary_ce_intra.json` |
+| RUN-017 tokenizer oficial (com bug) | 3.000 steps ×16, 14,5 h CPU; held_loss ~7,55; held_l11=6,8095; held_l0=8,20 | `bench_official.json`, `metrics_gen_ncm_official_final.jsonl` |
+| RUN-019/020 v2 limpo | held_loss 5,8158; held_l11=2,7924 (≈ref. oficial ~2,75, protocolo aproximado); held_l0=8,2174; 1,306 s/amostra, 12 passes | `bench_v2.json`, `metrics_gen_ncm_v2_final.jsonl`, `representative_samples.json` |
 | Uniforme para codebook 4.096 | CE ≈ 8,32 (ln 4096) | derivado |
 | Receita oficial de referência | ~50k steps × batch 2048, 12 camadas, ~88M–600M | Kumbong et al. (2026) |
 
@@ -69,10 +69,12 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
     arXiv:2107.03312, 2021.
 18. KOU, S. et al. CLLMs: Consistency Large Language Models.
     arXiv:2403.00835, 2024.
-19. FU, C. et al. Fast and Accurate Causal Parallel Decoding using Jacobi
+19. HU, L. et al. Fast and Accurate Causal Parallel Decoding using Jacobi
     Forcing. arXiv:2512.14681, 2025.
 20. QWEN TEAM. Qwen3 Technical Report. arXiv:2505.09388, 2025.
 21. HUI, B. et al. Qwen2.5-Coder Technical Report. arXiv:2409.12186, 2024.
+21a. YANG, A. et al. Qwen2.5 Technical Report. arXiv:2412.15115, 2024 —
+     base dos embeddings usados na pirâmide RVQ e no warm-start.
 22. GGERGANOV, G. et al. llama.cpp. Software. github.com/ggml-org/llama.cpp.
 23. Mimir-1.6B: mirror comunitário dos pesos LCM (two-tower diffusion) —
     huggingface.co/mimir-lcm (usado na medição RUN-008).
