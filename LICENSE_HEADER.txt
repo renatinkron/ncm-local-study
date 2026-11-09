@@ -1,0 +1,6 @@
+This work (papers, documentation and artifacts in this repository) is licensed
+under the Creative Commons Attribution-NonCommercial 4.0 International License
+(CC BY-NC 4.0) — exclusively for academic and research use.
+
+Author: Renato de Souza e Silva, 2026.
+Full legal text: see LICENSE or https://creativecommons.org/licenses/by-nc/4.0/

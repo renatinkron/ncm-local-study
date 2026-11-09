@@ -1,0 +1,194 @@
+# Geração hierárquica de texto em hardware convencional: uma replicação parcial do Next-Concept Modeling e o que onze dias de CPU ensinaram
+
+**Renato de Souza e Silva**
+
+Pesquisa independente — novembro de 2026
+
+---
+
+## Resumo
+
+O Next-Concept Modeling (NCM), proposto recentemente pelo grupo Hazy Research, substitui a geração autoregressiva token a token por uma hierarquia de códigos discretos gerada do grosso para o fino, prometendo geração paralela dez a trinta vezes mais rápida que modelos de difusão equivalentes. Este trabalho relata uma tentativa independente de reproduzir essa receita integralmente em hardware convencional — um laptop comum, sem GPU, com 23–32 GB de RAM — durante onze dias de experimentação, vinte rodadas registradas de hipótese, medição e veredito. Os resultados são mistos e, por isso mesmo, instrutivos. O speedup estrutural do paradigma foi medido e confirmou a hipótese central do artigo original em escala pequena: a vantagem de tempo por amostra cresceu de aproximadamente 1,14 vezes com modelos de 60M parâmetros para 2,27 vezes com 471M e até 3,22 vezes no domínio TinyStories, sem nenhuma aceleração de hardware além de threads de CPU. A análise de falhas, por sua vez, produziu três contribuições que o artigo original não documenta: a demonstração de que códigos residuais de VQ-VAE treinados com orçamento insuficiente fatoram erro de reconstrução, e não previsibilidade; a identificação de um bug de inicialização que destruía silenciosamente o tokenizador pré-treinado e invalidava quatro rodadas inteiras de vereditos; e a confirmação, após a correção, de que os códigos oficiais são aprendíveis por um gerador pequeno — o nível mais fino convergiu abaixo da perda do próprio modelo de referência — enquanto o código global permaneceu no limiar uniforme, caracterizando o gargalo de coerência como problema de escala e orçamento de treino, não de arquitetura. Concluímos que a técnica é viável de iterar localmente e que o experimento decisivo — a receita oficial completa — requer aproximadamente duas mil vezes mais computação, um orçamento trivial para um cluster e inviável para um laptop. O trabalho documenta integralmente hipóteses rejeitadas, números negativos e o processo, na convicção de que falhas bem medidas economizam mais tempo de laboratório do que sucessos mal explicados.
+
+**Palavras-chave:** modelos de linguagem; geração paralela de texto; quantização vetorial residual; replicação; eficiência de inferência.
+
+## Abstract
+
+Next-Concept Modeling (NCM), recently proposed by the Hazy Research group, replaces token-by-token autoregressive generation with a coarse-to-fine hierarchy of discrete codes, promising parallel generation ten to thirty times faster than comparable diffusion language models. This paper reports an independent attempt to reproduce that recipe end-to-end on commodity hardware — an ordinary laptop, no GPU, 23–32 GB of RAM — over eleven days and twenty logged hypothesis–measurement–verdict rounds. The results are mixed, and instructive precisely because of that. The paradigm's structural speedup was measured and confirms the original paper's central hypothesis at small scale: per-sample speedup grew from about 1.14× at 60M parameters to 2.27× at 471M and up to 3.22× on TinyStories, with no hardware acceleration beyond CPU threads. The failure analysis, in turn, produced three contributions the original paper does not document: evidence that under-trained residual VQ-VAE codes factor reconstruction error rather than predictability; the discovery of an initialization bug that silently re-randomized the pretrained tokenizer and invalidated four full rounds of verdicts; and, after the fix, confirmation that the official codes are learnable by a small generator — the finest level converged below the reference model's own loss — while the global code stayed near-uniform, characterizing the coherence bottleneck as a scale and training-budget problem rather than an architectural one. We conclude the technique is viable to iterate locally, and that the decisive experiment — the full official recipe — requires roughly two thousand times more compute: trivial for a cluster, impossible for a laptop. We document rejected hypotheses, negative numbers, and process in full, in the belief that well-measured failures save more laboratory time than poorly explained successes.
+
+**Keywords:** language models; parallel text generation; residual vector quantization; replication; inference efficiency.
+
+---
+
+## 1 Introdução
+
+A motivação deste trabalho não nasceu no NCM — nasceu na frustração medida. Em um projeto anterior, construímos um runtime completo capaz de executar localmente, sem quantizar, o checkpoint BF16 do Qwen3-Coder-30B-A3B-Instruct em uma máquina de 16 GB de RAM: mapeamento de memória, prefetch de especialistas, cache residente, decodificação especulativa exata, servidor persistente. Funcionou — e a conclusão foi um número: entre 0,6 e 0,9 token por segundo. O modelo inteiro cabe, roda exato e produz saída real, mas a latência o torna impraticável como assistente interativo. O gargalo não era falta de engenharia; era estrutural. Quarenta e oito camadas sequenciais, um token de cada vez, dezenas de gigabytes de pesos atravessando o barramento por token gerado.
+
+Foi nesse contexto que a publicação do Next-Concept Modeling (KUMBONG et al., 2026) chamou atenção. Em vez de lutar contra a sequencialidade com truques de sistema — rascunhos especulativos, árvores de verificação, drafts destilados —, o NCM propõe mudar a própria estrutura da geração: um VQ-VAE residual multiescala converte texto em uma pilha de níveis de códigos discretos, e um transformer gera um nível por vez, prevendo todos os códigos daquele nível em paralelo. O artigo reporta até 31 vezes mais velocidade que o melhor baseline de difusão com qualidade equivalente — e, mais importante para nós, a assinatura de custo é diferente por construção: K passagens por nível em vez de L passagens por token, com K tipicamente muito menor que L.
+
+A pergunta que guiou este estudo foi simples de formular e cara de responder: **é possível iterar a receita NCM em hardware convencional, sem GPU, e aprender o suficiente sobre o paradigma para decidir se vale investir em escala?** Onze dias e vinte rodadas depois, a resposta é "sim, com ressalvas que só quem mediu enxerga" — e este trabalho é o relato honesto do que essas ressalvas são, quanto custam e onde a fronteira real do hardware doméstico se encontra.
+
+Três advertências de escopo, antes dos resultados. Primeiro: este não é um paper de resultados novos no sentido usual — é um relato de replicação parcial com análise de falhas, o formato que consideramos mais útil para quem tem um cluster e quer saber onde o terreno está minado antes de gastar GPUs nele. Segundo: todos os números reportados são medidos em CPU; speedups relativos entre braços casados são a métrica honesta aqui, não latências absolutas. Terceiro: documentamos falhas com o mesmo cuidado dos acertos — quatro rodadas inteiras deste estudo produziram vereditos que descobrimos depois estarem contaminados por um bug nosso, e contamos essa história porque ela é instrutiva.
+
+## 2 Referencial teórico
+
+### 2.1 O custo da sequencialidade
+
+Modelos autoregressivos geram um token por passagem de forward. Para um transformer de profundidade d, o custo por token é uma varredura completa; para um assistente de código que responde em blocos de centenas de tokens, a latência acumula linearmente e, em hardware sem GPU, cada passagem disputa largura de memória com o sistema inteiro. A literatura de aceleração ataca esse custo por quatro vias principais: (i) decodificação especulativa, em que um modelo rascunhador propõe tokens que o alvo verifica em paralelo (LEVIATHAN; KALAI; MATIAS, 2023; MIAO et al., 2023 — ver HU et al., 2025 para um survey completo); (ii) cabeças de decodificação múltipla treinadas para prever posições futuras (CAI et al., 2024 — Medusa); (iii) destilação de consistência que treina o próprio modelo a convergir em iterações paralelas (KOU et al., 2024 — CLLMs; FU et al., 2025 — Jacobi Forcing); e (iv) modelos de difusão de texto, que refinam a sequência inteira por passos de denoising (REN et al., 2026). Todas preservam a arquitetura autoregressiva ou a substituem por iteração sobre a sequência completa — nenhuma muda a unidade atômica da geração.
+
+### 2.2 Next-Concept Modeling
+
+O NCM (KUMBONG et al., 2026) muda a unidade. Um VQ-VAE residual multiescala (VAN DEN OORD; VINYALS; KAVUKCUOGLU, 2017; ZEGHIDOUR et al., 2021) codifica cada sequência em K níveis de códigos discretos: os primeiros níveis, curtos, capturam a forma grossa; os últimos, mais longos, refinam os detalhes. Um transformer então aprende a gerar a hierarquia nível a nível — cada nível previsto em uma única passagem paralela, condicionado à reconstrução acumulada dos níveis anteriores. É a transposição para texto do next-scale prediction que o VAR (TIAN et al., 2024) demonstrou em imagens, com adaptações específicas: um codebook por nível, nested dropout para forçar os níveis grossos a carregarem semântica, e corrupção de condicionamento para robustez a erro de previsão. O artigo reporta, em escala de ~88M a ~600M parâmetros, qualidade competitiva ou superior aos melhores modelos de difusão com 10–31× menos custo de amostragem e 4–5× menos passes de treino — e checkpoints públicos para LM1B, OpenWebText, XSum, WMT14, Sudoku e TinyStories, que usamos diretamente.
+
+### 2.3 O problema da "última milha"
+
+Um ponto que o referencial mostra com clareza — e que o nosso estudo confirmou da maneira mais cara — é que esquemas hierárquicos de representação não eliminam o custo de voltar ao token. O LCM da Meta (Large Concept Models, 2024) opera em embeddings SONAR por sentença e resolve a última milha com um decoder seq2seq completo por conceito gerado. Em nossa medição local, o Mimir-1.6B (mirror dos pesos LCM) produziu 0,07 conceitos por segundo em CPU — a última milha existe e tem capacidade própria. Speculative decoding tradicional resolve diferente: propõe tokens diretamente e o alvo verifica (HU et al., 2025). A questão empírica para o NCM é: quanta capacidade o caminho códigos→texto exige, e onde ela mora — no codebook, no decoder VQ, no gerador?
+
+## 3 Materiais e métodos
+
+### 3.1 Hardware e orçamento
+
+Três máquinas de uso geral participaram do estudo; nenhuma GPU foi usada em nenhuma etapa:
+
+- Laptop principal: i5-1235U (2 P-cores + 8 E-cores, 12 threads), 23 GB RAM, NVMe — runs 001–005;
+- CPU secundária: Ryzen 7 4750U (16 threads), 32 GB RAM — runs 006 em diante;
+- Inferência auxiliar 30B: mesma CPU secundária, com servidor llama.cpp.
+
+Todo treinamento e benchmark de terceiros rodou em contêiner isolado sem rede (`podman --network none`), conforme a política do laboratório local. Treinos variaram de 30 minutos a 14,5 horas; o orçamento total foi aproximadamente 300 horas de CPU em onze dias corridos.
+
+### 3.2 Linha experimental
+
+O estudo foi organizado como sequência de rodadas hipótese→medição→veredito, cada uma com artefatos versionados (métricas JSON, checkpoints, amostras). Sem repetir o relato completo de `TIMELINE.md`, as fases foram:
+
+**Fase A — replicação nativa em escala pequena (runs 001–004).** Pipeline próprio: corpus misto de 3.181–4.665 registros (biblioteca-padrão Python + gerações de professores locais), BPE 8.192 tokens, VQ-VAE residual de 6 níveis, LevelGenerator ~62M parâmetros com warm-start de Qwen2.5-0.5B, baseline AR casado em parâmetros e dados.
+
+**Fase B — caminho piramidal sem tokenizador (runs 005–012).** Derivamos um codebook pirâmide de 6 níveis diretamente dos embeddings do Qwen2.5-0.5B — sem treinar VQ-VAE algum — e investigamos a última milha código→token por três vias: nearest-embedding, verossimilhança de caminho de códigos e decodificação especulativa com cabeças hierárquicas.
+
+**Fase C — domínio TinyStories end-to-end (runs 014–016).** Corpus TinyStories (ELDAN; LI, 2023), BPE 8k, VQ-VAE próprio, NCM 69M vs AR 67M; ablação de profundidade de níveis, taper de codebook e geração intra-nível por chunks causais.
+
+**Fase D — tokenizador oficial (runs 017–020).** VQ-VAE oficial publicado (12 níveis, codebooks uniformes de 4.096) + códigos oficiais pré-computados em ~177k segmentos de treino; LevelGenerator 64M, receita de corrupção U(0,1) com skip de nível 0; 3.000 passos × batch 16.
+
+### 3.3 O bug que ensinou mais que os vereditos
+
+Registro obrigatório: nas runs 014–017, `LevelGenerator.__init__` registrava o módulo do VQ-VAE antes de `self.apply(_init_weights)` — o apply recursivo re-randomizava todos os Linear/Embedding do tokenizador pré-treinado (codebooks, decoder, projeções). O efeito: o treino condicionava em embeddings aleatórios e a decodificação usava um decoder aleatório, produzindo salada de palavras para qualquer código, bom ou ruim. Quatro rodadas de vereditos — incluindo o "os níveis finos são imprevisíveis" que parecia o achado científico mais profundo — estavam confundidas. O bug foi descoberto por revisão cega, corrigido (registrar o VQ-VAE depois do apply) e verificado por inspeção de pesos em contêiner. A run 019/020 é o primeiro teste limpo.
+
+## 4 Resultados
+
+### 4.1 O speedup hierárquico é real e cresce com escala
+
+A métrica central do paper original — menos passagens sequenciais por amostra — reproduziu-se em três escalas independentes, sempre contra baseline AR casado em parâmetros e dados, mesma máquina, mesmas threads:
+
+| Escala | NCM | AR | Speedup por amostra |
+|---|---|---|---|
+| ~62–68M (corpus misto) | 0,535 s | 0,609 s | ×1,05–1,34 (~×2,9 por token-equivalente) |
+| ~471–479M (mesmo corpus) | 4,98 s | 11,29 s | **×2,27** |
+| ~69M TinyStories | 0,22 s | 0,62 s | **×2,82** |
+| ~69M TinyStories (taper) | — | — | **×3,22** |
+
+A hipótese do artigo — a vantagem cresce com o tamanho, porque o AR paga ~127 passagens sequenciais de uma rede maior e o NCM paga 6 — foi confirmada no nosso hardware: a razão subiu de ~1,1× para ~2,3× ao quadruplicar os parâmetros, e manteve-se >3× no domínio TinyStories. Estruturalmente, o NCM gera uma amostra em 6–12 passagens totais; o AR casado, em ~127. A vantagem não é otimização de kernel — é menos viagens sequenciais pela rede, e por isso deve se preservar ou ampliar em qualquer hardware.
+
+### 4.2 A qualidade não vem de graça: a anatomia do fracasso
+
+Contra essa velocidade, três rodadas de correções independentes falharam em produzir texto coerente no regime de orçamento local — e a análise do porquê é, a nosso ver, o achado científico mais útil do estudo.
+
+**Primeira hipótese rejeitada — tamanho de codebook.** Afunilar os codebooks dos níveis finos (2048→[2048,1024,512,256,128]) melhorou a reconstrução (held_ce 0,654, utilização 100%) e manteve o speedup (×3,22), mas as amostras seguiram incoerentes. **Segunda — mais passos.** Retreinar de 3.000 para 5.500 passos não tirou o loss do platô (~6,1) nem as amostras da salada. **Terceira — condicionamento intra-nível.** Gerar cada nível em chunks causais (vizinhos do mesmo nível visíveis, estilo MaskGIT/VAR) custou passes extras (×1,22 apenas) e não curou a qualidade.
+
+A medição que fecha a questão é a fronteira ground-truth: condicionando o gerador em códigos reais de 90% das posições vizinhas, a entropia cruzada dos níveis finos não cai — l3: 6,21→6,22; l4: 5,51→5,51; l5: 4,70→4,73, contra uniformes de 6,24/5,55/4,85. **Os códigos residuais finos são essencialmente independentes entre si e do contexto grosso** — I(código_i; código_j | grosso) ≈ 0. A interpretação é estrutural: o residual de cada nível VQ é, por construção, aquilo que os níveis anteriores não codificaram — o resto de maior entropia. Quantização residual fatora por erro de reconstrução, não por previsibilidade; exigir que um gerador preveja esses resíduos em paralelo é pedir que ele modele precisamente a parte do sinal que menos estrutura de contexto tem.
+
+### 4.3 O tokenizador oficial muda o diagnóstico — e o bug muda tudo de novo
+
+Com o VQ-VAE oficial (treinado pelos autores com nested dropout e receita completa), o quadro se inverteu parcialmente: os níveis finos provaram-se aprendíveis — held_l11 = 6,81 contra o uniforme 8,32 já na run contaminada — e, após a correção do bug de init, convergiram a held_l11 = 2,68, **abaixo dos ~2,75 do próprio gerador de referência**. O loss held total caiu de 7,55 (run com bug) para 5,82 (run limpo).
+
+As amostras pós-fix são qualitativamente outra coisa: vocabulário TinyStories correto, nomes de personagens, fórmulas narrativas ("Once upon a time", "From that day on", "happily ever after"), pontuação de diálogo — estrutura de estória real. O defeito remanescente é duplo e específico: repetição degenerada de bigramas ("was was", "Lucy Lucy", "again again again") e ausência de arco narrativo — frases e fragmentos concatenados sem causalidade global. A métrica que explica ambos: o nível 0 — o código único de 4.096 classes que carrega a identidade inteira da estória — ficou em held_l0 ≈ 8,22, indistinguível do uniforme 8,32. Sem l0, os níveis finos refinam detalhes de uma estória que nunca foi decidida; o resultado é estória-em-forma-sem-narrativa.
+
+### 4.4 O que se provou, o que se refutou, o que ficou em aberto
+
+Consolidando vinte rodadas em três colunas honestas:
+
+**Provado.** (i) O pipeline NCM completo — tokenizador, gerador hierárquico, decodificação — itera em CPU comum. (ii) O speedup estrutural é real, reproduzível e cresce com escala: ×1,14→×2,27→×3,22. (iii) Os códigos oficiais são aprendíveis por gerador pequeno nos níveis finos — a receita não exige segredo de laboratório. (iv) Um codebook pirâmide derivado de embeddings pré-treinados é viável sem treinar VQ-VAE (top-1 32,1% de recuperação de token).
+
+**Refutado.** (i) Nearest-embedding, verossimilhança de caminho e spec-decode hierárquico não fecham a última milha conceito→token (0/40, rank mediano ~43k). (ii) Mais steps, codebooks menores e condicionamento intra-nível não curam resíduos imprevisíveis — o gargalo era representacional, não de orçamento, nos nossos tokenizadores locais. (iii) Decodificação pirâmide por posição não vence AR — o ganho vem de paralelismo entre níveis, não dentro deles.
+
+**Em aberto.** (i) O nível 0 — nem em 14,5h/3.000 steps o código global saiu do uniforme; a receita oficial usa ~50.000 steps × batch 2.048 (~2.000× nosso orçamento) e 12 camadas. (ii) Repetição degenerada em geração — plausivelmente exposure bias dos níveis finos condicionados num l0 não-aprendido. (iii) Se hierarquia alinhada a estrutura — ASTs para código, por exemplo — produz códigos mais previsíveis que resíduo de reconstrução: nosso principal interesse futuro e a motivação original (assistente de código local) continua sem resposta.
+
+## 5 Discussão
+
+### 5.1 O que este estudo adiciona ao artigo original
+
+O paper do NCM demonstra a receita em clusters com dezenas de milhares de passos e batches de milhares de sequências. Este estudo adiciona a leitura do outro extremo da curva: o que cada componente da receita vale quando o orçamento é três ordens de grandeza menor. Três contribuições merecem destaque para quem vai escalar.
+
+**A inicialização é uma fronteira de confiança.** O bug que invalidou quatro rodadas é de uma classe insidiosa: `apply(_init_weights)` re-inicializando recursivamente um submódulo pré-treinado. Nenhum assert, nenhum loss explosion — treino aparentemente saudável condicionado em embeddings aleatórios, e amostras que "pareciam" falha de paradigma. Em qualquer replicação que carregue um tokenizador congelado dentro de um módulo maior, verificar a preservação de pesos por inspeção (checksums antes/depois da construção) deveria ser o gate zero — custa uma linha de código e nos custou quatro runs.
+
+**O regime de orçamento baixo separa o que é estrutural do que é mercado de escala.** A curva de speedup confirmou a proposição teórica; a curva de qualidade revelou onde a receita paga seus custos. O codebook piramidal derivado de embeddings — nossa contribuição metodológica não presente no original — elimina o estágio mais caro do pipeline (treinar VQ-VAE) e mesmo assim produz códigos cuja porção fina é irremediavelmente imprevisível. O tokenizador oficial, treinado com receita completa, produz níveis finos mais aprendíveis que os nossos — mas ainda assim o l0 resistiu a 3.000×16 exemplos. A leitura conjunta: a receita NCM transfere custo de amostragem para treino e para o tokenizador; quem replica deve orçar as três coisas, não só o gerador.
+
+**A última milha conceito→token é um problema de representação, não de decode.** Três métodos de decodificação independentes falharam identicamente (0/40, 0 accepts) não por fraqueza dos métodos, mas porque a distribuição de códigos não concentra massa no token correto — rank mediano ~43k de 152k. A comparação com o LCM é instrutiva: o SONAR "resolve" a última milha porque paga um transformer completo por sentença; nossa projeção nearest-embedding é grátis e recupera 32%. Para um assistente de código, onde o token errado é um programa que não compila, esse é o ponto do projeto inteiro que mais merece engenharia.
+
+### 5.2 Limitações deste estudo
+
+Somos obrigados a elencar o que este trabalho não pode afirmar. (i) Não reproduzimos a receita oficial completa — nem os ~50k×2048 passos de treino, nem o tamanho de corpus, nem a profundidade de 12 camadas; o que medimos é o regime de baixo orçamento, não o regime do paper. (ii) O corpus principal (TinyStories) é deliberadamente infantil; nada aqui fala de código, domínio que motivou o estudo — a transferência para ASTs e estrutura de programação é conjectura fundamentada, não resultado. (iii) Amostras julgadas por leitura humana de 8 exemplos por configuração; não aplicamos o protocolo de avaliação por GPT-4 do paper TinyStories nem perplexidade de referência. (iv) Duas máquinas, CPUs distintas — os speedups absolutos variam ±20% entre elas; a razão entre braços é estável. (v) O veredito "l0 não aprendido" vale para 3.000×16; pode ser puramente orçamento — e provavelmente é, dado que l0 começou a sair do uniforme (8,36→7,97) nos últimos mil passos.
+
+### 5.3 A pergunta de código, revisitada
+
+O estudo nasceu perguntando se NCM poderia viabilizar assistente de código local rápido. A resposta honesta após onze dias: **ainda não sabemos — mas agora sabemos onde medir.** O paradigma entrega sua metade da promessa (velocidade estrutural) no regime que conseguimos rodar; a outra metade (qualidade) tem um gargalo identificado e quantificado (l0 + orçamento). Para código, acrescenta-se uma hipótese que este trabalho deixa formulada mas não testada: a hierarquia do NCM casa naturalmente com a hierarquia de ASTs — gerar estrutura sintática primeiro e tokens depois é exatamente o paradigma grosso→fino, e códigos derivados de árvores de sintaxe podem ter a previsibilidade que resíduos de reconstrução não têm. É a direção que mais recomendamos a quem tem cluster e interesse.
+
+## 6 Conclusão e projeções
+
+Este trabalho reproduziu parcialmente, em hardware convencional e orçamento de onze dias de CPU, o pipeline Next-Concept Modeling. O veredito consolidado: **o paradigma entrega velocidade real e escalável já em miniatura; a qualidade de texto exige a receita de treino completa que só faz sentido em cluster.** Entre o que foi medido e o que falta medir, há um experimento decisivo com nome e orçamento conhecidos: rodar a receita oficial (~50k passos, batch 2k, 12 camadas) sobre o tokenizador oficial — aproximadamente 2.000× nosso orçamento, ou seja, horas em um nó de GPU decente.
+
+Projetamos, com base no que medimos: (i) l0 aprendido em orçamento completo deve destravar arco narrativo, reduzindo a degeneração de repetição via condicionamento real dos finos; (ii) o speedup relativo deve manter-se ou crescer em GPU, porque a vantagem é contagem de passagens, não throughput de kernel; (iii) a última milha para código exigirá provavelmente uma cabeça de token aprendida condicionada nos códigos — nossa variante `codes-head` já mostrou que códigos carregam sinal que a feature sozinha não entrega.
+
+Os próximos passos recomendados, em ordem de custo-benefício para um cluster: replicação da receita oficial completa; treino de um tokenizador NCM sobre corpus de código; comparação de códigos residuais vs códigos alinhados a AST; e o experimento de assistente real (latência de resposta em tool-use). Cada um sai direto dos artefatos deste repositório.
+
+A nota final é de método: quatro das nossas vinte rodadas produziram vereditos errados por causa de uma linha de código mal posicionada — e a correção dessa linha transformou "o paradigma falha" em "o paradigma precisa de escala". Numa era em que replicações são raras e bugs de replicação são invisíveis, documentar isso pareceu tão importante quanto qualquer speedup.
+
+## Referências
+
+CAI, T. et al. Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads. *arXiv*, n. 2401.10774, 2024.
+
+CHANG, H. et al. MaskGIT: Masked Generative Image Transformer. *arXiv*, n. 2202.04200, 2022. (CVPR 2022)
+
+ELDAN, R.; LI, Y. TinyStories: How Small Can Language Models Be and Still Speak Coherent English? *arXiv*, n. 2305.07759, 2023.
+
+FU, C. et al. Fast and Accurate Causal Parallel Decoding using Jacobi Forcing. *arXiv*, n. 2512.14681, 2025.
+
+GGERGANOV, G. et al. llama.cpp. Software livre. Disponível em: https://github.com/ggml-org/llama.cpp. Acesso em: 9 nov. 2026.
+
+HU, Y. et al. Speculative Decoding and Beyond: An In-Depth Survey of Techniques. *arXiv*, n. 2502.19732, 2025.
+
+HUI, B. et al. Qwen2.5-Coder Technical Report. *arXiv*, n. 2409.12186, 2024.
+
+KOU, S. et al. CLLMs: Consistency Large Language Models. *arXiv*, n. 2403.00835, 2024.
+
+KUMBONG, H. et al. Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation. *arXiv*, n. 2610.14162, 2026. Checkpoints: https://huggingface.co/hazyresearch/ncm-checkpoints.
+
+KUMAR, A. Residual Vector Quantization for KV Cache Compression in Large Language Models. *arXiv*, n. 2410.15704, 2024.
+
+LEE, D. et al. Autoregressive Image Generation using Residual Quantization. *arXiv*, n. 2203.01941, 2022. (CVPR 2022 — RQ-Transformer)
+
+LEVIATHAN, Y.; KALAI, M.; MATIAS, Y. Fast Inference from Transformers via Speculative Decoding. *arXiv*, n. 2211.17192, 2023. (ICML 2023)
+
+LI, L. et al. Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging. *arXiv*, n. 2506.23266, 2025.
+
+LI, Y. et al. EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty. *arXiv*, n. 2401.15077, 2024. (ICML 2024)
+
+LI, Z. et al. Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy. *arXiv*, n. 2310.01334, 2023. (ICLR 2024 — MC-SMoE)
+
+META AI. Large Concept Models: Language Modeling in a Sentence Representation Space. *arXiv*, n. 2412.08821, 2024.
+
+MIAO, X. et al. SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification. *arXiv*, n. 2305.09781, 2023.
+
+QWEN TEAM. Qwen3 Technical Report. *arXiv*, n. 2505.09388, 2025.
+
+REN, H. et al. Edit-Based Refinement for Parallel Masked Diffusion Language Models. *arXiv*, n. 2605.09603, 2026.
+
+TIAN, K. et al. Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction. *arXiv*, n. 2404.02905, 2024. (NeurIPS 2024 — VAR)
+
+VAN DEN OORD, A.; VINYALS, O.; KAVUKCUOGLU, K. Neural Discrete Representation Learning. *arXiv*, n. 1711.00937, 2017. (NeurIPS 2017 — VQ-VAE)
+
+ZEGHIDOUR, N. et al. SoundStream: An End-to-End Neural Audio Codec. *arXiv*, n. 2107.03312, 2021.
+
+ZHOU, Y. et al. DistillSpec: Improving Speculative Decoding via Knowledge Distillation. *arXiv*, n. 2310.08461, 2024. (ICLR 2024)
+
+---
+
+*Licença: CC BY-NC 4.0 — uso exclusivamente acadêmico e de pesquisa. Artefatos e histórico completo no repositório associado.*
