@@ -1,0 +1,30 @@
+{
+ "v2_clean_run": {
+  "config": {
+   "n": 8,
+   "temp": 0.8,
+   "topk": 40,
+   "seed": 0,
+   "gen_s": 10.45,
+   "passes": 12,
+   "s_per_sample": 1.306
+  },
+  "sample_0": ".Once upon a time, there was a big was so angry angry. From From that that that day on,,,, Lucy he remembered remembered became the best of the friends friends\nOnce upon a time, there was a little boy named Tim.. He was three years old old and he he. From that day on, and and they all all lived happily ever after.One day, the ball back back to the The bird was sad and sad and all best friends became good good friends and played played together. upon a time, there was was a little little girl named Amy. She was was",
+  "sample_2": ". From that day on, Lucy and Lucy became best friends were happy. They They had a fun day at park at\nOnce upon a time, there there was a little little girl named Lucy. She was was three three old old old day, she she would she would would with with her her sun. One of end moral end of the the zoo.\n\nAt the the, and said said, \"Thank you!\"!\" Her mom mom mom smiled and said, \"OfOf course course! you you can can you help help you you move.\" Lucy Tom and Tom Tom they played together.\nThe little girl and the"
+ },
+ "bugged_run": {
+  "config": {
+   "n": 8,
+   "temp": 0.8,
+   "topk": 40,
+   "seed": 0,
+   "gen_s": 10.34,
+   "passes": 12,
+   "s_per_sample": 1.293
+  },
+  "sample_0": " pays remind kindness kindness Withoutvet doorbell doorbell moment vanishPenny vanish spid missTime Well frosting with twinkled dri kindness happenedfortSometoose Byus pin lick TEventually grey� seconds introdream pretendsSorrySorryub landed Mat r mama Sharingentvet reluctantly tripbye HaveSorry dem warnedaky bought newsp By heard Well dump imp ghost hel explor twinkled Get scatterirts proper sheep laundry tooth boatsZaraty accom designs snail Bye seconds hurricane instead Mama walls tells tomato presents silly brushak treesYes whaleission jogging changesOkay planet creatTime Bywk fault clapped pray pearvin cream lumber sistersange drove dreamtonsSarmump napping tells pajamasLucy meowedirrding downsequ opinions"
+ },
+ "ts_word_salad": {
+  "sample_0": "{'config': {'n': 8, 'temperature': 0.8, 'top_k': 40, 'ctx': 128}, 'hardware': {'cpu_count': 16}, 'ncm': {'wall_s': 1.753, 'per_sample_s': 0.219, 'codes_per_sample': 249, 'level_passes': 6, 'tokens_equiv': [132, 127, 137, 145, 128, 129, 140, 134], 'peak_rss_mb': 1098.7, 'params': 68834656, 'samples': [' fear bits So motor infant infant family Wendyctorj vegetables So So Willyj So vegetables guard r"
+ }
+}
