@@ -1,0 +1,41 @@
+{
+  "timesteps": 40,
+  "max_gen": 6,
+  "runs": [
+    {
+      "prompt": "The cat sits on the mat.",
+      "n_concepts": 7,
+      "embed_s": 0.2744104862213135,
+      "gen_s": 83.57397675514221,
+      "concepts_per_s": 0.07179268275792353,
+      "max_rss_gb": 16.70318,
+      "sentences": [
+        "The cat sits on the mat.",
+        "She is ...",
+        "Written on this table:",
+        "It is not possible to",
+        "which will descend on the White White.",
+        "From a platform seen from the northern coast,",
+        "a dam is shrouded by heavy lightning,"
+      ]
+    },
+    {
+      "prompt": "Write a Python function that computes fibonacci numbers.",
+      "n_concepts": 7,
+      "embed_s": 0.2883481979370117,
+      "gen_s": 84.35947847366333,
+      "concepts_per_s": 0.07112419503486113,
+      "max_rss_gb": 16.70716,
+      "sentences": [
+        "Write a Python function that calculates Fibonacci numbers.",
+        "We need to find a new python command to search for the command in a string.",
+        "*note:this is not indicated",
+        "Unsubscribe to join a content plan at Injoyness .",
+        "Create a new content account for all access to AllContents.",
+        "FIRE HERE this new format.",
+        "Check."
+      ]
+    }
+  ],
+  "max_rss_gb": 16.70716
+}

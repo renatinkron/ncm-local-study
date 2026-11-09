@@ -8,22 +8,24 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 
 | Afirmação | Valor | Fonte |
 |---|---|---|
-| Speedup NCM 60M vs AR 60M (etapa 2.000) | 0,535 s/amostra vs 0,609 s/amostra (×1,14; ~×2,9 por token-equivalente) | `bench.json` |
+| Speedup NCM ~69M vs AR ~67M (etapa 2.000) | 0,535 s/amostra vs 0,609 s/amostra (×1,14 nessa run; faixa ×1,05–1,34 entre re-runs internos; ~×3,1 por token-equivalente) | `bench.json` |
 | Speedup NCM 471M vs AR 471M | 4,98 s vs 11,29 s/amostra (×2,27); params 478,6M/477,6M; RSS 5,7 GB | `bench_471m.json`, `eval_471m.json` |
 | Pirâmide RVQ derivada de embeddings Qwen2.5-0.5B | top-1 token recovery 32,1%; 6 níveis sem colapso | `pyramid_cb_qwen05_report.json` |
 | Decode pirâmide por posição vs AR | ~34% mais lento (resultado negativo) | `pyramid_bench.json` |
 | Draft especulativo hierárquico (RUN-007) | accept=0 em todas as profundidades; text_equal_ar=True | `spec_pyramid_path_bench.json` |
-| Verossimilhança de caminho de códigos (RUN-009) | top-1 vs argmax AR 0/40; rank mediano ~43.505/151.936 | `codepath_eval.json` |
+| Verossimilhança de caminho de códigos (RUN-009) | top-1 vs argmax AR 0/40; rank mediano ~43.505/151.936 (computado dos ranks `ar`/`path` por posição) | `codepath_eval.json` (campo `per_pos`) |
 | Codes-head vs feat-head (RUN-010/011) | feat nunca < uniforme (11,9); codes top-1 truth 3,1%→2,34% | `token_head_eval2.json` |
 | Spec-decode codes→AR (RUN-012) | a1=3,125%; mean_ar_rank 4.659; accept 0,58@k=64; equal_ar=True | `token_head_ar_eval.json`, `spec_topk64_ar_bench.json` |
-| TinyStories end-to-end (RUN-014) | NCM ×2,82 (0,22 vs 0,62 s/amostra); VQ-VAE held_ce 0,152; word-salad | `bench_ts.json`, `eval_ts.json` |
-| Ablação por profundidade (RUN-015) | k0=3,5% → k5=36,4% → k6=96,9% recuperação de token | `level_ablation.json` |
-| Braço A taper (RUN-015) | ×3,22, amostras incoerentes | `bench_ts2.json` |
-| Braço B resume 3000→5500 (RUN-015) | ×3,21, word-salad; platô ~6,1 | `bench_ts_resume.json` |
+| TinyStories end-to-end (RUN-014) | NCM ×2,82 (0,22 vs 0,62 s/amostra); word-salad (dwr 0,652 vs AR 0,384); VQ-VAE held_ce 0,152 (log de treino interno, não versionado) | `bench_ts.json`, `eval_ts.json` |
+| Ablação por profundidade (RUN-015) | k0=3,52% → k5=36,28% → k6=96,9% recuperação de token | `level_ablation.json` |
+| Braço A taper (RUN-015) | ×3,22, amostras incoerentes; held_ce 0,654/utilização 100% (log interno) | `bench_ts2.json` |
+| Braço B resume 3000→5500 (RUN-015) | ×3,21, word-salad; platô de loss ~6,1 (log interno) | `bench_ts_resume.json` |
 | Intra-nível chunked (RUN-016) | ×1,22 (passes 6→10); 8/8 word-salad | `bench_ts_intra.json` |
 | CE por fronteira GT (RUN-016) — *regime contaminado, revalidação pendente* | l3 6,20→6,22; l4 5,51→5,51; l5 4,70→4,73 (≈uniforme) | `boundary_ce_intra.json` |
 | RUN-017 tokenizer oficial (com bug) | 3.000 steps ×16, 14,5 h CPU; held_loss ~7,55; held_l11=6,8095; held_l0=8,20 | `bench_official.json`, `metrics_gen_ncm_official_final.jsonl` |
 | RUN-019/020 v2 limpo | held_loss 5,8158; held_l11=2,7924 (≈ref. oficial ~2,75, protocolo aproximado); held_l0=8,2174; 1,306 s/amostra, 12 passes | `bench_v2.json`, `metrics_gen_ncm_v2_final.jsonl`, `representative_samples.json` |
+| LCM real Mimir-1.6B em CPU (RUN-008) | 0,0718 conceitos/s; RSS 16,7 GB; saída degenerada | `lcm_probe.json` |
+| L0 trajetória (run v2) | janelas de treino 8,36→7,97 (log); held-out final 8,2174 | `metrics_gen_ncm_v2_final.jsonl` |
 | Uniforme para codebook 4.096 | CE ≈ 8,32 (ln 4096) | derivado |
 | Receita oficial de referência | ~50k steps × batch 2048, 12 camadas, ~88M–600M | Kumbong et al. (2026) |
 
@@ -45,7 +47,7 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
    Language Models. arXiv:2410.15704, 2024.
 7. LI, L. et al. Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via
    Subspace Expert Merging. arXiv:2506.23266, 2025.
-8. LI, Z. et al. Merge, Then Compress: Demystify Efficient SMoE with Hints
+8. LI, P. et al. Merge, Then Compress: Demystify Efficient SMoE with Hints
    from Its Routing Policy (MC-SMoE). arXiv:2310.01334, 2023.
 9. REN, H. et al. Edit-Based Refinement for Parallel Masked Diffusion
    Language Models. arXiv:2605.09603, 2026.
