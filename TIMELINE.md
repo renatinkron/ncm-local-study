@@ -17,9 +17,11 @@ migração parcial para CPU 4750U/32 GB a partir do RUN-006.
 | 08 nov | Blind review: descoberto bug de init que re-randomizava o VQ-VAE — presente desde a 1ª versão do LevelGenerator | vereditos de qualidade 001–004 e 014–017 confundidos (vereditos de velocidade não afetados) |
 | 08–09 nov | RUN-018–020: retreino limpo (v2) idêntico + bench | held 5,82; l11=2,79 (≈ref. oficial ~2,75); estrutura TinyStories real, coerência global ausente |
 | 09 nov | Redação, revisões independentes, publicação | este repositório |
+| 09 nov | RUN-023: releitura do `eval_shard.py` oficial + sweep de inferência | `predict_level0: false` + amostragem plena (T=1,0, sem top-k) descobertos; l0 unigrama implementado; fonte do l0 ~irrelevante p/ gagueira; receita oficial cortou dup_rate 21,7%→11,0% |
+| 09–10 nov | RUN-023: exposure bias medido + réplica independente WPS encontrada | CE self-gen 5,65 vs GT 4,41 (+1,24 nats, concentrado nos finos); WPS/MLX (960k janelas): mesmo stutter, corrupção↔geração invertida; braço v3 (corrupção linear 0,75→0,25, warm-start, 10k steps) lançado |
 
 ## Leitura honesta do esforço
 
 ~11 dias corridos, dezenas de treinos CPU (runs de 30 min a 14,5 h),
-20 rodadas registradas de hipótese→medição→veredito. O gargalo foi sempre
+20+ rodadas registradas de hipótese→medição→veredito. O gargalo foi sempre
 orçamento de computação — razão pela qual a continuação natural é em cluster.

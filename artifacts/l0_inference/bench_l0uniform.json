@@ -1,0 +1,52 @@
+{
+  "n": 8,
+  "temp": 0.8,
+  "topk": 40,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "uniform",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 60.5,
+  "passes": 12,
+  "s_per_sample": 7.562,
+  "dup_rate": 0.1875,
+  "distinct_ratio": 0.6242,
+  "l0_codes": [
+    [
+      2882
+    ],
+    [
+      383
+    ],
+    [
+      751
+    ],
+    [
+      3262
+    ],
+    [
+      1625
+    ],
+    [
+      836
+    ],
+    [
+      449
+    ],
+    [
+      2154
+    ]
+  ],
+  "texts": [
+    " started to He started to to it down and tired tired but, but she knew knew that they noticed that beautiful was gone! She Tom was so so excited that Lucy was so and her her mom and hands hands their their back.",
+    "Once upon a time, there was a little boy named Tim. Tim loved loved to play with his his friends. One day day, a little girl named Sue",
+    " help She liked to to help her the.\nOneOne day, and Mia went Lucy went to to the park the the with park.. She said,, \"I'm glad you love love love you!\" I love love. I love will help you you you.\" Lucy Lucy for for Lily helping for for her. From that that day on,, Lucy day,, Lucy and Tim, in in the park park park. the sun and was had a fun a a time together.",
+    " Lily and and Lily were were very surprised and did not know that things are that that that he she had that Sue Sue saw her on on the floor and the and she went back fast danced with with her mom. She showed her her her and and hugged back and she.. Lily was was so happy. Mia was was so happy that so so, and Lucy, and and they played played together in the park in in the park.\n",
+    " her new new new new friend friends they were tired and tired.",
+    " a little boy named Tim went to the park store with with his mom mom.. They saw lived in a small town town town, there was a small small and Tom and Tom and and and Mia and Sue Sue learned that being very very very small.. You are nice nice are not not not not be be careful named named Sue had Sue their had a. Sue.",
+    ". Tom was a a man a little boy who who who loved the rich man.\nThe moral of the story is it that that it it was better better  The family family was so happy, but she glad glad glad. I am you for you for for for for for I I will will help you show you.\".\" And And they lived happily happily happily ever ever ever after.",
+    ", Mia Mia Sue Sue and, learned They They all all in in the field. The She She was the little girl in a little girl. They were found safe safe safe and safe house., a, a a time a time, there was a little girl girl girl who who who loved loved to loved who girl loved to the loved to play his kids.\nOne day, Lily and Lily it good in the pool.. a. One day, she saw the big. a box. children and a they could be fun fun. The The girl said to to make run run.\n in in with the town town. The"
+  ]
+}

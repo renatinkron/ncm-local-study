@@ -110,7 +110,26 @@ As amostras pós-correção são qualitativamente outra coisa: vocabulário Tiny
 
 Custo de geração nesta configuração: 1,306 s/amostra em 12 passagens de nível — **mais lento que o AR casado** (0,617 s/amostra na mesma máquina), porque cada passagem de nível fino processa sequências de até 641 posições. O speedup de ~×3 da §4.1 refere-se à nossa configuração de 6 níveis sobre T = 128; na configuração oficial de 12 níveis, o custo por passagem cresce o suficiente para inverter o sinal em CPU. A vantagem de latência reportada pelo artigo original foi medida em outra escala/hardware e não se transfere automaticamente a esta configuração.
 
-### 4.4 O que se provou, o que se refutou, o que ficou em aberto
+### 4.4 A receita de inferência pesa mais que o nível 0
+
+Uma releitura do código oficial de avaliação (`eval_shard.py`) expôs duas divergências de protocolo — não de arquitetura — entre nossa amostragem e a dos autores: (i) `predict_level0: false` — o l0 não é previsto pelo gerador, é sorteado de uma distribuição unigrama empírica salva no checkpoint; (ii) amostragem multinomial plena (temperatura 1,0, sem top-k nem top-p), enquanto usávamos temperatura 0,8 com top-40. Implementamos as três variantes de l0 (predito, uniforme, unigrama) e portamos as penalidades de decodificação do upstream (`frequency_penalty`, `adjacency_penalty`), com compatibilidade bit a bit no modo original. Sobre 8 amostras por configuração, medimos a taxa de palavras duplicadas adjacentes (dup_rate) e a razão de palavras distintas:
+
+| Configuração de amostragem | dup_rate | distinct |
+|---|---|---|
+| l0 predito, T = 0,8, top-40 (protocolo v2) | 21,7% | 0,63 |
+| l0 uniforme, T = 0,8, top-40 | 18,8% | 0,62 |
+| l0 unigrama, T = 0,8, top-40 | 22,0% | 0,55 |
+| l0 unigrama, T = 1,0, sem top-k (receita oficial) | **11,0%** | 0,66 |
+| l0 unigrama + frequency_penalty = 5 | 16,3% | 0,64 |
+| l0 unigrama + adjacency = (5, 3, 0,5) | 18,1% | 0,57 |
+
+Três leituras. Primeira: a fonte do l0 é quase irrelevante para a gagueira local — predito, uniforme e unigrama diferem em ~3 pontos percentuais, dentro do ruído de n = 8. Segunda: a receita de amostragem oficial cortou a gagueira pela metade — a combinação temperatura < 1 com top-k estreito correlaciona posições adjacentes nos mesmos códigos, e removê-la produz o maior ganho isolado que já medimos. Terceira: as penalidades de decodificação ajudam parcialmente e não fecham a lacuna — o resíduo é qualidade de modelo.
+
+O resíduo foi quantificado diretamente: o CE do gerador sobre pilhas de códigos que ele mesmo gerou é de 5,65 nats/código, contra 4,41 sobre pilhas reais held-out (+1,24), concentrado nos níveis finos (l7: 4,08 vs 2,00; l11: 2,21 vs 0,65). É a medida de exposure bias que a literatura de geração não-autoregressiva prediz — o modelo não aprendeu a condicionar-se às próprias imperfeições, mecanismo clássico documentado por GU et al. (2018) para tradução automática não-autoregressiva. A avaliação limpa também corrige um número do §4.3: sem corrupção de entrada, o held_l11 do v2 é 0,65 — os 2,79 reportados incluíam a corrupção do protocolo de treino.
+
+O achado converge com uma replicação independente (WORLD PROGRAMMING SOCIETY, 2026): NCMs pequenos em MLX, treinados sobre 960 mil janelas de TinyStories (~20× nosso orçamento em exemplos), exibem o mesmo defeito de repetição ("Joe was was three years old") e a mesma relação inversa entre CE teacher-forced e qualidade generativa — corrupção forte decrescente por nível (0,75→0,25) produz CE limpo 2,25 e perplexidade GPT-2-large de 45,6–47,9, contra CE 1,39 e perplexidade 93,8–97,8 sem corrupção; o baseline AR casado marca 14,3–14,7 e o checkpoint oficial 16,3. Duas implicações: (i) nossa gagueira residual é o modo de falha documentado do paradigma, não artefato da nossa implementação; (ii) a corrupção por nível decrescente — que ainda não havíamos implementado — é a alavanca que melhora geração à custa de CE limpo. Um braço v3 com essa receita (warm-start do v2, 10.000 passos) está em andamento no momento da escrita.
+
+### 4.5 O que se provou, o que se refutou, o que ficou em aberto
 
 Consolidando vinte rodadas em três colunas honestas:
 
@@ -118,7 +137,7 @@ Consolidando vinte rodadas em três colunas honestas:
 
 **Refutado.** (i) Nearest-embedding, verossimilhança de caminho e spec-decode hierárquico não fecham a última milha conceito→token (0/40 acertos, rank mediano ~43 mil; após retreino orientado a alvo, o spec-decode chegou a 0,58 de aceitação com k = 64, porém ~2× mais lento que o AR — o bloqueio migrou de aceitação para latência). (ii) Mais passos, codebooks menores e condicionamento intranível não curaram a falta de coerência nos nossos tokenizadores locais — mas ver o caveat do §4.2: vereditos medidos no regime contaminado, portanto indicativos. (iii) Decodificação pirâmide por posição não vence AR — o ganho vem de paralelismo entre níveis, não dentro deles.
 
-**Em aberto.** (i) O nível 0 — nem em 14,5 h/3.000 passos o código global saiu do uniforme; a receita oficial usa ~50.000 passos × batch 2.048 (~2.000× nosso orçamento em exemplos vistos) e 12 camadas. (ii) Repetição degenerada — combinação plausível de exposure bias dos finos condicionados num l0 não aprendido e da independência condicional intranível da geração paralela. (iii) Se hierarquia alinhada a estrutura — ASTs para código, por exemplo — produz códigos mais previsíveis que resíduo de reconstrução: nosso principal interesse futuro e a motivação original (assistente de código local) continua sem resposta.
+**Em aberto.** (i) O nível 0 — nem em 14,5 h/3.000 passos o código global saiu do uniforme; o §4.4 mostrou que a fonte do l0 pouco importa para a gagueira, restando a questão do arco narrativo: se l0 empírico basta como semente, o déficit de coerência global migra para os níveis condicionados — hipótese que o braço v3 com corrupção decrescente testa. (ii) Repetição degenerada — parcialmente decomposta: a receita de amostragem responde por ~metade da taxa; o exposure bias foi medido em +1,24 nats/código nos finos; o resíduo é o modo de falha de independência condicional documentado para modelos não-autoregressivos (GU et al., 2018) e replicado independentemente (WORLD PROGRAMMING SOCIETY, 2026). (iii) Se hierarquia alinhada a estrutura — ASTs para código, por exemplo — produz códigos mais previsíveis que resíduo de reconstrução: nosso principal interesse futuro e a motivação original (assistente de código local) continua sem resposta.
 
 ## 5 Discussão
 
@@ -134,7 +153,7 @@ O artigo do NCM demonstra a receita em clusters com dezenas de milhares de passo
 
 ### 5.2 Limitações deste estudo
 
-Somos obrigados a elencar o que este trabalho não pode afirmar. (i) Não reproduzimos a receita oficial completa — nem os ~50.000×2.048 passos de treino, nem o tamanho de corpus, nem a profundidade de 12 camadas; o que medimos é o regime de baixo orçamento, não o regime do artigo. (ii) O corpus principal (TinyStories) é deliberadamente infantil; nada aqui fala de código, domínio que motivou o estudo — a transferência para ASTs e estrutura de programação é conjectura fundamentada, não resultado. (iii) Amostras julgadas por leitura humana de 8 exemplos por configuração; não aplicamos o protocolo de avaliação por GPT-4 do artigo TinyStories nem perplexidade de referência. (iv) Medidas únicas (n = 8), sem repetições nem barras de erro; o braço AR observado variou de 0,617 a 0,978 s/amostra na mesma máquina, e os benchmarks de TinyStories foram feitos em máquina distinta dos benchmarks de corpus misto — as razões de speedup >3× devem ser lidas como limite superior. (v) O veredito "l0 não aprendido" vale para 3.000×16; pode ser puramente orçamento — e provavelmente é, dado que l0 começou a sair do uniforme (8,36→7,97 em janelas de treino) nos últimos mil passos. (vi) Os vereditos de qualidade das fases A e C foram medidos no regime contaminado pelo bug de init (§3.3) e aguardam revalidação no regime limpo; os de velocidade não são afetados. (vii) A comparação de held_l11 com o modelo oficial (~2,75) é aproximada de protocolo — splits e condicionamento podem diferir. (viii) Não publicamos código de treino nem checkpoints; os artefatos de métricas e amostras estão no repositório, e a receita de reprodução é descrita em §3.
+Somos obrigados a elencar o que este trabalho não pode afirmar. (i) Não reproduzimos a receita oficial completa — nem os ~50.000×2.048 passos de treino, nem o tamanho de corpus, nem a profundidade de 12 camadas; o que medimos é o regime de baixo orçamento, não o regime do artigo. (ii) O corpus principal (TinyStories) é deliberadamente infantil; nada aqui fala de código, domínio que motivou o estudo — a transferência para ASTs e estrutura de programação é conjectura fundamentada, não resultado. (iii) Amostras julgadas por leitura humana de 8 exemplos por configuração; não aplicamos o protocolo de avaliação por GPT-4 do artigo TinyStories nem perplexidade de referência. (iv) Medidas únicas (n = 8), sem repetições nem barras de erro; o braço AR observado variou de 0,617 a 0,978 s/amostra na mesma máquina, e os benchmarks de TinyStories foram feitos em máquina distinta dos benchmarks de corpus misto — as razões de speedup >3× devem ser lidas como limite superior. (v) O veredito "l0 não aprendido" vale para 3.000×16; pode ser puramente orçamento — e provavelmente é, dado que l0 começou a sair do uniforme (8,36→7,97 em janelas de treino) nos últimos mil passos. (vi) Os vereditos de qualidade das fases A e C foram medidos no regime contaminado pelo bug de init (§3.3) e aguardam revalidação no regime limpo; os de velocidade não são afetados. (vii) A comparação de held_l11 com o modelo oficial (~2,75) é aproximada de protocolo — splits e condicionamento podem diferir. (viii) Não publicamos código de treino nem checkpoints; os artefatos de métricas e amostras estão no repositório, e a receita de reprodução é descrita em §3. (ix) O sweep de amostragem do §4.4 usou 8 amostras por configuração: diferenças de ~3 p.p. estão dentro do ruído, e o efeito de ~10 p.p. da receita oficial aguarda confirmação com n maior e múltiplas seeds. (x) A réplica WPS é fonte não-revisada por pares (post técnico); tratamos seus números como evidência convergente qualitativa, não como referência quantitativa primária.
 
 ### 5.3 A pergunta de código, revisitada
 
@@ -159,6 +178,8 @@ CHANG, Huiwen et al. MaskGIT: Masked Generative Image Transformer. In: CONFERENC
 ELDAN, Ronen; LI, Yuanzhi. TinyStories: How Small Can Language Models Be and Still Speak Coherent English? arXiv, 2023. Disponível em: https://arxiv.org/abs/2305.07759. Acesso em: 9 nov. 2026.
 
 GGERGANOV, Georgi et al. llama.cpp: inference of LLMs in pure C/C++. Software livre. Disponível em: https://github.com/ggml-org/llama.cpp. Acesso em: 9 nov. 2026.
+
+GU, Jiatao et al. Non-Autoregressive Neural Machine Translation. In: INTERNATIONAL CONFERENCE ON LEARNING REPRESENTATIONS (ICLR), 2018. arXiv, 2017. Disponível em: https://arxiv.org/abs/1711.02281. Acesso em: 10 nov. 2026.
 
 HU, Lanxiang et al. Fast and Accurate Causal Parallel Decoding using Jacobi Forcing. arXiv, 2025. Disponível em: https://arxiv.org/abs/2512.14681. Acesso em: 9 nov. 2026.
 
@@ -193,6 +214,8 @@ REN, Houxing et al. Edit-Based Refinement for Parallel Masked Diffusion Language
 TIAN, Keyu et al. Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction. In: NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 2024. arXiv, 2024. Disponível em: https://arxiv.org/abs/2404.02905. Acesso em: 9 nov. 2026.
 
 VAN DEN OORD, Aaron; VINYALS, Oriol; KAVUKCUOGLU, Koray. Neural Discrete Representation Learning. In: NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 2017. arXiv, 2017. Disponível em: https://arxiv.org/abs/1711.00937. Acesso em: 9 nov. 2026.
+
+WORLD PROGRAMMING SOCIETY. Lower loss, worse stories: small NCMs trained on TinyStories. Post técnico, 2026. Disponível em: https://www.worldprogramming.org/posts/lower-loss-worse-stories-small-ncms-trained-on-tinystories-kbogee. Acesso em: 10 nov. 2026.
 
 YANG, An et al. Qwen2.5 Technical Report. arXiv, 2024. Disponível em: https://arxiv.org/abs/2412.15115. Acesso em: 9 nov. 2026.
 

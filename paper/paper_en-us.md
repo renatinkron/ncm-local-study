@@ -107,7 +107,26 @@ Post-fix samples are qualitatively something else: correct TinyStories vocabular
 
 Generation cost in this configuration: 1.306 s/sample over 12 level passes — **slower than the matched AR** (0.617 s/sample on the same machine), because each fine-level pass processes sequences up to 641 positions. The ~×3 speedup of §4.1 refers to our 6-level configuration over T = 128; in the official 12-level configuration, per-pass cost grows enough to invert the sign on CPU. The latency advantage reported by the original paper was measured at a different scale/hardware and does not automatically transfer here.
 
-### 4.4 What was proven, what was refuted, what remains open
+### 4.4 The inference recipe outweighs level 0
+
+A reread of the official evaluation code (`eval_shard.py`) exposed two protocol — not architecture — divergences between our sampling and the authors': (i) `predict_level0: false` — l0 is not predicted by the generator; it is drawn from an empirical unigram distribution stored in the checkpoint; (ii) full multinomial sampling (temperature 1.0, no top-k or top-p), while we used temperature 0.8 with top-40. We implemented all three l0 variants (predicted, uniform, unigram) and ported the upstream decode penalties (`frequency_penalty`, `adjacency_penalty`), with bit-exact backward compatibility in the original mode. Over 8 samples per configuration, we measured the adjacent-duplicate word rate (dup_rate) and the distinct-word ratio:
+
+| Sampling configuration | dup_rate | distinct |
+|---|---|---|
+| predicted l0, T = 0.8, top-40 (v2 protocol) | 21.7% | 0.63 |
+| uniform l0, T = 0.8, top-40 | 18.8% | 0.62 |
+| unigram l0, T = 0.8, top-40 | 22.0% | 0.55 |
+| unigram l0, T = 1.0, no top-k (official recipe) | **11.0%** | 0.66 |
+| unigram l0 + frequency_penalty = 5 | 16.3% | 0.64 |
+| unigram l0 + adjacency = (5, 3, 0.5) | 18.1% | 0.57 |
+
+Three readings. First: the l0 source is nearly irrelevant for local stutter — predicted, uniform, and unigram differ by ~3 percentage points, within the noise of n = 8. Second: the official sampling recipe halved the stutter — combining temperature < 1 with narrow top-k correlates adjacent positions onto the same codes, and removing it produced the largest single gain we measured. Third: decode penalties help partially and do not close the gap — the residual is model quality.
+
+The residual was quantified directly: the generator's CE on code stacks it generated itself is 5.65 nats/code, against 4.41 on real held-out stacks (+1.24), concentrated at fine levels (l7: 4.08 vs 2.00; l11: 2.21 vs 0.65). This is the exposure-bias measurement the non-autoregressive literature predicts — the model never learned to condition on its own imperfections, the classic mechanism documented by GU et al. (2018) for non-autoregressive machine translation. The clean evaluation also corrects a figure from §4.3: without input corruption, v2's held-l11 is 0.65 — the reported 2.79 included training-protocol corruption.
+
+The finding converges with an independent replication (WORLD PROGRAMMING SOCIETY, 2026): small NCMs in MLX trained on 960k TinyStories windows (~20× our budget in examples) show the same repetition defect ("Joe was was three years old") and the same inverse relation between teacher-forced CE and generative quality — strong per-level decaying corruption (0.75→0.25) yields clean CE 2.25 and GPT-2-large perplexity 45.6–47.9, versus CE 1.39 and perplexity 93.8–97.8 without corruption; the matched AR baseline scores 14.3–14.7 and the official checkpoint 16.3. Two implications: (i) our residual stutter is the paradigm's documented failure mode, not an artifact of our implementation; (ii) decaying per-level corruption — which we had not yet implemented — is the lever that improves generation at the cost of clean CE. A v3 arm with that recipe (warm-start from v2, 10,000 steps) was running at the time of writing.
+
+### 4.5 What was proven, what was refuted, what remains open
 
 Consolidating twenty rounds into three honest columns:
 
@@ -115,7 +134,7 @@ Consolidating twenty rounds into three honest columns:
 
 **Refuted.** (i) Nearest-embedding, code-path likelihood, and hierarchical spec-decode do not close the concept→token last mile (0/40 hits, median rank ~43k; after target-oriented retraining, spec-decode reached 0.58 acceptance at k = 64 yet stayed ~2× slower than AR — the blocker migrated from acceptance to latency). (ii) More steps, smaller codebooks, and intra-level conditioning do not cure unpredictable residuals — but see the §4.2 caveat: verdicts measured in the contaminated regime, therefore indicative. (iii) Per-position pyramid decoding does not beat AR — the gain comes from parallelism across levels, not within them.
 
-**Open.** (i) Level 0 — even at 14.5h/3,000 steps the global code never left uniform; the official recipe uses ~50,000 steps × batch 2,048 (~2,000× our budget) and 12 layers. (ii) Degenerate repetition in generation — a plausible combination of exposure bias of fine levels conditioned on an unlearned l0 and intra-level conditional independence of parallel generation. (iii) Whether structure-aligned hierarchy — ASTs for code, for instance — yields more predictable codes than reconstruction residuals: our main future interest, and the original motivation (local coding assistant) remains unanswered.
+**Open.** (i) Level 0 — even at 14.5h/3,000 steps the global code never left uniform; §4.4 showed the l0 source barely matters for stutter, narrowing the open question to narrative arc: if empirical l0 suffices as a seed, the global-coherence deficit migrates to the conditioned levels — the hypothesis our v3 arm with decaying corruption now tests. (ii) Degenerate repetition — partially decomposed: the sampling recipe accounts for roughly half the rate; exposure bias measured +1.24 nats/code at fine levels; the residual is the conditional-independence failure mode documented for non-autoregressive models (GU et al., 2018) and independently replicated (WORLD PROGRAMMING SOCIETY, 2026). (iii) Whether structure-aligned hierarchy — ASTs for code, for instance — yields more predictable codes than reconstruction residuals: our main future interest, and the original motivation (local coding assistant) remains unanswered.
 
 ## 5 Discussion
 
@@ -131,7 +150,7 @@ The NCM paper demonstrates the recipe on clusters with tens of thousands of step
 
 ### 5.2 Limitations of this study
 
-We are obliged to list what this work cannot claim. (i) We did not reproduce the full official recipe — neither the ~50,000×2,048 training steps, nor corpus size, nor 12-layer depth; what we measured is the low-budget regime, not the paper's regime. (ii) The main corpus (TinyStories) is deliberately child-level; nothing here speaks of code, the domain that motivated the study — transfer to ASTs and programming structure is grounded conjecture, not a result. (iii) Samples judged by human reading of 8 examples per configuration; we did not apply the TinyStories paper's GPT-4 evaluation protocol or reference perplexity. (iv) Single measurements (n = 8), no repetitions or error bars; the observed AR arm ranged 0.617–0.978 s/sample on the same machine, and TinyStories benchmarks ran on a different machine than the mixed-corpus ones — >3× speedup ratios should be read as an upper bound. (v) The "l0 unlearned" verdict holds for 3,000×16; it may be purely budgetary — and probably is, given l0 began leaving uniform (8.36→7.97 in training windows) in the last thousand steps. (vi) Phase-A and Phase-C quality verdicts were measured in the bug-contaminated regime (§3.3) and await clean-regime revalidation; speed verdicts are unaffected. (vii) The held-l11 comparison to the official model (~2.75) is approximate-protocol — splits and conditioning may differ. (viii) We do not publish training code or checkpoints; metric artifacts and samples ship in the repository, and the reproduction recipe is described in §3.
+We are obliged to list what this work cannot claim. (i) We did not reproduce the full official recipe — neither the ~50,000×2,048 training steps, nor corpus size, nor 12-layer depth; what we measured is the low-budget regime, not the paper's regime. (ii) The main corpus (TinyStories) is deliberately child-level; nothing here speaks of code, the domain that motivated the study — transfer to ASTs and programming structure is grounded conjecture, not a result. (iii) Samples judged by human reading of 8 examples per configuration; we did not apply the TinyStories paper's GPT-4 evaluation protocol or reference perplexity. (iv) Single measurements (n = 8), no repetitions or error bars; the observed AR arm ranged 0.617–0.978 s/sample on the same machine, and TinyStories benchmarks ran on a different machine than the mixed-corpus ones — >3× speedup ratios should be read as an upper bound. (v) The "l0 unlearned" verdict holds for 3,000×16; it may be purely budgetary — and probably is, given l0 began leaving uniform (8.36→7.97 in training windows) in the last thousand steps. (vi) Phase-A and Phase-C quality verdicts were measured in the bug-contaminated regime (§3.3) and await clean-regime revalidation; speed verdicts are unaffected. (vii) The held-l11 comparison to the official model (~2.75) is approximate-protocol — splits and conditioning may differ. (viii) We do not publish training code or checkpoints; metric artifacts and samples ship in the repository, and the reproduction recipe is described in §3. (ix) The §4.4 sampling sweep used 8 samples per configuration: differences of ~3 p.p. are within noise, and the ~10 p.p. effect of the official recipe awaits confirmation with larger n and multiple seeds. (x) The WPS replication is a non-peer-reviewed source (technical blog post); we treat its figures as qualitative converging evidence, not as a primary quantitative reference.
 
 ### 5.3 The code question, revisited
 
@@ -156,6 +175,8 @@ CHANG, Huiwen et al. MaskGIT: Masked Generative Image Transformer. In: CONFERENC
 ELDAN, Ronen; LI, Yuanzhi. TinyStories: How Small Can Language Models Be and Still Speak Coherent English? arXiv, 2023. Available at: https://arxiv.org/abs/2305.07759. Accessed: Nov. 9, 2026.
 
 GGERGANOV, Georgi et al. llama.cpp: inference of LLMs in pure C/C++. Free software. Available at: https://github.com/ggml-org/llama.cpp. Accessed: Nov. 9, 2026.
+
+GU, Jiatao et al. Non-Autoregressive Neural Machine Translation. In: INTERNATIONAL CONFERENCE ON LEARNING REPRESENTATIONS (ICLR), 2018. arXiv, 2017. Available at: https://arxiv.org/abs/1711.02281. Accessed: Nov. 10, 2026.
 
 HU, Lanxiang et al. Fast and Accurate Causal Parallel Decoding using Jacobi Forcing. arXiv, 2025. Available at: https://arxiv.org/abs/2512.14681. Accessed: Nov. 9, 2026.
 
@@ -190,6 +211,8 @@ REN, Houxing et al. Edit-Based Refinement for Parallel Masked Diffusion Language
 TIAN, Keyu et al. Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction. In: NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 2024. arXiv, 2024. Available at: https://arxiv.org/abs/2404.02905. Accessed: Nov. 9, 2026.
 
 VAN DEN OORD, Aaron; VINYALS, Oriol; KAVUKCUOGLU, Koray. Neural Discrete Representation Learning. In: NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 2017. arXiv, 2017. Available at: https://arxiv.org/abs/1711.00937. Accessed: Nov. 9, 2026.
+
+WORLD PROGRAMMING SOCIETY. Lower loss, worse stories: small NCMs trained on TinyStories. Technical post, 2026. Available at: https://www.worldprogramming.org/posts/lower-loss-worse-stories-small-ncms-trained-on-tinystories-kbogee. Accessed: Nov. 10, 2026.
 
 YANG, An et al. Qwen2.5 Technical Report. arXiv, 2024. Available at: https://arxiv.org/abs/2412.15115. Accessed: Nov. 9, 2026.
 

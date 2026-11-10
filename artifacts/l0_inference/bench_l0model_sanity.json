@@ -1,0 +1,49 @@
+{
+  "n": 8,
+  "temp": 0.8,
+  "topk": 40,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "model",
+  "gen_s": 10.84,
+  "passes": 12,
+  "s_per_sample": 1.356,
+  "dup_rate": 0.2174,
+  "distinct_ratio": 0.6269,
+  "l0_codes": [
+    [
+      2434
+    ],
+    [
+      209
+    ],
+    [
+      2272
+    ],
+    [
+      906
+    ],
+    [
+      679
+    ],
+    [
+      25
+    ],
+    [
+      679
+    ],
+    [
+      906
+    ]
+  ],
+  "texts": [
+    "",
+    " on, they always always always and the dog on the together. \nThe little the little girl girl and and the girl smiled and goodbye goodbye goodbye goodbye goodbye, she she felt so happy because she she nervous was anxious because because any than than than than than And they lived happily ever after.",
+    ". From that day on, Lucy and Lucy became best friends were happy. They They had a fun day at park at\n",
+    " a a little little girl named Lily who who girl girl who who loved to sing together. One day,,, she went she she went to the girl girl. They were so happy.\nThe family.\n\nThe little little girl girl and and and said, \"Don worry, Lucy Lucy!! Let's go go go on home Tom Tom and ran back to the beach beach and the button. From that that day day on on day, the gone again again again again again again,.There\nOnce upon upon a time, there was a bunny called called.. She She loved to play outside outside to the the shop",
+    ".\"\nAnna and smiled and said,, \"Let's Let go to the and get get better better better.\" Mom She She back, \"Thank you you. You You are a good brave brother. YouYouYou're welcome welcome welcome, are are a good good in the sky\n",
+    " had had a great time at the end.",
+    "..",
+    " their friends friends over their all together,, and they played playing playing playing their their friends friends. They all played and had lots lots of fun fun fun of tree.."
+  ]
+}

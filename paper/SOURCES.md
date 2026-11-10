@@ -81,6 +81,13 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 23. Mimir-1.6B: mirror comunitário dos pesos LCM (two-tower diffusion) —
     huggingface.co/mimir-lcm (usado na medição RUN-008).
 
+| RUN-023 sweep de inferência (§4.4) | dup_rate: l0 predito 0,2174 → unigrama+oficial 0,1095; uniforme 0,1875; freq=5 0,163; adj 0,1812 | `artifacts/l0_inference/bench_l0*.json` |
+| RUN-023 exposure bias (§4.4) | CE self-gen 5,6481 vs held GT 4,4124 (+1,24); l7 4,08 vs 2,00; l11 2,21 vs 0,65 | `artifacts/l0_inference/bench_l0uni_exposure.json` |
+| RUN-023 v2 held limpo | held_l11 sem corrupção = 0,6469 (os 2,79 incluíam corrupção de protocolo) | `artifacts/l0_inference/bench_l0uni_exposure.json` (ce_held_gt) |
+| Réplica independente WPS (§4.4) | GenPPL: corrupção forte 45,6–47,9; sem corrupção 93,8–97,8; AR 14,3–14,7; ckpt oficial 16,3 | WORLD PROGRAMMING SOCIETY (2026), post técnico |
+| l0 unigrama empírica | distribuição de 4.096 códigos l0 do corpus de treino (2706 vistos); TV=0,34 vs vetor oficial | `artifacts/l0_inference/` (unigram derivada; vetor .npy não publicado — regenerável) |
+
+
 ## Fonte interna (não primária)
 
 - Especificação destilada "MANA" (conversa de pesquisa paralela, out–nov/2026):
