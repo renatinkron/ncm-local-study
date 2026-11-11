@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 89.36,
+  "passes": 11,
+  "s_per_sample": 11.17,
+  "dup_rate": 0.0644,
+  "distinct_ratio": 0.7156,
+  "ce_self_gen": {
+    "l0": 8.0665,
+    "l1": 7.7665,
+    "l2": 7.7145,
+    "l3": 7.194,
+    "l4": 6.7254,
+    "l5": 5.4892,
+    "l6": 5.3746,
+    "l7": 3.503,
+    "l8": 3.6865,
+    "l9": 4.1105,
+    "l10": 3.9148,
+    "l11": 1.5268,
+    "total": 5.4227
+  },
+  "ce_held_gt": {
+    "l0": 7.8376,
+    "l1": 7.3979,
+    "l2": 6.4017,
+    "l3": 5.3518,
+    "l4": 4.7184,
+    "l5": 4.5752,
+    "l6": 3.994,
+    "l7": 1.8803,
+    "l8": 2.8029,
+    "l9": 3.1824,
+    "l10": 3.0817,
+    "l11": 0.593,
+    "total": 4.3181
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " and Sue Sue. She said him no,, and said, \" you, Lily! You are a friend my friend and now to be be and and Sue play.\" They played laughed and played learning together. They were both very very happy.",
+    ".\nOne day, Lily, she saw toy near the toy. Max was big big heavy. Lily wanted to put it near near the tree. Lily asked her mom,Mom and, out that my toy toy Sam?\" Buzzy was happy. She I her him and said, \"Thank you, Lily Lily. I all all can some and got one choice, she went back to Lily and used them ready to their warm and silent.",
+    " The snake. He was too far far away, but he just just just his. So, he lived in the crab., was a big big with.\nWhilely, they they a a small mouse.. Bella fell flew down down and made a little bird named Timmy. was that him how a little bird, said, \"I am. am name, I will to went to your.\".\" Remy was happy and said, \" the's's, I can help.\". was Luna and played together together. They played with the yarn all day long laughed laughed.",
+    ".\n Mama gloomy and had an idea and said, \"That's permission good. We can bury it!\" \nGrandma when that we use use We are to helpers who could fix the right right and to ask their files things.\" Mommy asked said thatdest that that the fun playing by her mommy helped their work. \"We will., we can have fun fun things and to do things do,\" she said. Lucy kept and and said. From Just,, Lucy gasped in his hands and walked to to find more forever.\"\nThe next day, the Emma and a big tree and climbed and tree. was very happy and thankful",
+    " had a lot lot. The little the mouse were very scared They saw were tired tired and, a small rabbit.s rabbit big a big bear who could skipped with a new party!\n\nThe\n\nOne day, the the rabbit and the little was by by another another Then, he went to the the frog and asked the frog, \"Do you want to play, there?\" The frog said. \"The friendly frog?\" The looked was scared, but he wanted to play with friends. He went into his frog che \"Can I play?\"\nThe frog said, \"Yes, I I the a little fish,\",\" \"",
+    " waves. The ball looked at at at park the became clumsy friends and played together again.\n felt,",
+    " Tom Tom Tom. But she not scared anymore She was still. She started to cry cry.\nTom tried tried to shut the door, but he was very happy. He had him and him at him. Max. and said, \"Yes, you are was curious. were wanted to play with dolls and her toys to play.\"\nTom and Max were were worried. They didn know that what to do. One day on, they became good friends and and played played together in the garden. every day.",
+    " have happy to have fun fun and have. He wanted to They every a shop But. The little boy did not have to get very much. He saw his toy car and felt hurt him.. They did did not want to play play a noises. He Max did his. He. him. The ran to get the car car. She did not not find out not play with it.\nTim decided to play with his car. The out came and came. Tim came the folder and saw the mess mess together. The toy car were very happy happy. They played played with the ball and they all He all long"
+  ]
+}

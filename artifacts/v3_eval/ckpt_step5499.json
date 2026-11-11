@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 33.82,
+  "passes": 11,
+  "s_per_sample": 4.227,
+  "dup_rate": 0.0596,
+  "distinct_ratio": 0.6775,
+  "ce_self_gen": {
+    "l0": 8.2236,
+    "l1": 7.8679,
+    "l2": 7.8875,
+    "l3": 7.1547,
+    "l4": 6.3104,
+    "l5": 5.3305,
+    "l6": 4.9867,
+    "l7": 3.7073,
+    "l8": 4.1778,
+    "l9": 4.1679,
+    "l10": 4.3295,
+    "l11": 1.6616,
+    "total": 5.4838
+  },
+  "ce_held_gt": {
+    "l0": 7.7723,
+    "l1": 7.4692,
+    "l2": 6.5235,
+    "l3": 5.4444,
+    "l4": 4.9443,
+    "l5": 4.6296,
+    "l6": 4.1869,
+    "l7": 2.0063,
+    "l8": 2.9896,
+    "l9": 3.365,
+    "l10": 3.2713,
+    "l11": 0.6256,
+    "total": 4.4357
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " to the bird. She says says, \" \"Okay,,, Ben, and Ben Lily. will love you and only to to go?\" Then I will be happy. I to to have and says. \"You are very kind with you?\" Mom says. \" do do you do what what are are doing doing?\" He sees sees angry and angry. He wants to join them with them?\" Ben asks Mom?\" he asks, \" sticking, we can have crayons. We helps us with others.\"\nMom.\"Ben, \"You is not, Mom Mom. You has a cake and Ben is is soon soon.\"\nAnnaAnna",
+    ", a little girl named named Sue. Sue went to the to play.Sue said, \"I to buy it. She saw a big tree. Sue asked man and said, \" \"Mom,, can make it back together!\" Tim was very excited and said said, \"Thank you,!\"\nThey all all played together all day and played with mom and dad dad. They were so happy to have so much fun together.",
+    ", Sue and her mom could not go away. They each looked at at each other, the thought with it the ball ball was a a name.\nOne day, Tim and Spot his they went to not cool to to find this where he found found found a red and It had lots of red friends. Tim was so big that he play with. Sam said, \"I toy near my red ball.\" Sam Sam. Tim said, \"Yes! I I I can all feed you.\" Tim and played together and they played played together all day long. And And they all all.",
+    ". are dry and the. can. You are drank and string was's.. friend liked liked!\". smiled and said, \"You are are right to forgive you too. But next to to veterinarian and Ben to and store sorry. We You would not not to fake And bird.. And others! We are new new blocks Then,. we can make many blocks and we do you do do we can spent to man is kind.\"\nAnna nodded nodded and head gasped, \" will help them you to book.\"\nThey smiled and put them a hat and a a hug hug her They were both a new. game. He",
+    " The a time, there was a little mouse was very and scared and would run away. He would stand in his car to the big dog that was not want to be new party in the.” The end.\nOne day, the small grill. was fast too. He wanted to fly all whenever because he wished wished have to bed and have fun. She did not to to be something.\nThen a, dog. The dog! at! \"You did not catch the chess again.\" The friends ring did did not listen not to to him. The dog did not to help them., but it did not say to say say",
+    ".. So, he gave his toy were of was very of toys and.From that day on Max Max were tired wet and dog knew that he was to magic, but sometimes his mom home. mom home home went and his back to the the park his mom his mom,, a park, there was a big clumsy dog named named. liked to the small house with his friend, a boy named Tim. Tim loved to play outside. One day, and black cat went to went cat and the big toy.\nAs to the store, he saw something inside. The dog and,, and Kitty out and. ran their Sam",
+    " She on. Kitty lived on a small him, there wasious cat named Max. The cat loved to play run and day, they saw a a cat cat making a fun cat. The dog thought",
+    " want have to have fun fun and have. He silly wants to sing a nice friend is The. He is very very happy he likes liked be others. His sees says, ' voice. She likes silly. does not want to share share. She wants to do things that that that. It is his big big and is not. Tom is the miserable. He did not listen to them. Lily wants wants to want to play. He smiles and Lily, and has made made\nThe king doctor made them lock himself. It. She is not happy again. She thinks she should have not something friend he have had share, they missed"
+  ]
+}

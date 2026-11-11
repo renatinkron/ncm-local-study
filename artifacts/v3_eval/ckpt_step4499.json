@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 24.89,
+  "passes": 11,
+  "s_per_sample": 3.111,
+  "dup_rate": 0.0792,
+  "distinct_ratio": 0.7657,
+  "ce_self_gen": {
+    "l0": 8.275,
+    "l1": 7.7704,
+    "l2": 8.0328,
+    "l3": 7.3886,
+    "l4": 7.0115,
+    "l5": 6.0766,
+    "l6": 5.4556,
+    "l7": 4.1105,
+    "l8": 4.2668,
+    "l9": 4.697,
+    "l10": 4.5048,
+    "l11": 1.9184,
+    "total": 5.7923
+  },
+  "ce_held_gt": {
+    "l0": 7.8395,
+    "l1": 7.4433,
+    "l2": 6.6199,
+    "l3": 5.5587,
+    "l4": 4.9253,
+    "l5": 4.7963,
+    "l6": 4.2105,
+    "l7": 2.1518,
+    "l8": 3.2229,
+    "l9": 3.6019,
+    "l10": 3.5125,
+    "l11": 0.6705,
+    "total": 4.5461
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " wall thought about the box was of no his friend,, Tim and why why you want to get our to his mommy and going to delay. TheyNo she, I I'll get wet.\" Sam. \"You work was,,\" she said Sam Tim. \"What are you got?\"\n\" what what was done How spaghetti is he?\" Tim said. Sam, said, \"I want know think think food. I I don't worry, Lily Tim thought it it was went to a pond. They around around and saw a big. She a big puddle off the ground and on away. Max away soon.\nThe snow feels",
+    ", they could not One day day Sue named Sue went to's ground, \"It is seat. She wanted to fix it near the the inside. Lily and Sue and said, \"Yes,,\nYes, we it is wonderful. We must have to playing in they were and more space, they knew that think it was fun fun. They choose one, but but they liked made and decided to show it special house, feel better minerals",
+    " parents other give. It was far far away a little frightened. Just then,, a big dolphin in the. This mouse was was a clean up. Sue laughed and, said, \"Hello a, Sue with outside near the tree I will help help with you?\"\nTheSara smiled. and said,, \" you what help help me for for a for a while while came back to her mom?\" told him. \"Can Can I I play with me?\" she said.\n Lily nodded nodded and Lily nodded. She gave gave not it the sang game. They played together all the long.",
+    " wearing.\" they were sad. They did not know not not. They were were their careful and. He tried to repair \" where where he was right, just day, Tim but We should should always listen to their parents to be.\" Max nodded if they should not not the with, while. And they they had to new to will but, so we we can stay and have to do when when things they were playing about playing kept in the park. He, \" you guess it's's toy! to to find friends.\"\nThey walked out of the pigeon and a behind and looked down. She asked.,\" said the boy,",
+    ". The motor got inside inside and her friends. smiled, and he was in their noisy. He was so lot to's more things from breeze itsvutily, to party world\n the end end.",
+    " red ball ball so and he he got very good at at the ball. From that day day, and the man were sad and ashamed how they knew to he fly, but walked away away. Spot learned back home back home though he ran to park.",
+    " on her drum. She was sad.LilyLily still sad friends. She made Lily Lily. Lily and said, \"I am sad, too, but a loud noise made made a terrible loud noise!\" Lily said said, \"No, it's so so scared. It was.... us us share your toys and sir.\"\nLilyLily and Max Max were sad. They did not't know how. They playing day the the the bear and visit for being make. would made sure sure to to happen.",
+    " so so happy to have have fun day snack snack. all all the the story is that having good. good."
+  ]
+}

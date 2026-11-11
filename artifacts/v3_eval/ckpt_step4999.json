@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 54.66,
+  "passes": 11,
+  "s_per_sample": 6.832,
+  "dup_rate": 0.0587,
+  "distinct_ratio": 0.692,
+  "ce_self_gen": {
+    "l0": 8.4111,
+    "l1": 7.6045,
+    "l2": 7.8024,
+    "l3": 7.0314,
+    "l4": 6.4231,
+    "l5": 5.6383,
+    "l6": 5.3441,
+    "l7": 4.0227,
+    "l8": 4.0374,
+    "l9": 4.4837,
+    "l10": 4.1711,
+    "l11": 1.6888,
+    "total": 5.5549
+  },
+  "ce_held_gt": {
+    "l0": 7.9499,
+    "l1": 7.4691,
+    "l2": 6.503,
+    "l3": 5.4275,
+    "l4": 4.8316,
+    "l5": 4.7162,
+    "l6": 4.1816,
+    "l7": 2.1367,
+    "l8": 3.1298,
+    "l9": 3.5125,
+    "l10": 3.3655,
+    "l11": 0.6669,
+    "total": 4.4908
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " and the box. She said it a and said, \"Sam, why don't't want give give to my way and going going to there, \"No, I I't delay happy!\" Mandy said, \"You was unite on me me now?\" His dad was got dirty and asked.\"Why are you doing here?\" she said.\nLucy had an idea and said, \"I can keep it for the movie, don't worry,, because you can be be careful with with others, and you you not worry, you will love you.\" Tom He not want to play with the toy..\nThe little little girl",
+    " day, a little girl named named Mimi went to to the park. Max saw a big seat. Lily wanted to cut it high. Lily thought and Lily,, \"Can I picked some, dish,. Can we play together?\" Max was sad and said, \"Thank you you, mom. So Now they both played with with toys and played ate the best the played. together. and wasOnce a time time, a man and a little. time day,, a big dog named. She loved to play with water water.. and saw the bird saw eating the grass. The water in a small bug and water. at",
+    "'s?” The cat was happily far away. but each other other. She it was just dangerous of the cake It It a net. and put put it and said, \"Hello, bird. I I help you on the chair fell It will you you and hurt. I think are are hopping hand, the girl man\nTheThe looked said, \"I will make you I will clean and.\"\nSo told girl here they ate the the decided, and they all all together. They played together together and together. They learned that sharing and it trying to be kind friends again\n",
+    ".\" it, and children. They did not want, andThat'sThat's the car and!\"\nThe Cara said, \"We are right, You are to to, but we can find my outside and their parents to stay home and home if they are safe safe.\"\nThe said, \"You have to organize new new will love, you we can be many fun and have to when we careful. You have and fun! We love as you,,, you can in his hands suits here try to things.\"\nTheThe next next day, Tim went outside to his dad. He walked home he saw a game. He",
+    " took a lot lot away. The the was were very tired and went without He was happy and.. The tiger's not the and and the. friends became became best friends..\n",
+    " said, \" \"I'm sorry at the park.\"\nTom asked, you are both happy. We can have have day things and all play with our a,, but maybe they are. Mia and Ben are friends. They like the slide slide and have the slide. They liked to play and fly and they see at the slide and but the they. Sara Ben on the look look. The dog dog has a pretty dress. It runs to see very happy birds birds. looked looked at the slide and was the up.\nThen, they saw a squirrel playing with its wasted and hurt village.\n\",, like a Can",
+    " it. Tom put Kitty ran match with the frog and had had much fun. Max and Max Max that. Max ran, to everyone sad, but he also made a a noise made a loud noise",
+    " not want to have fun fun a a old.\" Tom wanted to play with the park. The dog did not dance. \"Mom we have have your iron on?\" Sue said.\nTom Tom did not want want to to dance play and grabbed the ball went to run. They both wanted to open the ball and it and pulled pulled and pulled and pulled, but it was still catch.\nSue decided wanted to covered the ball. He table and threw the it back the back.\nThe stick the mess lock mess. The They were very very. to his friends.. They played together together games. They had had fun and fun"
+  ]
+}

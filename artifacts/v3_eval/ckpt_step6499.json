@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 23.0,
+  "passes": 11,
+  "s_per_sample": 2.875,
+  "dup_rate": 0.0505,
+  "distinct_ratio": 0.7178,
+  "ce_self_gen": {
+    "l0": 8.198,
+    "l1": 7.9449,
+    "l2": 7.8854,
+    "l3": 7.1251,
+    "l4": 6.3893,
+    "l5": 5.4892,
+    "l6": 5.2609,
+    "l7": 3.6403,
+    "l8": 4.0929,
+    "l9": 4.1429,
+    "l10": 4.0345,
+    "l11": 1.4679,
+    "total": 5.4726
+  },
+  "ce_held_gt": {
+    "l0": 7.8543,
+    "l1": 7.4447,
+    "l2": 6.6089,
+    "l3": 5.3174,
+    "l4": 4.7544,
+    "l5": 4.5047,
+    "l6": 4.0648,
+    "l7": 1.9473,
+    "l8": 2.8885,
+    "l9": 3.267,
+    "l10": 3.2151,
+    "l11": 0.5887,
+    "total": 4.3713
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " and the birds tray. She said no.\n\"Sara, Sara, but you have to be to with any before. You have going to be careful and kind. I will have to you. You have to work frustrated. You are sorry, sorry do. do you can do something. If know what was wrong She said that he could with you.\"\n\"CanDo want go to go?\" Ben asks.\n\"Sure, sticking I'm okay. I can't't you.. and, you will use it, you I you. And you You you want to learn something more.\" Mom said.\nSara.ier",
+    ", a little. One day,, Lucy went to her toy store and him a toy down. Lily wanted to put the toys back back inside too But Sue her mom said, \"Hi,,, this toy is?\" it said, \"I will get your toy back.\" to more more the toy and left left the box with toys. Amy got one, but but she used her friends had to much fun. TheThe fun.",
+    " baby bird. The cat was was not nice for, but each other They liked the bug The lion to play with ball and play together.\nOne day,, the bug, they they a heard. The bug, \"HelloI am scared. I?\" The bird was scared and the bug bug.. The little bug said, \" boy can help the bug. I will help you your friends.\"\n\nThe bug and said, \"Wow to! Let's difference follow the little little mouse and played together.. did not care of sharing and and. And they all.",
+    " like They liked and run and high in the sun and the sun were shining in the sun was was usually singingSuddenly, she heard help birds was. He was dark and, just to stay with his friends and their friends got a, and watched if he could not pause with the bird. He said comfortable to restore it new friend. Then,, we can have any fun things things that, when things they were busy and man old man said. When they reached the mom,.We will will it to to us.\"\nTheThe next next day, the bald man sat sat down down. She smiled. The tree didn wasn't",
+    " cookies. She off front their hands and her friends got got down and were proud and tired. She looked at each other other the toys but she was not at twins. He was sorry!\nThe end, \"Mom, and she were proud her hug pink too.Lily said \" and boy to a boy. She told tells her if you you did to for your your room. I forgive them them and said dog \"Yes, you you Lily. You are a a new new again Do I, ring on your you. We We want to play with you.. Sometimes you you help you?\"\nBen smiled and said, \"",
+    ". his ball, and he had sad had She was very sad because she couldn't't night anymore.",
+    ". But too, did she was scared. She still nervous friends She could not grow Lily. Lily was so happy to she said outside and she was too too, Lily a made a a loud noise",
+    " the big big green garden. One day, a dog came to eat the tree tree. The cat did not dance you it to to a new friend..\nOne day, Tim and his itch. She did not want to play and had an idea. He He did not know what. The big dog was this. He could not there, he could not find find it.\nTim was looking looking looking for was seat. He had bad painime and felt sad.\nThe brown cat did the lock they and it would be be to be safe. They played with the butter and shared together. And he had"
+  ]
+}

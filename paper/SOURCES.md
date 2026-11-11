@@ -86,6 +86,8 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | RUN-023 v2 held limpo | held_l11 sem corrupção = 0,6469 (os 2,79 incluíam corrupção de protocolo) | `artifacts/l0_inference/bench_l0uni_exposure.json` (ce_held_gt) |
 | Réplica independente WPS (§4.4) | GenPPL: corrupção forte 45,6–47,9; sem corrupção 93,8–97,8; AR 14,3–14,7; ckpt oficial 16,3 | WORLD PROGRAMMING SOCIETY (2026), post técnico |
 | l0 unigrama empírica | distribuição de 4.096 códigos l0 do corpus de treino (2706 vistos); TV=0,34 vs vetor oficial | `artifacts/l0_inference/` (unigram derivada; vetor .npy não publicado — regenerável) |
+| Série v3 (corrupção linear 0,75→0,25, §4.4) | 10 ckpts @4499–9499: dup_rate 0,0792→0,0576; gap +1,246→+1,090 (platô ~1,10 estável por 4.500 passos); gt CE 4,546→4,216; parada antecipada pré-registrada (2 pts consecutivos na faixa 0,95–1,20) | `artifacts/v3_eval/ckpt_step*.json` (n=8, seed 0, receita oficial) |
+| Braço v4 GLAT-lite (§4.4) | pareado @6998 vs controle @6999: gap +1,616 vs +1,105 (−46%) → morto | `artifacts/v4_eval/ckpt_step6998.json` |
 
 
 ## Fonte interna (não primária)

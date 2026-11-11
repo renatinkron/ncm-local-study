@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 62.23,
+  "passes": 11,
+  "s_per_sample": 7.779,
+  "dup_rate": 0.0515,
+  "distinct_ratio": 0.6807,
+  "ce_self_gen": {
+    "l0": 8.1048,
+    "l1": 7.538,
+    "l2": 7.9134,
+    "l3": 7.2662,
+    "l4": 6.7231,
+    "l5": 5.4282,
+    "l6": 5.3674,
+    "l7": 3.701,
+    "l8": 3.8945,
+    "l9": 4.247,
+    "l10": 4.0255,
+    "l11": 1.6616,
+    "total": 5.4892
+  },
+  "ce_held_gt": {
+    "l0": 7.9598,
+    "l1": 7.427,
+    "l2": 6.6519,
+    "l3": 5.3533,
+    "l4": 4.6207,
+    "l5": 4.3556,
+    "l6": 3.9321,
+    "l7": 1.8172,
+    "l8": 2.7825,
+    "l9": 3.1199,
+    "l10": 3.0445,
+    "l11": 0.6051,
+    "total": 4.3058
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " And and Dad. She says says, \"il you,, Sara, but have to have the to tell my and listen to going to them them.. I am happy. to have have Sam. YouYou are naughty. You are very, Mom I you do you very sad and and scared?\"\n then on says says. He says says, \"You're welcome, Sally. You are very helpful. You said, \"It's okay okay's. We couldn't okay okay, Mom. I will will you love.. I love you.\" And. I you try to learn new again. And will be be friends.\"",
+    " without the ball. One day,, Sue went for a a ride. The dog was high. and wanted to attach it. The dog was sad and Sue asked.\nThen,, something unexpected happened. The dog took it was fast and. the ball and jumped down, and it back into them landed. Tim Tim and Tim was very surprised! The dog bird and and she she and knew they had to something fun fun..",
+    " parents to help their cat liked with walk, high. They liked to his big bear bear long day of the cake phone. a was a lion and walked marched around the ball, they saw a a small mouse, playing near the there tree. The had a big wheel all day. Lily helped Tom's little a little with a a stick with dolls. It said, \"I can help you me find it?\" Lily got here food and Max Max found a home home. The lady was happy to and they prayed together. They danced and played all the the the park at time again\n",
+    ". We will gloomy and sit on a tree and a a string's permission\n a good fun. You lived clean it room I they are. We are right... forgive each other,, mom andark and forgive forgive.\" We. You should be happy happy. And then shock. They share to roof, \"WeWe can can have friends when you everyone can have things that things we do. They have and smile.\" They hug They goodbye asked, they will in their their hands. They rolled to toBy night. They thanked.\n they ate, and they all sat down down a time day. She had a He",
+    " upon a time, there was a little girl named Lucy. She loved to jump and cob. Every day she He to her toy toys that she would make her quick. She got inside.\n\n end.\nOne next day, the squash was pink big too. He said said, \"I's apron little girl told told Lily that that would not look for your room. Then she had a big big, dog. The dog barked at a friendly dog and and wanted to play and again.\"\nAmy's smiled. Dad laughed and had to play. They have have fun. And happy happy that could could that he could help her",
+    " ball red red ball and gave back a red girl was very happy. Lucy loved that day day.",
+    ", on on, Kitty. playing with the big red ball had so much much much.\nAs Max tried to reach the cat, but he he was playing a loud noise loud sound. It heard a loud sound noise in the sky. was very and she started to play with Kitty. Kitty and decided to play with his ball.\nKitty and Max played played with the ball.. They had had playing. They enjoyed sorting it with the spray smile and make a things. Max was the that could make Max happy.",
+    " big the the big tree. One day, she wanted to happen climb with tree.. the tree monkey tree was very happy to have a new friend..\nOne day,. loved liked to find tree. The tree saw a small bird very good, the tree that that that made the tree was came to see the tree. It looked around that could not find find it a magic again. It wanted to mark with it. He had old and, also gave her made.\nThe tree made a pretty pebbles. The seed cauliflower that himself herself. She shopkeeper would make a new new friend, she she had to mix with had"
+  ]
+}

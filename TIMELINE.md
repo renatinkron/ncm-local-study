@@ -19,6 +19,8 @@ migração parcial para CPU 4750U/32 GB a partir do RUN-006.
 | 09 nov | Redação, revisões independentes, publicação | este repositório |
 | 09 nov | RUN-023: releitura do `eval_shard.py` oficial + sweep de inferência | `predict_level0: false` + amostragem plena (T=1,0, sem top-k) descobertos; l0 unigrama implementado; fonte do l0 ~irrelevante p/ gagueira; receita oficial cortou dup_rate 21,7%→11,0% |
 | 09–10 nov | RUN-023: exposure bias medido + réplica independente WPS encontrada | CE self-gen 5,65 vs GT 4,41 (+1,24 nats, concentrado nos finos); WPS/MLX (960k janelas): mesmo stutter, corrupção↔geração invertida; braço v3 (corrupção linear 0,75→0,25, warm-start, 10k steps) lançado |
+| 10–11 nov | RUN-024/025: série v3 monitorada em 10 checkpoints | dup_rate 0,110→~0,05 (−47%), exposure gap +1,24→platô ~+1,10, gt CE 4,41→4,22; parada antecipada pré-registrada em @9499 (~24h CPU economizadas) |
+| 11 nov | RUN-025: braço v4 GLAT-lite (corrupção com predições próprias) | pareado @6998 vs @6999: gap +1,62 vs +1,11 (−46%) → braço morto; segundo datapoint de que a forma do ruído importa mais que sua presença |
 
 ## Leitura honesta do esforço
 

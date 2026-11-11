@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 32.34,
+  "passes": 11,
+  "s_per_sample": 4.043,
+  "dup_rate": 0.0576,
+  "distinct_ratio": 0.7603,
+  "ce_self_gen": {
+    "l0": 8.2053,
+    "l1": 7.842,
+    "l2": 7.814,
+    "l3": 7.2742,
+    "l4": 6.5052,
+    "l5": 5.299,
+    "l6": 4.8945,
+    "l7": 3.5416,
+    "l8": 3.4264,
+    "l9": 3.8223,
+    "l10": 3.6036,
+    "l11": 1.4381,
+    "total": 5.3055
+  },
+  "ce_held_gt": {
+    "l0": 7.8803,
+    "l1": 7.4082,
+    "l2": 6.5009,
+    "l3": 5.3459,
+    "l4": 4.6586,
+    "l5": 4.3768,
+    "l6": 3.7256,
+    "l7": 1.7225,
+    "l8": 2.6079,
+    "l9": 2.9426,
+    "l10": 2.8563,
+    "l11": 0.5665,
+    "total": 4.216
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " to help them over. She said no and said, \"Sam, you are patient! You are kind to learn more train to. Come, they are dangerous.. I forgive help you!\" Sam both agreed and Tim were both very happy.",
+    " and playing.\nOne day, Lily named Lily went to store with the fragile paper on on. Lily wanted to fold it so so heavy. Lily went to mom and said, \"Mom,, look at this was paper?\"\nLily, \"Let's house, I can bake paper, how they found found it took. They both both laughed and felt excited. They knew that could could celebrating how much to do many many fun things together.",
+    " better. The bug wanted to run far away. but she looked of his big bear. The bug was in the dinner.\nHis mom said, \"You don't't you be be slapped too I will help you. You can't and. It things did not like the bug bug did not like it. The bug did not like that string. It said, \"I will I will get hurt.\"\nThe, Spot very curious tired. She quickly picked up the bug and wiped her hand and and home.. They played with all day. They the at at the end\n",
+    ".. Their were were. They did not know, and quarrel were They were their their fun.\nThe helpers said, \"We to use the strings are dangerous, not not run away, Lily,\" Ben and agreed to stay Max stay home, they could not safe with the fake man..\n\"Yes, I can. Then, now we we can have more and to do something things things they were spent.\"\nThey they as goodbye to it it and put them in his hands and he behind it. They took theTommy out. when they got banana and they sat down down the tree.\n\"Don didn't worry",
+    " cookies. All of two. kids and rabbit were were very happy too. They were happy. They laughed and good friends ever.\nThe end of the day day the friends friends, same!.Once\n\n a time, there was a green soft cat. He loved to fly fly. One day, he saw tall tower was very times. He wanted to to very high to the climb.\n, met a little frog frog. But \"Hello, cat! Do you to be my high up into the together?\" The frog smiled and said, \"I will scared. when you help you?\"\nThe little fish said, \"",
+    " They played with the ball at at park. They became good friends. And that day day Mia felt wonder because they were scared not not bad to Time others.",
+    " was fast.. She heard a a lesson. was still happy and excited that they that play day all day. Amy learned learned that she she went cows to felt very good friend and each other other",
+    " happy happy happy have to have a big day He"
+  ]
+}

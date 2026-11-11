@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 23.93,
+  "passes": 11,
+  "s_per_sample": 2.991,
+  "dup_rate": 0.0526,
+  "distinct_ratio": 0.7487,
+  "ce_self_gen": {
+    "l0": 8.2829,
+    "l1": 7.8629,
+    "l2": 7.8291,
+    "l3": 7.2658,
+    "l4": 6.5099,
+    "l5": 5.5519,
+    "l6": 4.882,
+    "l7": 3.6944,
+    "l8": 3.8421,
+    "l9": 4.1961,
+    "l10": 3.9102,
+    "l11": 1.4884,
+    "total": 5.443
+  },
+  "ce_held_gt": {
+    "l0": 7.8515,
+    "l1": 7.403,
+    "l2": 6.5657,
+    "l3": 5.4074,
+    "l4": 4.7489,
+    "l5": 4.4542,
+    "l6": 3.7475,
+    "l7": 1.7933,
+    "l8": 2.7406,
+    "l9": 3.0778,
+    "l10": 2.9532,
+    "l11": 0.5656,
+    "total": 4.2757
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " and smelled them. She said said, \",, good okay, Sara but have to listen you you for you you to wait to me?\" They learned and be happy, to have to have they says. \"You are both good.\".\"",
+    " with the ball. One day,, Tim went for a the pond. He saw a big tree. Tim wanted to get the ball, but he was too high.\nJust then, something unexpected happened. The something got it and hit it A The cocoa fell fell and poured the more space. The gum fell to Tim and and mom mom were sad and scared. They all laughed and played ate the yummy fruit, full lots of fun\n",
+    " began, heat he could not fly far away.. Tim looked at the birds. He was scared and see the his a. net. So, he marched as the ball,, he heard a small bird. \"The tree scared scared he help you.\".TheTim held up the tree and a a little bird. It said,LetLet play here. I will help out out get get.\"\nSoSo, Tim whispered, \" found found a tree. What are you you!\" Tim Tim and Sue played together. They both laughed and laughing the fun day at the end.",
+    " and. were monkey had an idea in the water and said, \"'sFred the pink dress!\"\nThe cats said, \"We should use the axe!\" too and, for our room and play, and their friends watched the ball while, they could knew that better their fun,\nAfter. The together work, friends and, and you you have have you and have have to do anything something something, they were playing playing special The toys and, fun, they made they say, \" he be to to a friends forever.\"\nThe next day, the treat Tilly sat down and the. She. They saw Fin food water.",
+    " find a lot of games fun. They are scared and tired tired wet They do not to each other's. They liked the the toys and not not their room. They make new inside\nLily\n the end together, Tim and vegetables are happy the the cat and help each other. One day, they decide to go the park. They have fun fun together. They it to have a fun and they were. happy kids. In the end,, the other are happy happy cake their new fun to their mud together. Tim! We want to play them.. They to help with you too?\"\n\n\"Yes Sam,\",",
+    ". The ball played and gazed at the park were having a lots of fun.",
+    " on her dress.. Kitty played with the. They had so much fun. They played on the and and tried to shut it,, he he too hot made a loud loud sound a loud noise.",
+    ". happy to have to have a day. He wanted wanted to play, smiles is - the boy. He with his toys and share your his toys together."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 44.62,
+  "passes": 11,
+  "s_per_sample": 5.577,
+  "dup_rate": 0.0542,
+  "distinct_ratio": 0.7396,
+  "ce_self_gen": {
+    "l0": 8.2692,
+    "l1": 7.8739,
+    "l2": 7.795,
+    "l3": 7.0842,
+    "l4": 6.5323,
+    "l5": 5.6879,
+    "l6": 5.0129,
+    "l7": 3.681,
+    "l8": 3.9703,
+    "l9": 4.2562,
+    "l10": 4.0717,
+    "l11": 1.6963,
+    "total": 5.4942
+  },
+  "ce_held_gt": {
+    "l0": 7.7448,
+    "l1": 7.4143,
+    "l2": 6.6243,
+    "l3": 5.4247,
+    "l4": 4.8446,
+    "l5": 4.5612,
+    "l6": 4.0379,
+    "l7": 1.9851,
+    "l8": 2.9382,
+    "l9": 3.3488,
+    "l10": 3.3087,
+    "l11": 0.6283,
+    "total": 4.4051
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " and the that!. She said no moment, and her, \"Hey why don't have a a stay and off to go going to stay little: bird. Lucy I won't happy!\" Sam said they \"You to go home now now soon soonHe all got upset the he asked yourself Sarah and happened was sat happy that he he got hurt.  \nOne day the the line, but she didn't knew she she wouldn to it it. Eventually she can be for a way walk.\n, could not touchues with only and and off was The sandcastle was again. \nSo little boy.\nThe little girl",
+    ",, a little girl named Sue Amy. One One day,, Mia saw something store. She wanted to cut it anywhere. She asked the mom, so her mom mom asked her mom food .HerLily was sad,, but she needed some cocoa. She went to bake more honey. So she decided to share theBoo, - she had carry helmet,, but she made her mom had so much fun. They laughed and had had fun playing again",
+    " feel to feel better. They run do away each but each other. The they were was not scary of goose The first was a was a hero.\nOne day, playing, they found a a small voice.. lion fell fell down he he saw a. The bear angry. \" did are help me happy little boy?\" The sheep and said, \"II will help. will get ball.\"\n\n bear smiled Spot said, \"Yes,,. I all both and you the all played together and together. They learned that it was all day. And they all laughed.",
+    " it.\" They were angry. They did not mean. ItThat's good tidy. You had a Tim's toys. She,, are are. You are, you you put him away right,\" Ben and\" and and things. We We You are are good better. And. that her mom helped him and said \"WeWe't't't on it. You have have to do something else something.\"\nThe old and, \"Yes, course.. It them them that in my dough. We helped them.\"\nThey They threw it to the apples and a hug and hug. They were felt proud of. They went home",
+    " off the broke near their mouth hands and friends were very and they away and home with again, and the dust. and the the pot was not mean and the quick cat.",
+    ". his ball ball but he had forgotten so so that he out didn't know what twisty again.",
+    " then up knocked on rock and found a special. She had so much fun much Lily.\n\"Look at!\" Amy said.\nBut then, she saw a loud noise noise. Tom looked at disgusting mud. Lucy said, \"OhNo, but she want to play with Lucy,, Kitty wanted to make him away!\"\n and Lucy and Kitty felt. She did not know what it was would be good good play on day. She. Every day, she would always made sure was not like them.",
+    " want I want to have have have a new great..\nBut the was sat - the tree. He did not I felt very happy. She relieved.\nOne day, her juice felt angry. She did not not like Tom had has an idea. He did not find open. She tried his house get get the ball. She did sneezed but she did not listen listen cleaned again. It looked looked all it toy was too too and,, and she made her.\nThe man saw the mess mess away. The belt was and very happy again. She played played with the kids, they all came and played together all day"
+  ]
+}

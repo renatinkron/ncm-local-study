@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 65.0,
+  "passes": 11,
+  "s_per_sample": 8.125,
+  "dup_rate": 0.0578,
+  "distinct_ratio": 0.6723,
+  "ce_self_gen": {
+    "l0": 8.2488,
+    "l1": 7.9088,
+    "l2": 7.9377,
+    "l3": 7.5483,
+    "l4": 6.9302,
+    "l5": 6.0043,
+    "l6": 5.6399,
+    "l7": 4.4561,
+    "l8": 4.26,
+    "l9": 4.7354,
+    "l10": 4.4331,
+    "l11": 2.3097,
+    "total": 5.8677
+  },
+  "ce_held_gt": {
+    "l0": 8.1004,
+    "l1": 7.3897,
+    "l2": 6.7734,
+    "l3": 5.4405,
+    "l4": 4.6085,
+    "l5": 4.4126,
+    "l6": 3.6437,
+    "l7": 1.7456,
+    "l8": 2.6267,
+    "l9": 2.8913,
+    "l10": 2.8495,
+    "l11": 0.5384,
+    "total": 4.2517
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " happy and happy wipe them They said,, \"\"I. Bellas why why you have a letter a for out and starting to to say.\"\n\". I am a a promise.\" Sam said and \"Ready think we can help now now for the morning do you could do do you come what is it?\" He said that he could play with. say, \"Do can I all join in the?\"?\"Tom said.. \"I'm sorry, it.. can make way way, and hoped they could not tease you order,\" she said.\n\"Of rabbit,\" said the Mommy said.\nThe robotThe and",
+    ", the girl had have explore. One day she went to go home to find some cook of money to get the flour, so she went inside inside so she asked her mom said, “Oh,, pot pot for everyone?\"\nJill agreed took all her ingredients inside big, and grass, riding the switch.. came to to some - one one and said, \" it was. \" and of to set a other andly and the little neat.\nSuddenly,, the big a boot now! The chicken for for sorting the force, driver then then then purple.. on that day day. They both the attachers at",
+    " little little girl named Tim Tim was very very balance, but the could not bounce,, and scary too in. Emma was a was a name. She looked around the ball, they heard a voice voice Whiskers sat outside the tree table fell he He had a lot lot of.. Lily showed Sam Lily light happy and a a game. The The was was so excited and she said to her friends.\"\n, he opened the it and her fun and and clothes.. Froggy was happy and happy became not was happy. They learned that of playing playing golf. And they all.",
+    " stones stones, and and would sit on the tree and said,That \" idea. You had a tree!\"!\" Max thought with Tweet that use the axe and with them them. Whiskers slipped to the kangaroo and and and rocks things and a rings and they should not safe. And the that, the rabbit said, \"We are would., we can pull far you have have to do something do things\nTommy said, \"Yes,,,. Just and next on, we can will find here to keep and.\"\nTheTommy walked\n the castle and watched Sammy down down. They had a day day, went flying. went",
+    " off the hand gently in their hands and friends scared very very dreaming and by by. They wanted to give up their work Crab the toys. was want to delay with a slept. laughter!\nThe dog stretched the favorite balloonss, and they Mommy and would and others each other. They liked to play with his animals and many shapes. They would would read in bowl to their room, they saw a hairy and friendly little doctor. The dog was scared, but he wanted to play play with the clay bear and his bear and did not want to play with it. He said to his friends her.\n\"Yes course Sam,\" the",
+    " was a playing, Sophie loved Buddy was very good at at the toys. From that day that was Thanks they were just tired and couldn't to travel with all wings, but he walk around around. mom went back home and walked back to the big. Max family family and dad liked to liked's spread, and they gaze at the blue. She liked liked to cook Froggy a name. She told her organized and Dino in the grass. She saw a children like the birds, some big sand and and the reflection got up.\nLater, they got walked to the the plants chirped and Emily. They were proud happy content with her parents",
+    " She put it on and went went with the farm. They ran and steak to to it. Lily and Ben tried to to the exit, but he also very hard. Max made a very noise noise He wanted his dog and said, \"That's fun! We and remember to it will the truck and and make a the park!\"\nTim and Max ran to run. They gently and the cow would cry. They off off the the ball came out. Suddenly Suddenly, a duck came brought them to to kind go.\nSam Sam and Max had a.. They had a a lot of any\nTim wanted to go but but",
+    " big, modern and truck. One day, she wanted it to explore the driver was - the tree. It's big thought it very thankful very!'. His happy was wet and They They both liked to play with.\nOne day, a little boy started to move that that her wagon. The big lived drove to the handle. It turned the word, but it not not catch it.\nThe cat went to the seat. He bounce had the chairs it as she made.\nThe cow unsure of the pedals could make the loop by himself herself herself. She took a lives of kind to fold fa and be. Can you help"
+  ]
+}
