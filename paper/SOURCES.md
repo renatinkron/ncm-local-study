@@ -91,6 +91,7 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | Série v5 intra (§4.4) | 5 ckpts @9998–final: gap +1,101→+0,909; 24 passes vs 11 | `artifacts/v5_eval/ckpt_step*.json` |
 | v5 refinement (§4.4) | it1-f0.5-l5: gap +0,416 (31 passes); it2-f0.5-l1: gap −0,226, dup 0,088 (colapso de modo, 46 passes) | `artifacts/v5_eval/sweep_*.json` |
 | Profiling do treino (§5.2 xi) | ~67% GEMM @ ~360 GFLOPS (~84% pico); compile trunk −14% isolado / −5% e2e | `artifacts/prof/*.json` (repo privado de pesquisa) |
+| Decode chunk-local (§4.4, 5.2 xi) | gen_s 91,68→13,51 s (×6,79, B=8) com saída byte-idêntica | `artifacts/decode_eval/{fullprefix,chunklocal}_eval.json` |
 
 
 ## Fonte interna (não primária)

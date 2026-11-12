@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 91.68,
+  "passes": 24,
+  "s_per_sample": 11.46,
+  "dup_rate": 0.053,
+  "distinct_ratio": 0.6688,
+  "ce_self_gen": {
+    "l0": 8.1208,
+    "l1": 7.916,
+    "l2": 7.7908,
+    "l3": 6.9595,
+    "l4": 6.2843,
+    "l5": 4.9237,
+    "l6": 4.4107,
+    "l7": 3.125,
+    "l8": 3.4218,
+    "l9": 3.4337,
+    "l10": 3.8036,
+    "l11": 1.3285,
+    "total": 5.1265
+  },
+  "ce_held_gt": {
+    "l0": 7.7684,
+    "l1": 7.2345,
+    "l2": 6.5414,
+    "l3": 6.0672,
+    "l4": 4.5217,
+    "l5": 4.1029,
+    "l6": 3.702,
+    "l7": 1.6553,
+    "l8": 2.6803,
+    "l9": 2.9837,
+    "l10": 2.8538,
+    "l11": 0.4962,
+    "total": 4.2173
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " box in the box. She said it it was wrong. Ben asked, \" will says and and take. you take to to store We. stretch time there were not and the the mud. They mud in\nThey present Lily found a big puddle mud. This time time. When When do did you you did something pretty.\"What you sad?\" Lily said, \"I want to be more mud of you.\" Lily said, \"That's okay, Ben. We can't find a walk.\"\nThey walked on their mom and and saw a little baby. The shark Lily Lily and Lily were scared of the scared. They They",
+    ",, a little girl named Sue. Sue went to the store. She saw a big furniture and wanted to buy a surprise. She told Sue Lily and said, \"Can I go home,, please please?\" Her mom said, \"Yes, we need to finish first first!\" The mom said, \"Yes, let let's go space and to pick the top.\".\" They tried to get it all so much.\nThen, something unexpected happened. The big cake into into a oranges! The Always Sue cool and cooked food for Tim boy. They all enjoyed the yummy yummy treats. But they reached for the big chair on the",
+    " became good friends and played together all every day. They were happy happy and fun day to see the big big cake.",
+    " liked to play and and the water. They would run, jump and run in the sun. The sun was hot day, the a little dolphin appeared and to play in the warm sea with his friends. They played in the day,. He saw a big a frog was sad,. The saw saw and said, \"Mom, can can have have have food water with with my house?\" frog said, \"YesYes please,, please. But be careful rocks to hold. Let's go find a friend.\".\"\nThe wild bee and the duck duck looked at the water. They all found under a tree. The frog was",
+    " upon a time, there was a little girl named Lily. Lily loved to sleep a small. She liked to take her to her room and always fold One. Every to would asleep and\n with her toy.\nOne day, the cat and Lily found a big, rock she decided to fly the tree. She thought her the cat would come come back soon and touch touch at it tree. then then, a big cat came came to the cat! The cat wanted to again bird again. Lily flew into the tree his under the big water. The cat was happy and wanted to help his hand,..\nLily said, \"",
+    ". the ball.\nAt the park, Mia got very happy to have the ball.\nTim's dad to they were too friends. They forgot about the ball and to go inside. and Tim said goodbye and sailed goodbye goodbye goodbye to his mom. They went back to park and to his mom again Then, they to play together and all had a fun fun.",
+    " He thought it would be be fun fun to play. He went went to play with her friends Tom Tom. got close to catch friends, but then they he made made a loud. The cat's mom and saw Max and said, \"Wow, I my my friend. I will show all me home and make your friend friend!\"\nMax and Max went upon a time, there was was a big kiss. The had a big smile Every day, he would make a dog and play her in the store.\nOne day, a little girl named Lily saw a big the vase. She was very very pretty, She the the drawings",
+    " cat loved to have fun. One day, a big little cat saw the empty park. The cat was very happy.\n\nThe cat saw too and saw a gray ball. The cat wanted play with the ball. But the,, had an idea. It could push push the ball. The big cat saw the ball. It ran play away. The cat did know what it was.. They all wanted to play the ball. The, barked and dropped the dog.\nThe cat and the dog played together again. They were were happy. safe and played with their their new new friends."
+  ]
+}
