@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 83.1,
+  "passes": 24,
+  "s_per_sample": 10.387,
+  "dup_rate": 0.0553,
+  "distinct_ratio": 0.5938,
+  "ce_self_gen": {
+    "l0": 8.1272,
+    "l1": 7.9123,
+    "l2": 7.6486,
+    "l3": 7.306,
+    "l4": 6.4831,
+    "l5": 5.2651,
+    "l6": 4.994,
+    "l7": 3.6277,
+    "l8": 3.682,
+    "l9": 4.1674,
+    "l10": 3.7402,
+    "l11": 1.5388,
+    "total": 5.3744
+  },
+  "ce_held_gt": {
+    "l0": 7.9983,
+    "l1": 7.3004,
+    "l2": 6.5981,
+    "l3": 5.9263,
+    "l4": 4.6316,
+    "l5": 4.3852,
+    "l6": 3.8569,
+    "l7": 1.6674,
+    "l8": 2.7593,
+    "l9": 2.9849,
+    "l10": 2.8981,
+    "l11": 0.5422,
+    "total": 4.2957
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " cauliflower. Mom smiles She says.\n\"\"Mommy,, and Sara. we, have some cookies. love we and go to slide.\"\n\"OK, I have have the slide.\" Ben says.\n\" it, You have no!\" and and says, do do we have \"What you,?\" Mom Mom asks smiled says.\n\"Let's share,\" say. \"\"It like a gift.\" Mom says. \"It's okay okay.. We can Mom..\" Mom.\" and\n\".\"\nThat's okay,\" says. \"We can be okay,\" Mom says. Lily says.\n\"And you",
+    "",
+    " Sue felt felt sad because he he would away walk away that Tim looked at the big, scary book anymore.\n\"Okay, a bird!\" said Tim. \"Thank you,, bird bird I can you play with with it can help you find your?\"\nTim's ran of, Sam saw. saw a little playing a game game. They wanted game. \"Let's okay, Tim!\" Tim smiled and said, \"Yes, you can game with you.\" They jumped the ball and and and played together and. They and played day all day long, the game problem\n",
+    " one blue says.\n\"Here and you have something. There's something beautiful things. They them now!\"\nMom says \"You are the right right. but we to are the right. This go to learn learn things and to number. They they can a box and catch our toys. But we have to have new things new. And, Maybe can can be more more and to it together.\"\nBen nods. \"Yes, Mom! That's do rocks toys. We will try big and save more your toys.\"\nMom teacher showed them,, sandcastle and a smile smile They happy and better! We are the fun.",
+    " came from the tree. The bird was scared and blew. and the looked bird played together with the encouraged for the big and stayed landed and always looked out in the big puddle with their\n.",
+    ". their ball. Tim was so happy that he would always play with the.\nTom and Tim's dad and said they couldn't to eat morning. She ran and and ran inside too Tim showed his home and showed his mom side Mom Mom said goodbye and went back. The sky to to play again that they well in the sky. They thought Mama had fun things and to to see something.\nTom and Tom went to the sky. They saw a big to to high and the at the ball. Tom Tom opened it and saw go if he could climb climb. It flew away and tried to catch ball.\nTom picked up",
+    ". She lands on Mia and a book. She has eats more songs point at it it. She runs to to fast on the book. But then, heard he made a loud noise noise noise. She smiles boots. \"What is my big,. I can play play with with with my book.\" Tom says says.\nMia and Mia laugh and Mia smiles. They not do they, touch the park. They have to argue Tim. They run run and make a dog. They were happy to learn.",
+    " Tim was happy to have have a new friend. friend!\", like the green park was the tree for him. The tree was very happy. Their chores had soft small three old. Tim loved to play play with.\nOne day, Tim had an idea. He did that Kitty make.. It was a big and It had long. It could not if could see it it So, Tim went to to the park. She looked around splashed the and, when heard heard.\nThe green, green and thought it would be be safe safe and safe. He and Tim and he was a song. Tim Tim could manage it."
+  ]
+}

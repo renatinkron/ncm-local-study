@@ -88,6 +88,8 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | l0 unigrama empírica | distribuição de 4.096 códigos l0 do corpus de treino (2706 vistos); TV=0,34 vs vetor oficial | `artifacts/l0_inference/` (unigram derivada; vetor .npy não publicado — regenerável) |
 | Série v3 (corrupção linear 0,75→0,25, §4.4) | 10 ckpts @4499–9499: dup_rate 0,0792→0,0576; gap +1,246→+1,090 (platô ~1,10 estável por 4.500 passos); gt CE 4,546→4,216; parada antecipada pré-registrada (2 pts consecutivos na faixa 0,95–1,20) | `artifacts/v3_eval/ckpt_step*.json` (n=8, seed 0, receita oficial) |
 | Braço v4 GLAT-lite (§4.4) | pareado @6998 vs controle @6999: gap +1,616 vs +1,105 (−46%) → morto | `artifacts/v4_eval/ckpt_step6998.json` |
+| Série v5 intra (§4.4) | 5 ckpts @9998–final: gap +1,101→+0,909; 24 passes vs 11 | `artifacts/v5_eval/ckpt_step*.json` |
+| v5 refinement (§4.4) | it1-f0.5-l5: gap +0,416 (31 passes); it2-f0.5-l1: gap −0,226, dup 0,088 (colapso de modo, 46 passes) | `artifacts/v5_eval/sweep_*.json` |
 
 
 ## Fonte interna (não primária)

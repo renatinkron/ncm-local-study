@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 69.31,
+  "passes": 31,
+  "s_per_sample": 8.664,
+  "dup_rate": 0.0469,
+  "distinct_ratio": 0.7233,
+  "ce_self_gen": {
+    "l0": 8.1208,
+    "l1": 8.1243,
+    "l2": 8.0129,
+    "l3": 7.0525,
+    "l4": 6.1481,
+    "l5": 4.093,
+    "l6": 3.3961,
+    "l7": 2.3509,
+    "l8": 2.2763,
+    "l9": 2.8161,
+    "l10": 2.7008,
+    "l11": 0.9124,
+    "total": 4.667
+  },
+  "ce_held_gt": {
+    "l0": 7.7684,
+    "l1": 7.595,
+    "l2": 6.502,
+    "l3": 5.5137,
+    "l4": 4.5021,
+    "l5": 4.4154,
+    "l6": 3.6881,
+    "l7": 2.0034,
+    "l8": 2.7023,
+    "l9": 2.9906,
+    "l10": 2.8453,
+    "l11": 0.487,
+    "total": 4.2511
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " She thought it again. She said it was okay wrong. She asked Ben if he use different things to take take a things.\"",
+    ", a little little girl named Sue. Sue went to the store. Sue saw a big box. Sue wanted to see her toy She asked asked her mom,, \"Can I play with my, please please?\"?\" Her mom said, \"Yes, let to find food.\" Sue picked her and said, \"IYes, let's be a pretty cake with it.\" They all tried to, they had so much.\nThen, something unexpected happened. The ball ball rolled into a a big cake!\n Sue found for the colorful cake. They laughed and looked at the ball at together. The ball reached the rare store, they",
+    " became best friends. and played together every day.",
+    " and liked to play near the water. He liked to run and and jump in the sun. The sun was\nOne day, a big frog came out out. The rude boy and said his friends.\" Theark saw and yummy playing. They saw a big frog looked sad.\nThe frog frog asked and asked him, \"Please, I have a friend? That is my house?\" The frog said, \"Yes,, please please. But we have come back. They Let's find find the for my friend.\"\nLaterLater,, the the frog looked at the pond. They saw a big tree. The tree was so",
+    " upon a time, there was a little girl named Lily. She lived in a big tree. She liked to tease the toys and play toy things't always toys very fast she would play and licked him..\nOne day, Lily and Lily found a big pretty tree. She wanted to fly a tree. She thought told a cat would come back and will not touch touch touch the tree.\nThen, a big cat came into the tree! The cat did. Lily wanted it again. It flew into into and saw a tiny bug. The food cat was happy happy and wanted to play too too.\nLily said, \" secret",
+    ".. The ball was at the park. Mia was very happy to join Tom.\nTim and the dog were so excited. They forgot all all about the ball ball. Then, they waved goodbye goodbye goodbye and smiled and said goodbye to their nest. They went back to the park and and dog. They knew they played together together, and had lots of fun.",
+    " They thought it would would be fun to to play. He went to slide and ran on it. Spot jumped and tried to,,, it then, he made a noise. A big cat, Kate saw Sue crying and said,, \"Mom Mom! I am lost. Spot.\" decided to to make your ball the red ball!\"\nMax and Mia upon a time, there was a a big teacher near near a big hill. Every, she would make the other cup and play with her her friends.\nOne day, a little girl named SueSue found a big box. She was very pretty to see the cup, but",
+    " his liked to make fun fun One day, he saw a big, the black cat. The cat was very happy.\n\nThe baby cat saw a big white white cat and. The cat wanted to play the ball. But it it had an idea. He showed the his ball.\nThe cat was big black and ran flew far away. The cat did not not know it was was. They wanted to play the ball. The dog jumped and jumped into their ball.\nThe unexpected cat and the together played. They laughed. They were happy. They played with their new new ball all day."
+  ]
+}

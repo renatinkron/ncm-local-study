@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 89.92,
+  "passes": 24,
+  "s_per_sample": 11.239,
+  "dup_rate": 0.044,
+  "distinct_ratio": 0.7013,
+  "ce_self_gen": {
+    "l0": 8.2237,
+    "l1": 7.6065,
+    "l2": 7.713,
+    "l3": 6.9159,
+    "l4": 6.0733,
+    "l5": 5.3194,
+    "l6": 4.9878,
+    "l7": 3.2451,
+    "l8": 3.7642,
+    "l9": 4.1359,
+    "l10": 3.5443,
+    "l11": 1.5699,
+    "total": 5.2583
+  },
+  "ce_held_gt": {
+    "l0": 7.9004,
+    "l1": 7.237,
+    "l2": 6.6522,
+    "l3": 5.8698,
+    "l4": 4.6051,
+    "l5": 4.3034,
+    "l6": 3.8895,
+    "l7": 1.6304,
+    "l8": 2.7613,
+    "l9": 3.028,
+    "l10": 2.9318,
+    "l11": 0.536,
+    "total": 4.2787
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " new and saw them. She said, \"Ben,Lily, saw. She also you this to listen to took and should have to be careful and a music,. I will to have a new friend feel.\"\n or or you!\" She ran Mommy to Ben Ben got and up She got out. She was sad.\n\"Can we you have doing?\" Lily asked Lily. to. He smiled and said, \"Don't worry,Let's okay Ben. You can't't hurt or, or. will help you. will will give you tell you\n.\".\"\nBen did not listen when he saw a good girlSara",
+    " day, a little girl named Sue Sue went to to play. She saw a big pennies with. to eat. She put the plate in boot and.\nSue asked his mom, \"Mom,, can I have any cookies, please?\" Her mom said, \"No, Sue, yogurt, but you can buy your.\"\nLily smiled and went back got the yummy delicious cake. They had had so much fun fun.\nAt the table, Lily found a apple. She said, \"Thank you, cool and it for cake, Tim. They all enjoyed and the yummy treats together. They thanked for being polite and being being",
+    " feel better. She felt much back feel better. She saw her toy, a, scary dog named in. The bird smiled and said, \"Don't worry Lily! I help you,. I will help help,. Then I will help you you..\"\nTim smiled and relieved. He carefully his little red on his head and waved its back. The bird will help you Lily. Lily's and gave him big a nice They. You are very nice and..\" They hugged bird smiled and smiled.. She smiled and felt better. The bird was was very happy beach",
+    " saw,, Ben was pockets I can you take some my toys kids be careful. You can still!\"!\"\nBen and or smiles. You are not not to them. We are are right to us have to be gentle and our friends.\".Ben and was happy.\nBen says, you have have to tell mom mom. And you have to have now. But you have to be careful. They have a be kind and and gently But you have to the next time. But And you have promise..\"\nThey went home with a the hopping and a toy car. They better inside They \" feel feeling water. Tim smelled",
+    ".",
+    " ball. He had a a funny friend and Tim became good friends. They played anymore,. was was happy. And they all all happily happily ever after..Lily and and Ben were twins are friends. They like to play in their their mom dad and dad and mom dad.\n\"But.. would happen. They share. amazement new in the park. They have to see something strange. She has a sun the sky. They are some birds hawk to sing.ed the air and and Tom,\" Tom says says.\n\"Okay, can,\" you says.\n\"\"Can I play!\" She says.\nTom",
+    ". She found a red tight and had a plan. He ran. J cat and said, \"Hi, I am. Can you help me help you?\"\nLily smiled and and said, \"Don't worry, I me corner. Then, I I will play with him cat Kitty I me me make her fun surprise!\nAs they found her, Lily joke at the boy the and gave them.. happy was happy. Lily let would drop and nice nice and make right with pieces right her adventure.",
+    " hairy big forest, green. One day, a little dog found found the the park in the tree. The cat was very happy happy.The cat saw his new new friend. The cat wanted play. They did not belong to nice share. He did not other in the cat.\nThe big cat the cat was the It ate a.. It did not understand why it it Fiona the The cat was just wanted the nap. The cat dog and gave the thirsty back.\nTheThe cat and the the cat were friends.. friends were happy. They shared the their their toys and played with dog day."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 87.85,
+  "passes": 24,
+  "s_per_sample": 10.981,
+  "dup_rate": 0.0663,
+  "distinct_ratio": 0.6847,
+  "ce_self_gen": {
+    "l0": 8.1721,
+    "l1": 7.8837,
+    "l2": 7.7822,
+    "l3": 7.3267,
+    "l4": 6.6707,
+    "l5": 5.521,
+    "l6": 4.9326,
+    "l7": 3.4764,
+    "l8": 3.7156,
+    "l9": 3.698,
+    "l10": 3.7415,
+    "l11": 1.3288,
+    "total": 5.3541
+  },
+  "ce_held_gt": {
+    "l0": 7.8718,
+    "l1": 7.2366,
+    "l2": 6.3981,
+    "l3": 5.9388,
+    "l4": 4.4804,
+    "l5": 4.3266,
+    "l6": 3.8176,
+    "l7": 1.6536,
+    "l8": 2.7475,
+    "l9": 3.0465,
+    "l10": 2.9812,
+    "l11": 0.501,
+    "total": 4.25
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    ". She smiles smiles. She says their and said, \"Tom, why have have to have love. I love love and to to go to the large lake again. I can to have a a. You You have to play it now today you,. You should do you up. What are are you very confused.\n\"What are are you doing?\"\n\nLily says. \"It's okay?\" she says. \"It's okay's, Tom. We can take you a walk.\" You\" you day,, you will make you a safe safe safe,\",\" he says.\n smileMum. a smile and doll",
+    " his girl named Sue. One One day, Tim went to to play with a a big prize and wanted to help the cat near the street and Sue took took toys.\nSue then home, something unknown unknown cat. The dog was gray and bigger Tim began. They fell asleep! Sue Tim and the cat book her. Sue and laughed and clapped for for the dog. They were so happy.. hot much a time, in a a big park, there was a weak boy named Tim. Tim loved his room. He had a of full of of toys with him to put it. He went home his his toys all day.",
+    " feel. He wanted to help her feel better but, then he he, a bug. The bug was smaller,HelloHello, little bug,\" said the little bird. The bird said, \"I can my talk! I I will help you you find your home?\"\nThe bird flew back, Lily and the little went back to the little bug and said, \"I found,, I found you!\"!\" The little bird smiled and said, \"Yes,, Lily. We can do together and play together!\"!\" They played together and had had a a very happy\n",
+    " one one,\" Ben nods. It is Ben and that says brush \"It's okay. They can have!\"\nBen says, You can can keep me them,,, not to go to their us home, we should. But should solve your that money we we have. It is fun special and said, you to to place. Maybe we can have we and have fun fun things do?\"?\"\nBen nods and, \"Yes, Ben Lily Lily.... We will be more careful with it us us us.\"\nThey took the new new friends car and look at their away. They. not where he sand.\"",
+    " sing off cat food. The cat ate away. They were very happy. They played. gear had a fun day day at the the less The end.",
+    " was Max was playing the the park. Max was got very tired, and he felt so so tired. He was so and couldn't worry. He grabbed the the swings and ran inside. Tim the little went home and went back home in the park. He's mom and dad chance\nTim was happy and they in the sky.. They looked around and his toy. It was a big.! The walked walked walking in the yard The The small saw hopping flying you, Max looked at the a long toy.\nMax, Tim climbed the tree It grew and. It looked at Max and said, \"Hi!. Max more",
+    ". From then on, Lisa was scared. She was not worried aboutes to her birthday. She went to the suit and enjoyed the cold furniture, and she made a sunshine and loud noise.",
+    " That felt happy to have have a new friend, a a time, a new toy She lived house every day. The sun felt very happy and. She said had a friend, was, who loved to play with.\nOne day, the clock saw saw a symbol in the yard. It was dark and furry and so a. It did, it could not find find it it Fiona.\nLily wanted to try read it bracelet. She opened the room and she heard her\nThe little dinosaur felt scared of it it would would be to to brave for.. She thought,, was a lesson lesson remember remember to eat Speedy the"
+  ]
+}

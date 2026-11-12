@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 83.54,
+  "passes": 24,
+  "s_per_sample": 10.442,
+  "dup_rate": 0.0517,
+  "distinct_ratio": 0.6881,
+  "ce_self_gen": {
+    "l0": 8.1843,
+    "l1": 7.8719,
+    "l2": 7.5189,
+    "l3": 7.1572,
+    "l4": 6.8331,
+    "l5": 5.387,
+    "l6": 5.0523,
+    "l7": 3.4731,
+    "l8": 4.029,
+    "l9": 3.8075,
+    "l10": 3.7535,
+    "l11": 1.218,
+    "total": 5.3571
+  },
+  "ce_held_gt": {
+    "l0": 8.0347,
+    "l1": 7.2501,
+    "l2": 6.5688,
+    "l3": 5.8877,
+    "l4": 4.4099,
+    "l5": 4.3024,
+    "l6": 3.783,
+    "l7": 1.6118,
+    "l8": 2.6607,
+    "l9": 3.0297,
+    "l10": 2.9928,
+    "l11": 0.5375,
+    "total": 4.2558
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    "\n Mom Mom smiles. She says, \"Lily,, have for have me. You have me promise. you and want be your.\"\n\"Sorry,. I'm I to have a new friend. You are to nice. You are sorry sorry. do do you do?\"\n\" are you you?\" Mom asks asks.\n\"What are are you, only.. You your messy?\" Mom asks.\n\"Don't give,. Now, you to be okay,, Mom. I will you.. am am. I want to be swimming doing?\" Ben says.\n\"OK, thank too His\n please",
+    " and his loyal friend.. One day, Lily went to a medicine. They saw a big tree He wanted to buy some pebbles near a tree. Lily and laughed and said, \"Can I have some snack, you cookies today Lily agreed, they to go down down way.\nAs they were looking looking, they came into the store and grab the. milk got., but she tried to get all of a party.\nAfter the found a yummy treat and a fruit, and the. They had many yummy food for the cake, and. They all sat drank the juice treats. Lily learned that being kind and being being being",
+    ". the hole. The cat wanted to go scared sad and light her,, bug. fright bug am not real toy.?\"\nThe bird said, \"I am magic bird I am T. I will help you to see the flower? will feel you sad\n\nThe bug flew and saw a little bird said. It said, \"Hi, bug bug! I can help you. can stay.\" The lion was still and and said, \"Yes, I am am.\" They all played together and and together. They played and and had lots of fun at sky.",
+    " one. Ben asked. worried \" can you play my my bag \" be you. You can still food now. Maybe, if we will you first.. But we have to to easy. We need to have your your and and lunch.\"\n“Sure, you, let have fun, but friends have to to be careful. we you you but have to be more. you have to be quiet\n?\"\n\nLily smiles andOkay,!\"\n\"OK, let that's favorite lunch. I..\"\nThey go home the big split. They They a and smile smile fall They They. say, \"I love you",
+    " came work do very proud of Tom, Tom was scared and did not their moving. They were very alert and enjoyed their toys. The little moral of the story and always good on their friend.",
+    ". Max loved, so much, he was happy would always catch with play with him.\nTim's friend were sad they didn't to the Ready they ran run and, back inside. Tim his dog said waved goodbye goodbye and waved waved at the park.",
+    " together\nTom went to bites playtime his game. He made a loud sound made the loud bark. He tried to tried to to the box, but he he made made a loud. Tom Tom shakes his nose. He made Max Max loud loud. Tom was sad. He wanted to to make a home and make her fun.\nTom and Tom you felt afraid. They did not not want to make everything. They felt bad. They heard the noise.. Suddenly, they came out of the drawer window. She saw their the door and more again. It called him him.\nTomTom below a sad. She wanted to but",
+    " was so happy to to have a day friend, him little cat was playing in the the. The cat was happy happy Tom.\nAs the cat saw the new friend was the cat. They loved to play on the big park. They the as slide as could could with that make.\nThe big cat cat a bird. It lived where the problem. The cat cat had an idea. They They all ran to read both the under the tree. He dropped the bird.\n\nThe cat and the little bird played together together They were very happy together. They played games with the new toys. They all day long. Speedy Speedy"
+  ]
+}

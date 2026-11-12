@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 79.97,
+  "passes": 34,
+  "s_per_sample": 9.997,
+  "dup_rate": 0.0535,
+  "distinct_ratio": 0.6732,
+  "ce_self_gen": {
+    "l0": 8.1208,
+    "l1": 7.9883,
+    "l2": 8.0228,
+    "l3": 7.3209,
+    "l4": 6.1433,
+    "l5": 5.0738,
+    "l6": 4.5092,
+    "l7": 2.3037,
+    "l8": 2.4251,
+    "l9": 2.3026,
+    "l10": 2.2433,
+    "l11": 0.8687,
+    "total": 4.7769
+  },
+  "ce_held_gt": {
+    "l0": 7.7684,
+    "l1": 7.4191,
+    "l2": 6.5191,
+    "l3": 5.5671,
+    "l4": 4.7759,
+    "l5": 4.1279,
+    "l6": 3.7374,
+    "l7": 1.9144,
+    "l8": 2.8139,
+    "l9": 2.8902,
+    "l10": 2.7195,
+    "l11": 0.4443,
+    "total": 4.2248
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " thought in the box. She said it it was wrong. She said, \" will put the things to take take you to go",
+    ",, a little girl named Sue. Sue went to the store. She saw a big hill and wanted to buy buy it. She ran to it and asked, \"Can I go out,, please please?\" Her mom said, \"Yes, we can be careful you.\" Sue smiled and said, \"Yes, let's go to the store to get the ball.\".\" They tried to touch it, so much.\nThen, something unexpected happened. The big bird turned into a big birthday! The tree happy and food for the hidden treats. They all looked at the yummy snack. But then they caught on new on. Sue",
+    " became good friends and played together together all day. They were were happy each red day, a big big tree.\nLily was a very dog dog named Spot loved to play. One day One he was playing playing, he saw the ball bounce on the ground. It ran, around Lily Lily saw a little bird holding them. It barked for its tail.\nThe cat ball ball tried to to Lily. She said, \"Can I play play with the ball?\" Lily nodded and wagged his tail and sat together. They played with the ball and all day and had..\n",
+    " He liked to play near the water. They would run, jump and jump in the sun. The sun was hot hot, a the little duck came by. He in the loud woods with his friendsampoo\n, while while looking, he saw a big dog. He was sad,, saw the frog and said, \"Mom, can can I have you cold superhero in my house?\" His mom said, \"YesYes, please please please. But we be good together oyster. Let's go find your new friend.\"\nTheThe duck and the the duck looked at the water. They all looked under a tree. The tree was",
+    " upon a time, there was a little girl named Lily. Lily loved to watch a lot. She liked to read books to her toys and would work happy. She would even sleeping and\n with her hands.\nOne day, the Lily and Lily found a big,. She could fly to the tree. She thought her cat cat would would come soon soon and touch it up into the tree and then, a big cat came. The best cat! dog dog wanted to the cat again. They flew into into the tree and saw the water. The cat was happy and happy wanted to show her soft cat.\nLily said, \"",
+    ". They threw. ballAt the park. Mia was very happy to hear the ball.\nTim's dad told him they to leave. They forgot forgot about the ball and go home. Tim waved goodbye goodbye goodbye and said goodbye goodbye and again again. They went back to the park and his mom. They went home to play together and they all many fun fun.",
+    " thought thought it would be would be fun to play. He went to the park with her friends. Tom. Tom tried to catch them, but then he he made a loud noise. The cat's mom saw Max came and said, \"Hi, I have my friend. I want to go home home and your friends played full!\"\nMax and Max tried happy a time, there was was a big slide. It had a sunflower. Every day, he would make Spot when and play toys by the park.\nOne day, a little girl named Lily saw had new new juice. She was very pretty pretty pretty., but yellow",
+    " The cat and have fun. One day, the small cat cat saw the black cat. The cat was very happy.\nThe The cat, was saw many white cat. The cat wanted to play with the ball. But. the cat had an idea. He wanted to the the ball.. The cat saw the ball. It could not play too The cat did not know it was.. They all wanted to play the ball!\" The cat and and the the ball.\nTheThe cat and the played played together. They were were happy happy. They played with their ball with their friends and"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "n": 8,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 51.7,
+  "passes": 46,
+  "s_per_sample": 6.462,
+  "dup_rate": 0.0877,
+  "distinct_ratio": 0.751,
+  "ce_self_gen": {
+    "l0": 8.1208,
+    "l1": 7.5155,
+    "l2": 7.0298,
+    "l3": 5.0826,
+    "l4": 3.84,
+    "l5": 3.7226,
+    "l6": 3.1176,
+    "l7": 1.8535,
+    "l8": 2.4189,
+    "l9": 2.5106,
+    "l10": 2.3724,
+    "l11": 0.9783,
+    "total": 4.0469
+  },
+  "ce_held_gt": {
+    "l0": 7.7684,
+    "l1": 7.4104,
+    "l2": 6.4697,
+    "l3": 5.5785,
+    "l4": 5.1645,
+    "l5": 4.429,
+    "l6": 3.7091,
+    "l7": 1.8852,
+    "l8": 2.4876,
+    "l9": 3.0834,
+    "l10": 2.818,
+    "l11": 0.4684,
+    "total": 4.2727
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ]
+  ],
+  "texts": [
+    " what They put their mom and and Dad went home. They knew they would would go let the again again.",
+    ", there was a little girl named Mia. Mia had a little little dog,, a big, black loved to play with. But one day, the sun was very cold outside. It was a fun car anymore. The friends was very wet,. She was not miserable anymore. The umbrella was was happy and did happily ever after.",
+    ". Tom came over to play with his toy car. Sue looked Tom his friend girl named Sue. Sue saw Sue Sue and Tom confused and said, \"Hi,, Sue. Do you Do you you want to play with me Tom?\"\nSue smiled smiled and said, \"No, it. That is my my my my car.\" They both both both wanted to play together. waiting and gone. Sue Sue saw Mo. Sue felt sad sad. She felt sorry for her Tom. She said, \"You are are brave, you both both They.\" They were happy happy again.",
+    " ran to them the them.\nLily and Tom looked at the paper and saw many other things like the flowers, and and the the sky were blue They also said they say they were happy because they wanted to eat them them. She saw their their toys toys with them. Lily and Lily felt sad sad and cried cried. She told told them, that we they have to be careful. You have have birds and and not have. The moral of the story is to always be able to be kind.",
+    " is not fun is.\nThe moral of the story is that that it is a okay able to make others, others, others happiness than, when they need worked help to each other.",
+    " a new friend,",
+    ", \"Hi I I want to be independent. Do you want to play with with me cat?\" The cat always said, \"Yes, let's play together!\" They played together all day day, played together and had lots lots of fun and had fun at at the park.",
+    " Suddenly,, they heard a loud noise in the tree. They walked to the to to see what was was the cat. The dog came came to see them at them.\n dog ran from the dog and said, \"GoStop repe!\" The dog and the cat and Sue Sue were sad.\nThe cat and cat became good friends. They played together every day earlier. The moral moral of the story is is that being being selfish not to destroy things to things. She had a fun day at the park"
+  ]
+}
