@@ -90,6 +90,7 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | Braço v4 GLAT-lite (§4.4) | pareado @6998 vs controle @6999: gap +1,616 vs +1,105 (−46%) → morto | `artifacts/v4_eval/ckpt_step6998.json` |
 | Série v5 intra (§4.4) | 5 ckpts @9998–final: gap +1,101→+0,909; 24 passes vs 11 | `artifacts/v5_eval/ckpt_step*.json` |
 | v5 refinement (§4.4) | it1-f0.5-l5: gap +0,416 (31 passes); it2-f0.5-l1: gap −0,226, dup 0,088 (colapso de modo, 46 passes) | `artifacts/v5_eval/sweep_*.json` |
+| Profiling do treino (§5.2 xi) | ~67% GEMM @ ~360 GFLOPS (~84% pico); compile trunk −14% isolado / −5% e2e | `artifacts/prof/*.json` (repo privado de pesquisa) |
 
 
 ## Fonte interna (não primária)

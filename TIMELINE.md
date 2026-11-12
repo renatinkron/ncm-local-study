@@ -22,6 +22,7 @@ migração parcial para CPU 4750U/32 GB a partir do RUN-006.
 | 10–11 nov | RUN-024/025: série v3 monitorada em 10 checkpoints | dup_rate 0,110→~0,05 (−47%), exposure gap +1,24→platô ~+1,10, gt CE 4,41→4,22; parada antecipada pré-registrada em @9499 (~24h CPU economizadas) |
 | 11 nov | RUN-025: braço v4 GLAT-lite (corrupção com predições próprias) | pareado @6998 vs @6999: gap +1,62 vs +1,11 (−46%) → braço morto; segundo datapoint de que a forma do ruído importa mais que sua presença |
 | 11–12 nov | RUN-026: braço v5 — intra-level masked conditioning + Mask-Predict | chunked intra: gap +1,09→+0,91 (24 vs 11 passes); refinement moderado: gap +0,42; agressivo: gap −0,23 com dup 0,088 (colapso de modo — não-monotônico); dup ~0,05 invariante em todos os braços |
+| 12 nov | RUN-027: profiling do passo de treino | ~67% GEMM MKL a ~84% do pico Zen2 → treino FLOP-bound; C/Rust sem headroom; torch.compile trunk −5% e2e (flag opt-in); alavanca de inferência = prefix-cache (design pronto) |
 
 ## Leitura honesta do esforço
 
