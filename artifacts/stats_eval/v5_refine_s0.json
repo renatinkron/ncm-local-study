@@ -1,0 +1,178 @@
+{
+  "n": 32,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 79.24,
+  "passes": 31,
+  "s_per_sample": 2.476,
+  "dup_rate": 0.049,
+  "distinct_ratio": 0.7123,
+  "ce_self_gen": {
+    "l0": 8.0078,
+    "l1": 7.7159,
+    "l2": 7.8204,
+    "l3": 6.9323,
+    "l4": 6.0295,
+    "l5": 4.3835,
+    "l6": 3.7228,
+    "l7": 2.4655,
+    "l8": 2.6405,
+    "l9": 2.8544,
+    "l10": 2.6829,
+    "l11": 1.0144,
+    "total": 4.6892
+  },
+  "ce_held_gt": {
+    "l0": 7.8328,
+    "l1": 7.4734,
+    "l2": 6.6931,
+    "l3": 5.8134,
+    "l4": 4.8703,
+    "l5": 4.4475,
+    "l6": 3.8465,
+    "l7": 1.9774,
+    "l8": 2.6799,
+    "l9": 2.9716,
+    "l10": 2.9162,
+    "l11": 0.5097,
+    "total": 4.336
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ],
+    [
+      3672
+    ],
+    [
+      3349
+    ],
+    [
+      3789
+    ],
+    [
+      722
+    ],
+    [
+      2146
+    ],
+    [
+      3496
+    ],
+    [
+      1300
+    ],
+    [
+      811
+    ],
+    [
+      3930
+    ],
+    [
+      2016
+    ],
+    [
+      1349
+    ],
+    [
+      3051
+    ],
+    [
+      2418
+    ],
+    [
+      2280
+    ],
+    [
+      1299
+    ],
+    [
+      1256
+    ],
+    [
+      3187
+    ],
+    [
+      1699
+    ],
+    [
+      431
+    ],
+    [
+      609
+    ],
+    [
+      2540
+    ],
+    [
+      735
+    ],
+    [
+      218
+    ],
+    [
+      77
+    ]
+  ],
+  "texts": [
+    " car. It is shiny and shiny and enough.\n\"\"Look Tom, this is mine fair!\" Lily says.\n\"But we have have it. They take turns turns the them and avoid ran to ran after it.\nLily is very angry. She picks them in them their room room and living room.\nLily and Ben scared. They want to open the it it.\n\"Let's try it!\"!\" They pull Lily and Tom and Lily look by by them. They take out of the couch. They see a big leaf on the long head. They act them to eat their flowers. She are stuck in trouble",
+    "Lily found a new friend, help to help him. Spot barked agreed and agreed and played the bird. They played together all day long.\nIn the worms, Sam had made a new new friend to his house. Lily was so happy, and knew they were best friends.",
+    " gone!",
+    " had a lot of of fun fun. The cat told his friends about the talking cat. They played played all all day,, the cat were fun.",
+    " tries to help.",
+    " surprise biggo in a house. The old man does not give it to Tom Tom and.\nLily and Ben are safe. They went back to the house inside. They see a big red ball. on a bench. They laughed and clap.\n\"\"Look, Tom is my my ball!\"!\" Ben says. \"This is very pretty!\"\nThe hears hears them puts sees on the blood. The man likes the dog is them. They say the man when And give it back to Ben the and crack with us. They are happy hard again again.",
+    " be end of you you happy.\".\" Sue said, \"I love you too, everyone now.\"\n\nTim and the witch went with his friends. They had a lot lot of fun fun. They saw their ball. Tim friends laughed and laughed. They had a lot of fun to. Tim and Tim remembered remembered what what was. They were best.",
+    ", no no no One sunny day,, she decided to nap nap. They went to the park park and crawled on on the street, and kept kept playing.\nWhile they were walking in the park, he saw a big tree tree. There was a big was that dog was!! They looked around and saw a big. The dog ran away Tom and said,Can we come them. We ran to the small dog named Max to the dog.\nLily and Tom were sad, but brave. He showed the dog with a her. They gave the dog in the park and they played together and with many fun.. day",
+    " was tired, but he jumped in in dog dog, a friendly, flew out of the ball went away away. Tim wanted to cook the Tim's mom. Tim was very scared scared and the flew away. Tim gave the dog man to the dog. Tim and Tim said goodbye, and both went to to the dog and play again again.",
+    " rocket.\n\"No, Tim. Maybe we can fix rocket,\" Mom says.\n\"No, Ben,. We We need to use it the card. We want to it.\" mom mom said, \"NoNo, don't, I don't want to hurt you.\".\"\n\"No, Mom, did not mean.\" Ben says.\n\"Be careful,,\",\" says says. \" teaspoon is is fun and and be careful.\"\nMomMom hears. She is not angry. She made a picture grateful for them. She is not mean to them.\n\"Oh no, that!\" Lily says says.\n",
+    ".. She climbed the tree and sees it. She saw a big tree with a things on her head. The fish a red ball. It has four red and ball.\n\"Look at Mom?\" Lily asked. can we knowing we button, the ball?\"?\"",
+    " He said, \" \"Thank you, Tim. It is happy and warm. is together from my park.\" Tim learned that that it is is important to have them and try try together and and made everyone everyone makes everyone happy..",
+    "",
+    " surprised. They didn't know know what to do\nThey saw the big bird saw driving,, the green flowers was the ground. The bird was gone under the big. Sue was so pretty! The other birds with all their family. They had a new friend\n",
+    ".” Lily goes back to the bench. Lily sees Ben and Ben and throws the cat. She back back him.\n\"Look, mom we catch?\" Lily and Ben to go away, go,\" Ben says says.\n\nBen does head she sees them. She opens out, Lily. She opens the book and gives them them a big hug. She is angry and scary.",
+    " had funny cat came play in the park. Spot was about about playing.\nTim said, \"Sam, we have to and the the ball the ball, let's first!\" Sam saw Sam agreed and agreed and they they all played together.\nAt the park, something unexpected happened. The bird bowed its beak. beak found a ball ball it in the air. The dog picked up the ball together and found furry ball went back. Tim Tim were happy and safe. They played together in the ball and the was every day.",
+    " play in the park.",
+    " and play all day.\nOne day, they saw a little cat named Lily. Lily went to her house. She said said, \"Hi, cat cat flying. We can play with me me?\" please?\" Sue was happy and said, \"'t know.. They played together together and had lots of fun.. They made a happy. and helping each other.\nWhen they were daisy,, but Lily said to Fluffy,, \" no!\" Lily and Tom Tom had a fun day in the park park was happy and she was happy.",
+    " cat with a big box. The cat said, \"Hello, man.\" The man wanted to help the man find the cat.\nShe went to the man and ate the food, please please. The nice man smiled smiled and went back for help. She helped her things things because they each slide helped each other.",
+    " play. That is not good to go inside the park and is is fun. They went a big room with with a smile on the others.",
+    ". They played played with the red ball. They were very happy to have a ball. From that day on, Tim and the cat always ate. They shared the ball back to back. Tim and the cat played all day long. They were of the best of friends.",
+    " puppy and the dog played Spot the yard. They all played all day long and had lots of of fun.",
+    " was hurt and said, \"Mom, we we okay, mom, we should share to fix your car and fix our. Now we fix it.\"\nMom mom mom mom smiled and said said, \"Don't worry, Tim ha you. I will help help you you.\" Lily helped helped to Mom. Tim's car saw Lily toy back. She said, \"Thank you you. Thank my my car.\" From then, Lily Sam Lily pushed on the car. She broken and turns't. She was sad, and was again. Next time time, Mommy came!\". She said, \"It's okay, Mom. You did",
+    " of the house. They did not know what to do to drink what",
+    " helps them some some wonderful him. They are sorry for him and gives them to ask to him. They are sorry again and",
+    " shiny sack. They saw a small living inside inside. But when they were yelling. There was a big cat jumped out of the barrel again. They were happy of them.\nButBut the dog came back and took the room room. Tim and people were sad. They looked mad at them. They knew that they will be careful and.. Tim and the dog for for true. They were happy. They both good good of friends.",
+    " happy to have a new friends.\nOneOne day, a little boy boy went to the park. He saw a cat cat at cat. He felt like the big tree. the big cat was scared scared of the cat. He saw a cat cat was crying. Mia thought the cat coming a just.\nThe all played together., they were. The cat and his mom was happy happy happy to help.\nThe moral of the story is: Don't be be others with helping others and be fun things do we can do things.",
+    "\n. He kept to to find it out, but he far far away away. He barked and they walked away. But then, he heard a noise noise came back. Tom told Tom that if he could help Tom found Sam back back. They all all had to help him.\n walked Sam up and saw him crying crying and of him. She told him and said, \"I want to to, his mom. I will make the food.\" Sam smiled and.\nThey ate. food and ate away. Tom was happy and gave the the right their new friend.",
+    " friends. They decided to be things. things played with the sword with their. things.\nOne day, a boy named Lily went to his room her She saw a dog.\n\"Wow,, this look!\" she said. \"But, I not the the sword. It is to and nice!\" Lily said.\n\"No,, Lily. That's take the dog. That is a special special thing.\"\nTim and Lily and the looked at Tom. They said, \"Maybe is mean! We are pumpkin the dog. I am mad mad at my dog! But you you will give show you.\" Lily said.",
+    " new.\n\n time, there was a kind boy named Tim was playing on a car. He wanted wanted to play with it. So Tim saw saw Sue over over car. He said, \"No, I can see you find my car?\" Sue went over., but he was going to going together.\nTim's's mom came into Sam Tim's house said, \" Max we can play with me and cars.\" Tom was sad and tried, but he did not to look at Tim the car. But Tim saw and pushed the car how to move Tim's car. Tim and his mom ran to to their room. It",
+    "I love my my ball? This is our ball, we can be nice others.\" Kitty Kitty and they were both both very happy. They played on the ground play.",
+    " went to the store with her mom. They saw a big ball. The cat played with the ball were you cold and tall. Tim was very happy to have, \"Thank you, Spot!\"\nAnd now, Spot played and the moral of the story is, to always be careful with with else."
+  ]
+}

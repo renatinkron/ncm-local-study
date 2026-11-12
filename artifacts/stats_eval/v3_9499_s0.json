@@ -1,0 +1,178 @@
+{
+  "n": 32,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 23.43,
+  "passes": 11,
+  "s_per_sample": 0.732,
+  "dup_rate": 0.0509,
+  "distinct_ratio": 0.7135,
+  "ce_self_gen": {
+    "l0": 8.0177,
+    "l1": 7.6704,
+    "l2": 7.8703,
+    "l3": 7.1369,
+    "l4": 6.1637,
+    "l5": 5.3227,
+    "l6": 4.5066,
+    "l7": 3.2547,
+    "l8": 3.5453,
+    "l9": 3.7682,
+    "l10": 3.6423,
+    "l11": 1.2865,
+    "total": 5.1821
+  },
+  "ce_held_gt": {
+    "l0": 8.0547,
+    "l1": 7.6025,
+    "l2": 6.6856,
+    "l3": 5.6545,
+    "l4": 4.9638,
+    "l5": 4.4566,
+    "l6": 3.7331,
+    "l7": 1.9231,
+    "l8": 2.6662,
+    "l9": 2.9749,
+    "l10": 2.926,
+    "l11": 0.551,
+    "total": 4.3493
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ],
+    [
+      3672
+    ],
+    [
+      3349
+    ],
+    [
+      3789
+    ],
+    [
+      722
+    ],
+    [
+      2146
+    ],
+    [
+      3496
+    ],
+    [
+      1300
+    ],
+    [
+      811
+    ],
+    [
+      3930
+    ],
+    [
+      2016
+    ],
+    [
+      1349
+    ],
+    [
+      3051
+    ],
+    [
+      2418
+    ],
+    [
+      2280
+    ],
+    [
+      1299
+    ],
+    [
+      1256
+    ],
+    [
+      3187
+    ],
+    [
+      1699
+    ],
+    [
+      431
+    ],
+    [
+      609
+    ],
+    [
+      2540
+    ],
+    [
+      735
+    ],
+    [
+      218
+    ],
+    [
+      77
+    ]
+  ],
+  "texts": [
+    " It is not nice. It was a \". Lily and Lily are sorry. Lily and and Lily were playing playing in the park. They wanted to have pretty flowers flowers Lily said. She held the the fruits and ran to the garden. They were very. They wanted to show their Mom for adventures. Mom said.\nLily and felt sad. wanted to play.?\" Mom said, \"Look, Lily. Let let's play.. play and play together.\"\nThey ran to. They said said. and showed them Tom to to watch. Anna was scared\nFinally it, their flowers. Lily said Lily \", we in",
+    " and for helping me me!\" Tim and wagged his tail, and and they all decided to play of a party for the They all all day day long.. they they were happy because they were balloons. Tim help help, help their friends, and they were all were good friends..",
+    " the the!\" Tim thought thought a moment ride ride they should not balloons in the cake.\nIn the end, Tim his toys and Tim played with his balloons. Every day, Tim's mom mom with a big big big smile! Are There they are very one playing playing. Tim was not sad.",
+    " Let's But they are fun cold\nThe moral of the story is that is so scared too. They see who see it was dark, and taught them to be them and and come back to the box world pie they did not fly before. He was very old,, but but she was shy. He had a a big storm. One day, bird started to run!.. Tom Tom and Tom looked at the big bird said sorry for him. He wished he had listened and his his friends.\n Inside they walked, the kayak of the big and played with and cars. They had made him him. They did not listen",
+    " bad bad ending.",
+    " They look look for the. Tom Tom agreed agreed. They their lesson. They held and in it.\nLila Ben ran to the kitchen and safe. They went to a a big, ball. They hugged and hugged.. They and tried to show the ball.\n\"Are are it Ben!\" Ben says.\n\"you, you try get the ball. It is high and and didn't know what. It is not nice\nTheyThey hold hug you away from the couch. They are to the park, happy, down, and the ball is clean again.",
+    ", \"Thank you Mom.\" She smiled and said, \"Yes, Tim Tim's mom found.\"\nTim and Sue and his dad with all the slide. They all had a lot of of fun. At In the day, Tim played with his toys his toys long They were happy happy to see new toys of of for playing together. They were the best friends.",
+    ", but but no was three! Max was very excited to help and they all went at the park playing play and put it on his mouth and kept around.. WhileWhile they walking by his, he saw saw something something strange suddenly of the door. The Sam was was surprised! \"Oh no no no!\", Tim asked asked Max from the. Tim said, \" you to back you the is important to the friend and should try.\".\"\nLily and Lily were some many playing with the nuts. From that day, Tim and they would always enter things when playing together, and they played together at the little boy named Tim",
+    " tired, were, so so, he said, \"Now you, no more.\" The player took the other other and said \" \"Thank, little bird!\" Sam of,, be brave. He flew away away.,, we share his mom and day!\" And that day and the The boy had a fun together and was the end anymore.",
+    " small small away.\n\"Tom,, you you sure you?\" Max said a their. Tom Max Max at his head. He wanted to sell it back back.\nLilyLily ran to Tim. She said, \"Max, you, I don't want to my my\". Max they was scared I I didn want.\" Max smiled and said, \"I am too too. I won't play it it.\"\nBenMom and mom closed their eyes and looked at the toys. She said sorry they could see Max felt Max for a big hug to her.\n\nGood job, mom mom,\",\" Mom said goodbye to Tim",
+    "\nThe next day, Mia and her mom went to the less to to play outside outside. Suddenly, they found a colorful holes on the ground. It long and and and it and Mia Mia ran to the park with her.\nAt park with while his mom said said,I found a big box box!\" Lily was happy and ran to to the big surprise box.\n picked it up big tree and on the water. Tim his mom said, \"Tim, what I is this car on this box to my mom?\" His mom. His mom said, \"Yes, help. Let's play it it!\"\nThey played,",
+    " said said, \"II will help you get someone's are safe. That be good, tonight.\" The cat became very very and and learned that it's wrong to take good things and and made made her feel better castle.",
+    " and dog were best toys and never play with the ball. They are good very happy place where the park was happy to have a new friend.\nTheir called them in the park.\n saw saw the ball playing and wanted to play with it. She did did not want to the ball away to other kids happy. kids who had to be kind, kind and to be kind and help them.\nThe dog was not mad hiding back to help. They didn't want to smart they learned their lesson lesson They will be mad to to you want to be careful here.\"The children and liked the run bad.\nThe was still still",
+    " surprised surprised. They didn't matter do to do magic.\nThe the bird bird looked the toy! The bug did not know. sky it stopped small and surprised. The big bird knew that sharing was it the bubbles with its family. The bird. the, and the was the bird who a nice surprise. The bird had a special pot, and they all lived happily after",
+    " with the nest together, but it was time time away. Lily picked the the up in the box and took the blocks back to go home.!\" Lily and his mom and put them back together. Lily was happy, and they learned never never. ball again.",
+    " to keep his friend, Max Sam to play in the water too.\nTom said, \"TomMom, let's play a big, please please?\" Tom smiled and said, \"Yes, mom!\". let's play on the together!\" As house went on on the big of rice was cooking. Sue's friend. Max said, \"Wow job, Tom!! You need to very hard!\".Tom and Tom went with Lily's house Tim was very very, and they ran to Max back back and played with the big spade together. After they dug until the sun went down.\n and and Max were tired but happy me",
+    ". It was happy.",
+    " day, Lily had trying to to make the soup and to make soup. Lily thought knew her mom and her mom. She said,, \"I will help you!\" said, Lily. Can you help you organize cooking?\"\nThey big plates and and the cakes. They played together and had lots of of fun on. Lily felt very happy. her tail home. Suddenly, the day came down it and it looked Lily. Lily.\n\"Oh no no no a!\"'s!\" Lily came to the park. Her mom mom and were were. She ran to kitchen and saw the mess. She saw her mom but not not She",
+    " bird. She saw the tree and the bird gave them them a hug. The bird came to help the dog and help, and they shared the tree. They climbed down the tree was not so much fun!\nThe bird and the bird were the best friends. They played all and had fun and had lots lot of fun fun.",
+    " could with the the man to go to the park park.\nAtAt the park. He found a big window with it. He thought it which they both and went to the play together.. When little little girl saw him ball a small dress on its home. The man took the castle man and the dog were. They all laughed and had the fun.\nThe next end, and they played play in all the park the park and had fun days together:.\n friends upon a nice time.",
+    " of fun. One day, they found a big box. and found a pretty things. They were amazed to what it book!\" he said.\nThe lady smiled and raised the flower. The lady said \" birds the's family. They all to help friends. They took turns together in the big day. They look a fun together.\"\nSo the car car and felt happy it. They looked in it searched everywhere. They were was in yard the yard. sun was very blue and asked blue. The car was happy, and they became became good friends friends.",
+    " said, \"You! You are not ourselves.\"\nThe mom mom said, \" \" are are mean. You are are got nice.\"\n His mom said \"It's me understand I. want to listened and his mom mom said.\nShe took the book away. She said, \"Stop!,! You's not!\"!\" said, \"I drank away, Mom I found the toys It is something and your room.\" She wanted to keep Tom had to. She can with with toys and share many toys.",
+    " like and to make it feel better.\nThen, Amy Lucy to his his friend., Tim helped fix little house. \"There, something unexpected happened. looked at the river and said, \"I told you,. We will not help you you.\"\n was brave little and helped the room clean that the pretty he was gone! Tim was happy and said,, \"Thank you, Tom!\" From that day on, Lily learned that made made everyone's friend, and they both together.",
+    " was not nice. He did did not know what to do it it happen. Spot Spot played with with his sister,, it and was was time to go again again again!",
+    " me?\" His mom looked at at the girl.\nThe girl was sad, asked his mom asked him,. \"How do The scared. Tom to play with me?\"\nThe dog and did not want to do take to care of you They took took turns with their cars and wires then fight.. The little brother was that their his were not but they naughty learned that sometimes you will breaking to the help. But we should not with..\n were is better. get We to learn cars cars and said sorry, to Anna glove and their did..\" Mom said. \"We to pick it and work work at together.",
+    " shiny I I play with the lady?\"\nHis mom smiled and said, \"Yes, let's play with!\" They took the Tim and Max played together from.\nBut one day, the, were shiny and on on the table, and and his were sad. them saw. Lily told him, him, we will be the again.. We can take them the smelly back to.\".\" The queen was happy that Sam was so tired and Tim and had home with with the queen.",
+    " thing that he had a new friend.\nOne day, a little boy named Sue hurt. Tim had said, \"That's's good not good wash.\"\nHis mom said, \"I I feel tired, but she restThe the vine okay?\" Sue Sue Mia Sue felt bad for ake. could help help. They all knew if they could do. Their mom mom hugged him, and your your. She learned you, can help help the you you are friends.\"",
+    ", you need to leave leave and play later.\"\nLily started to cry cry. Sue He watched he he slid away. Then then Lily heard petted voice out to her. She ran to be careful, Lily her her tape to get closer. They all said, \"Yes, I'm sorry,!\" The bird was happy to return Sue. She ball smiled and said, \"I love help you Tom, but we were were happy to be dirty.\" Tom and Sue Sue felt happy. They played together and became best friends.",
+    " mom smiled and told him to help at it and was feels sorry. They knew that that you are not so mean and, terrible and told that told him to asking if You are just any in toys. We were not nice home for help friends. we play again again when we feel nice.\"\nBen and felt sad and smiled. He learned learned. to this this lesson. But one day day something something loyal. Lily met a little boy, friendly dog. It looked at the hole.\n\"Hi you,\",\" Lily said. \"I don't know my doll.! That knew they will help you.\"\nThe dog was",
+    " \" Tim get a down, Tim Tim a was happy and said, \"You are're welcome welcome, sister and Sam can play with you! Now that! Now, Lily friends and played together together every day. again and Tom were best friends. They were big, strong and to make make them sad.",
+    " \" love love your toy. And we can share and your toy car toy car have now, louder.\" both both were playing together,, hate the eyes interesting amazing.",
+    " and her park mom Sue's mom opened her mom mom. She said, \"Can are a good one Lucy thought what they are yummy yummy!\" Her mom said at the knight and said, \"I have a great time, and was very.\" Lucy Lucy and her mom and dad played with her mom.."
+  ]
+}

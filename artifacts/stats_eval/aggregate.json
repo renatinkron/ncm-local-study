@@ -1,0 +1,89 @@
+{
+  "v3_9499": {
+    "n_per_seed": 32,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "dup_rate": {
+      "mean": 0.0521,
+      "std": 0.001
+    },
+    "distinct_ratio": {
+      "mean": 0.741,
+      "std": 0.0248
+    },
+    "ce_self": {
+      "mean": 5.1584,
+      "std": 0.0431
+    },
+    "ce_gt": {
+      "mean": 4.331,
+      "std": 0.0417
+    },
+    "exposure_gap": {
+      "mean": 0.8274,
+      "std": 0.0766
+    },
+    "passes": 11
+  },
+  "v5_chunked": {
+    "n_per_seed": 32,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "dup_rate": {
+      "mean": 0.0434,
+      "std": 0.0017
+    },
+    "distinct_ratio": {
+      "mean": 0.7418,
+      "std": 0.0147
+    },
+    "ce_self": {
+      "mean": 5.2001,
+      "std": 0.022
+    },
+    "ce_gt": {
+      "mean": 4.3474,
+      "std": 0.044
+    },
+    "exposure_gap": {
+      "mean": 0.8527,
+      "std": 0.0514
+    },
+    "passes": 24
+  },
+  "v5_refine": {
+    "n_per_seed": 32,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "dup_rate": {
+      "mean": 0.0471,
+      "std": 0.0043
+    },
+    "distinct_ratio": {
+      "mean": 0.7154,
+      "std": 0.0071
+    },
+    "ce_self": {
+      "mean": 4.6594,
+      "std": 0.0302
+    },
+    "ce_gt": {
+      "mean": 4.344,
+      "std": 0.0195
+    },
+    "exposure_gap": {
+      "mean": 0.3155,
+      "std": 0.0328
+    },
+    "passes": 31
+  }
+}

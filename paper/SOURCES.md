@@ -93,6 +93,7 @@ Os artefatos de métrica estão em `../artifacts/metrics/`; amostras de texto em
 | Profiling do treino (§5.2 xi) | ~67% GEMM @ ~360 GFLOPS (~84% pico); compile trunk −14% isolado / −5% e2e | `artifacts/prof/*.json` (repo privado de pesquisa) |
 | Decode chunk-local (§4.4, 5.2 xi) | gen_s 91,68→13,51 s (×6,79, B=8) com saída byte-idêntica | `artifacts/decode_eval/{fullprefix,chunklocal}_eval.json` |
 | Head windowing + compile-decode (§4.4) | →8,29 s (×11,06, bit-idêntico); compile quente 7,37 s (~12,4×) | `artifacts/decode_eval/{windowed,compiled}_eval.json` |
+| Estatística n=32×3 seeds (§4.4, 5.2 iv) | gap: v3 0,827±0,077 / v5-chunked 0,853±0,051 (nulo) / v5-refine 0,316±0,033 | `artifacts/stats_eval/{aggregate,*_s*}.json` |
 
 
 ## Fonte interna (não primária)

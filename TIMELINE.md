@@ -25,6 +25,7 @@ migração parcial para CPU 4750U/32 GB a partir do RUN-006.
 | 12 nov | RUN-027: profiling do passo de treino | ~67% GEMM MKL a ~84% do pico Zen2 → treino FLOP-bound; C/Rust sem headroom; torch.compile trunk −5% e2e (flag opt-in); alavanca de inferência = prefix-cache (design pronto) |
 | 12 nov | RUN-028: decode chunk-local (block-diagonal) implementado | gen_s 91,7→13,5 s (×6,8, B=8) com saída byte-idêntica (códigos, textos, métricas) — paridade com o `generate` upstream; int8/KV-cache avaliados e descartados por escopo |
 | 12 nov | RUN-029: head windowing + compile-decode opt-in | gen_s →8,29 s (**×11** acumulado, bit-idêntico); compile quente 7,4 s (**~12,4×**, warmup ~11 s — só paga multi-geração); headroom residual ~4× em kernels pequenos |
+| 12 nov | RUN-030: stats n=32×3 seeds + v5-ext lançado | **correção**: intra-chunked não replica em n grande (0,853±0,051 vs v3 0,827±0,077 — o +0,18 do n=8 era ruído); refinement confirmado robusto (+0,316±0,033); v5-ext +2.500 passos em treino |
 
 ## Leitura honesta do esforço
 

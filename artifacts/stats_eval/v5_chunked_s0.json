@@ -1,0 +1,178 @@
+{
+  "n": 32,
+  "temp": 1.0,
+  "topk": 0,
+  "top_p": 1.0,
+  "seed": 0,
+  "l0_mode": "unigram",
+  "freq": 0.0,
+  "mu": 0.0,
+  "adj": null,
+  "gen_s": 62.6,
+  "passes": 24,
+  "s_per_sample": 1.956,
+  "dup_rate": 0.0448,
+  "distinct_ratio": 0.7531,
+  "ce_self_gen": {
+    "l0": 8.0078,
+    "l1": 7.6769,
+    "l2": 7.8094,
+    "l3": 7.0178,
+    "l4": 6.1063,
+    "l5": 5.4582,
+    "l6": 4.7494,
+    "l7": 3.2771,
+    "l8": 3.5811,
+    "l9": 3.7956,
+    "l10": 3.6989,
+    "l11": 1.5277,
+    "total": 5.2255
+  },
+  "ce_held_gt": {
+    "l0": 7.8328,
+    "l1": 7.651,
+    "l2": 6.6589,
+    "l3": 5.7474,
+    "l4": 5.0308,
+    "l5": 4.4642,
+    "l6": 3.7478,
+    "l7": 1.8731,
+    "l8": 2.7223,
+    "l9": 3.0301,
+    "l10": 2.8336,
+    "l11": 0.5242,
+    "total": 4.343
+  },
+  "l0_codes": [
+    [
+      2181
+    ],
+    [
+      222
+    ],
+    [
+      439
+    ],
+    [
+      2574
+    ],
+    [
+      1017
+    ],
+    [
+      488
+    ],
+    [
+      260
+    ],
+    [
+      1490
+    ],
+    [
+      3672
+    ],
+    [
+      3349
+    ],
+    [
+      3789
+    ],
+    [
+      722
+    ],
+    [
+      2146
+    ],
+    [
+      3496
+    ],
+    [
+      1300
+    ],
+    [
+      811
+    ],
+    [
+      3930
+    ],
+    [
+      2016
+    ],
+    [
+      1349
+    ],
+    [
+      3051
+    ],
+    [
+      2418
+    ],
+    [
+      2280
+    ],
+    [
+      1299
+    ],
+    [
+      1256
+    ],
+    [
+      3187
+    ],
+    [
+      1699
+    ],
+    [
+      431
+    ],
+    [
+      609
+    ],
+    [
+      2540
+    ],
+    [
+      735
+    ],
+    [
+      218
+    ],
+    [
+      77
+    ]
+  ],
+  "texts": [
+    ". It was just laughing. There is Ben.\n\"\"Look,, it is mine mine!\" Lily says.\nMaybe we we see a bottle have took the cookie. Mom held held the jar and break it. But it is curious. and sniffed them She pushed them her to to room their room room.\nLily is sad and scared. She decided and. Ben and it.\"Let's push it it!\" They shouts. Tom it and Tom says near\n bike the to to hold on on the queen. They see a big box under the ground help their cookie them and puts above them. She pulled is in in",
+    " it She found out his friends friend come to help him. and Tim agreed and and started to play. They played all all day long. long. done and they made a new friend friend find their new together. Tom was so happy. They knew they were the best friends.",
+    " She.",
+    " had a lot of of and the cat. The dog his and the ball all day. They played together, together all sometimes night and had lots of fun.\nOne day, Tom had a sneeze coming. He saw saw a big box box. He thought it it was a hook, the cat was was lived in a big cat cat. The cat came, Tom was scared.. Tom saw the cat helped Tim him them.\nOne day, Tom went back to the his house. He saw his toy cat, but he was scared scared. Tom grabbed cat and the cat said, \"Hi, Mommy! I will help you",
+    " people loved nature.",
+    " It is cake for Mom for. The A owner man not to them. Lily Lily.\nLily and Tom are, Tom and They run to the house the mole. They see a big red ball playing in red balloon. They laughed They are happy.\n\"Look, Tom is the balloon balloon!\" Ben says.. It is the inside!\"\nA nice man comes and looks for them. Thees the red is is Tom.\nTheyThey you you to the balloon? You have have waiting. it belongs to everyone. He makes makes to drop again again",
+    ". That me me my hat.\".\" Sue said, \"Yes, I with our balloons fun!\"\nTim and and Sally Bunny flew into the parade. They and had a lot of of fun. They did and water. Tim laughed and laughed laughed. They had a lot of for fun to go fun home, Tim what they needed in. They were best.",
+    " forever one.. one day,, she to decided go play it. He went to the park. They jumped and jumped Spot, Spot. They kept digging playing. While they was walking walking yoga, she he saw a big red dog! There were a big bird was near dog.! They laughed and looked around the dog. Tim and ran away. Tom said, \"I want to in I the pants said hello, new she to say the dog.\nLily and were tired, but a boy gave with them a big dog. They told Tim's warm dog Lily, and they played together. They had party.",
+    " Sam were tired, they they found a tiny mouse A big dog, came to down. Tim jumped fast from away away! The behind to hear the squirrel's Tim felt Tim and a his kite flew away away. Tim looked bird was so proud She and. Tim and Sam played and friends and went back on big bird and spin it again.\n, was a time, in a small town, there was a small cat. The cat lived in a house in his yard. very happy, Tom then loved to the cat when he saw the big house. He wanted to catch the cat, so he Sue got.\nOne sunny day",
+    " the. the.Can I will help you wash, lion!\" Mom says.\n\"No,, the Mom. We go it. I want me take it..\"\n\nHer mom mom said..NoNo I don't't I I I want to make him him.\"\n\"No, Mom, did not want?\" Sam says.\n\"Be careful, I say it,\" Lily says. \"Maybe clothes is be and careful.\"\nMom hears them that was not angry.. She feels sorry sorry for a bad for Lily. Lily got calls him.\n\"Help out, Lily, us,\" Mom says.",
+    " ran outside. She took the door a door. She saw a big tree and climbed on window.. The mom made the the key door. It was been and excited.\n\"Help, help?\" Tom asked. \"Can we our their Mom and pizza.\"\n",
+    ". She said, \"Thank you, Kitty. They are not good. We are are too too.\" The furniture story is sometimes that it is important to be careful to care for them them and makes them happy makes everyone happy memories.",
+    "",
+    " surprised. They did not know know what was stopped! The dog thought the big cat cat up the, rose from it a tree. It's it and was shiny. The big poppy! many trees like the all the of all family. They. had a new friend.",
+    " and Lily. She sees the bridge She sees Lily and Ben and threw the flies again. She waved her back..\n\"Mommy home,, and go to the pop and go away,\",\" Ben Ben said.\nLily smiled and ask ask before. will come out. They say Mom to walk back to their their family. They felt silly. They is a big smile.",
+    " funny Tim showed her friends to the park park. The bird was playing. Everyone said, \",,, we we both have the ball with me ball?\" The ball agreed will let for them.\" Kitty agreed and they played together.\nThey, and. Suddenly, something unexpected happened happened. A big bird took the ball the the ball and threw it were again. The bird's ball ball all.. Tom and Lily and went home. Tim was not happy,, and they played in the ball ball there all day.",
+    " to play together.",
+    " played together all day.\n's playing, he Lily saw a big cat named Lily went up to her kitchen. She said said, \"Hi, Tom! is hungry We You to play with you?\" The big cat was happy and andI don the cat. They played and together, and had lots of fun. They made made the biglet, a big wind, and he all was scared, but it ran goodbye.\n\"Oh no, Lily and Tom cried. Spot learned come in the yard as stuff, she and her mom They.",
+    ". was big big.\" The bossy bird said, \"Here, lost.\" The bird wanted to help help the lady. So, She ran to the girl and and wrapped him for give the bird man.. The man smiled and said,, you all and helped helped each other.\" They hugged each other and other.",
+    " with, that, is not for go to the park, she met. The magic. observe smiled smiled with with a dolphin on the beach.",
+    ". They played with with the red ball, until they were happy to have it Kitty. From that day on, Tim and knew would always always keep her friend made ball and named on. and Sue played all and and play together. They were the best best of friends.",
+    " fixed and the dog dog could play and play. They They played all day day and had lots of fun.",
+    " mom with He says, \"Mom, Mom,?\"?\" \" \" should should not with it with your help.,,, can we play together.\"\nMom slept Mom smiles and said,, \"Don't be a,. Mom forgive you. I help you feel.\". helped helped helped go to it and and the mom mom into vase. Tim says, \"Thank you against your brother.\" From that day on, Lily and Sam pushed the the. on it it. He took it out to Sue make pins driver again again time, it was yummy it Lily!\" She says, \"That's okay,, Mom. You",
+    " in the house. They did not know what to watch to what they do. They played with the big bear and had shared their ball is good. They accept them go inside.",
+    " them and them a hug. They went out for them. and thanked them them about some them. They can are all together.",
+    " to play. They saw the nice on on the.. Lily and her they, who heard followed. They came out of the window window. They were happy for them.\nBut the cake was still still opened the room and the little brother were.. They were very mad. Lily Lily did They told that that would be careful things. They said they were proud their new. They both both both. They had a good of fun.",
+    " a to show their bad. game.",
+    ". He tried to throw it and out out, but he searched far far away. Then,, he slipped down. Just then,, he heard a voice coming coming. Tom said did not decide what. he asked. leaving, Sam. They all all came to him!\nTom said, Sam saw the mess and tried to play the mom hugged him. She said,I want to push the kids, but we can create it was better.\" Sam smiled and smiled. They played together together and had so friends. Tom were happy and the became the best best boy.",
+    " friends. They liked to do things with their toys and their pretend it They were fun.\nOne day, a boy named Tim ran in the yard with his mean. dog.\"Hey,,! look at!\" she said.\n\"Go me! not dog to resist after our things, Lily!\" said said.\n\"No, Lily! Let's not to ours rest. one one not a bad thing.\"\nTim and Lily Lily came by. They looked at. \"No, Mom was! We are sorry.\" They said. \"I lose my coin and no thank you. I will help us.\"\nThey said",
+    " sort.\n",
+    " you you,, Mommy. I can jump your bike back it and safe.\" Mom Mom. Sue they were both very very happy. played under the couch to play... upon a time, there was a little there was a little boy named Tim. Tim. Tim loved to play with his toy toy cars. Tim liked to on his train on the cars. One day, Tim saw a a toy car in his yard. He wanted to shoot with it with his toy.\nTim picked up the with his toy car went the The. and it it broke a car into the door. Tim was so happy!. He She",
+    " went to the store with mom. They saw a big ball that said, \"This with your ball and it can ruined empty.\" Sue was very happy to see the have to his mom. and Spot kept playing, Tim and Tim fancy moral of the story is to to always be careful with your when."
+  ]
+}
